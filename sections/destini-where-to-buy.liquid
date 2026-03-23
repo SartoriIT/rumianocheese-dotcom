@@ -83,26 +83,26 @@
   endif
 -%}
 
-<div 
-  class="destini-widget-container" 
-  style="background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px;"
+<div
+  class='destini-widget-container'
+  style='background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px;'
 >
-  <div class="destini-widget-wrapper">
+  <div class='destini-widget-wrapper'>
     {%- if section.settings.section_title != blank -%}
-      <h2 class="destini-widget-title">{{ section.settings.section_title }}</h2>
+      <h2 class='destini-widget-title'>{{ section.settings.section_title }}</h2>
     {%- endif -%}
-    
+
     <div
-      id="destini-locator-{{ section.settings.locator_id }}"
-      class="destini-locator-class"
-      data-locator-id="{{ section.settings.locator_id }}"
-      data-alpha-code="{{ section.settings.alpha_code }}"
-      data-apo="{{ apo_attr }}"
+      id='destini-locator-{{ section.settings.locator_id }}'
+      class='destini-locator-class'
+      data-locator-id='{{ section.settings.locator_id }}'
+      data-alpha-code='{{ section.settings.alpha_code }}'
+      data-apo='{{ apo_attr }}'
     ></div>
   </div>
 </div>
 
-<script src="https://lets.shop/productWidgetSnippet.js" charset="utf-8"></script>
+<script src='https://lets.shop/productWidgetSnippet.js' charset='utf-8'></script>
 
 <style>
   .destini-widget-container {

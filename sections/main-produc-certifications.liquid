@@ -147,7 +147,7 @@
 {%- liquid
   assign product_certifications = product.metafields.product.certifications.value
   assign has_certifications = false
-  
+
   if product_certifications and product_certifications.size > 0
     for cert_id in product_certifications
       assign normalized_cert = cert_id | strip | handleize
@@ -166,38 +166,36 @@
 -%}
 
 {%- if has_certifications -%}
-  <div 
-    class="certifications-section section-{{ section.id }}" 
-    style="background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px {{ section.settings.padding_bottom }}px;"
+  <div
+    class='certifications-section section-{{ section.id }}'
+    style='background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px {{ section.settings.padding_bottom }}px;'
   >
-    <div class="certifications-container">
+    <div class='certifications-container'>
       {%- if section.settings.title != blank -%}
-        <div class="certifications-title-wrapper">
-          <h2 
-            class="{{ section.settings.title_font }}" 
-            style="color: {{ section.settings.title_color }};"
+        <div class='certifications-title-wrapper'>
+          <h2
+            class='{{ section.settings.title_font }}'
+            style='color: {{ section.settings.title_color }};'
           >
             {{ section.settings.title }}
           </h2>
         </div>
       {%- endif -%}
 
-      <div class="certifications-grid">
+      <div class='certifications-grid'>
         {%- for cert_id in product_certifications -%}
           {%- assign normalized_cert = cert_id | strip | handleize -%}
-          
+
           {%- for block in section.blocks -%}
             {%- assign block_id = block.settings.certification_id | strip | handleize -%}
-            
+
             {%- if normalized_cert == block_id and block.settings.logo != blank -%}
-              <div class="certification-item" {{ block.shopify_attributes }}>
+              <div class='certification-item' {{ block.shopify_attributes }}>
                 {{
                   block.settings.logo
                   | image_url: width: 400
-                  | image_tag: 
-                    class: 'certification-logo',
-                    alt: block.settings.alt_text | default: block.settings.certification_id,
-                    loading: 'lazy'
+                  | image_tag: class: 'certification-logo', alt: block.settings.alt_text
+                  | default: block.settings.certification_id, loading: 'lazy'
                 }}
               </div>
             {%- endif -%}

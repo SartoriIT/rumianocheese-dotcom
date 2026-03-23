@@ -1,148 +1,145 @@
-
-
-
 {% schema %}
+{
+  "name": "Contenido marco",
+  "tag": "section",
+  "class": "contenido-marco",
+  "settings": [
     {
-      "name": "Contenido marco",
-      "tag": "section",
-      "class": "contenido-marco",
-      "settings": [
+      "type": "checkbox",
+      "id": "invertir_orden",
+      "label": "Align to the right",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_fondo_seccion",
+      "label": "Background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "habilitar_imagen_fondo",
+      "label": "Use background image",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "color_fondo",
+      "label": "Background color",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Title",
+      "default": "A Century of Craftsmanship"
+    },
+    {
+      "type": "select",
+      "id": "clase_titulo",
+      "label": "Font family",
+      "options": [
         {
-          "type": "checkbox",
-          "id": "invertir_orden",
-          "label": "Align to the right",
-          "default": false
-        },
-        {
-          "type": "image_picker",
-          "id": "imagen_fondo_seccion",
-          "label": "Background image"
-        },
-        {
-          "type": "checkbox",
-          "id": "habilitar_imagen_fondo",
-          "label": "Use background image",
-          "default": false
-        },
-        {
-          "type": "color",
-          "id": "color_fondo",
-          "label": "Background color",
-          "default": "#C9A76D"
-        },
-        {
-          "type": "text",
-          "id": "titulo",
-          "label": "Title",
-          "default": "A Century of Craftsmanship"
-        },
-         {
-          "type": "select",
-           "id": "clase_titulo",
-           "label": "Font family",
-           "options": [
-             {
-               "value": "Titulo-Nickson-four-h1-portada",
-               "label": "Nickson Four-Big"
-             },
-             {
-               "value": "Titulo-Nickson-six-h1-portada",
-               "label": "Nickson Four-Big"
-             },
-             {
-               "value": "Titulo-Nickson-four-h1",
-               "label": "Nickson Four-H1"
-             },
-             {
-               "value": "Titulo-Nickson-six-h1",
-               "label": "Nickson Six-H1"
-             },
-             {
-               "value": "Titulo-Nickson-four-h2",
-               "label": "Nickson Four-H2"
-             },
-             {
-               "value": "Titulo-Nickson-six-h2",
-               "label": "Nickson Six-H2"
-             },
-           ],
-           "default": "Titulo-Nickson-four-h2"
+          "value": "Titulo-Nickson-four-h1-portada",
+          "label": "Nickson Four-Big"
         },
         {
-          "type": "color",
-          "id": "color_titulo",
-          "label": "Title color",
-          "default": "#EDDEC1"
+          "value": "Titulo-Nickson-six-h1-portada",
+          "label": "Nickson Four-Big"
         },
         {
-          "type": "text",
-          "id": "subtitulo",
-          "label": "Subtitle",
-          "default": "A Future of Sustainability"
+          "value": "Titulo-Nickson-four-h1",
+          "label": "Nickson Four-H1"
         },
         {
-           "type": "select",
-          "id": "clase_subtitulo",
-          "label": "Font family",
-          "options": [
-             {
-               "value": "Titulo-Nickson-four-h1-portada",
-               "label": "Nickson Four-H"
-             },
-             {
-               "value": "Titulo-Nickson-six-h1-portada",
-               "label": "Nickson Four-H"
-             },
-             {
-               "value": "Titulo-Nickson-four-h1",
-               "label": "Nickson Four-H1"
-             },
-             {
-               "value": "Titulo-Nickson-six-h1",
-               "label": "Nickson Six-H1"
-             },
-             {
-               "value": "Titulo-Nickson-four-h2",
-               "label": "Nickson Four-H2"
-             },
-             {
-               "value": "Titulo-Nickson-six-h2",
-               "label": "Nickson Six-H2"
-             },
-            {
-              "value": "Titulo-Nickson-four-h3",
-              "label": "Nickson Four-H3"
-            },
-            {
-              "value": "Titulo-Nickson-six-h3",
-              "label": "Nickson Six-H3"
-            }   
-          ],
-          "default": "Titulo-Nickson-six-h3"
+          "value": "Titulo-Nickson-six-h1",
+          "label": "Nickson Six-H1"
         },
         {
-          "type": "color",
-          "id": "color_subtitulo",
-          "label": "Color subtitle",
-          "default": "#002554"
+          "value": "Titulo-Nickson-four-h2",
+          "label": "Nickson Four-H2"
         },
         {
-          "type": "richtext",
-          "id": "texto",
-          "label": "Text",
-          "default": "<p>Since 1919, we’ve been leading the way in organic dairy. Learn how our regenerative practices nurture the planet and our farmers.</p>"
+          "value": "Titulo-Nickson-six-h2",
+          "label": "Nickson Six-H2"
+        }
+      ],
+      "default": "Titulo-Nickson-four-h2"
+    },
+    {
+      "type": "color",
+      "id": "color_titulo",
+      "label": "Title color",
+      "default": "#EDDEC1"
+    },
+    {
+      "type": "text",
+      "id": "subtitulo",
+      "label": "Subtitle",
+      "default": "A Future of Sustainability"
+    },
+    {
+      "type": "select",
+      "id": "clase_subtitulo",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h1-portada",
+          "label": "Nickson Four-H"
         },
         {
-          "type": "color",
-          "id": "color_texto",
-          "label": "Color text",
-          "default": "#FFFFFF"
+          "value": "Titulo-Nickson-six-h1-portada",
+          "label": "Nickson Four-H"
         },
-           {
-          "type": "checkbox",
-          "id": "ocultar_botones",
-          "label": "Hide buttons",
-          "default": false
+        {
+          "value": "Titulo-Nickson-four-h1",
+          "label": "Nickson Four-H1"
+        },
+        {
+          "value": "Titulo-Nickson-six-h1",
+          "label": "Nickson Six-H1"
+        },
+        {
+          "value": "Titulo-Nickson-four-h2",
+          "label": "Nickson Four-H2"
+        },
+        {
+          "value": "Titulo-Nickson-six-h2",
+          "label": "Nickson Six-H2"
+        },
+        {
+          "value": "Titulo-Nickson-four-h3",
+          "label": "Nickson Four-H3"
+        },
+        {
+          "value": "Titulo-Nickson-six-h3",
+          "label": "Nickson Six-H3"
+        }
+      ],
+      "default": "Titulo-Nickson-six-h3"
+    },
+    {
+      "type": "color",
+      "id": "color_subtitulo",
+      "label": "Color subtitle",
+      "default": "#002554"
+    },
+    {
+      "type": "richtext",
+      "id": "texto",
+      "label": "Text",
+      "default": "<p>Since 1919, we’ve been leading the way in organic dairy. Learn how our regenerative practices nurture the planet and our farmers.</p>"
+    },
+    {
+      "type": "color",
+      "id": "color_texto",
+      "label": "Color text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "ocultar_botones",
+      "label": "Hide buttons",
+      "default": false
     },
     {
       "type": "checkbox",
@@ -208,142 +205,165 @@
       "label": "Make transparent button",
       "default": true
     },
-         {
-          "type": "image_picker",
-          "id": "imagen_fondo_contenedor",
-          "label": "Background image"
-        },
     {
-          "type": "image_picker",
-          "id": "imagen_fondo_interior",
-          "label": "Frame image"
-        },
-        {
-  "type": "checkbox",
-  "id": "habilitar_video_fondo",
-  "label": "Enable background video",
-  "default": false
-},
-{
-  "type": "text",
-  "id": "url_video_fondo",
-  "label": "Background video URL (MP4)",
-  "info": "Enter MP4 video URL"
-},
-{
-  "type": "image_picker",
-  "id": "imagen_fallback_video",
-  "label": "Fallback image when video is disabled"
-}
-        
-      ],
-      "presets": [
-        {
-          "name": "Frame content",
-          "category": "Custom"
-        }
-      ]
+      "type": "image_picker",
+      "id": "imagen_fondo_contenedor",
+      "label": "Background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_fondo_interior",
+      "label": "Frame image"
+    },
+    {
+      "type": "checkbox",
+      "id": "habilitar_video_fondo",
+      "label": "Enable background video",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "url_video_fondo",
+      "label": "Background video URL (MP4)",
+      "info": "Enter MP4 video URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_fallback_video",
+      "label": "Fallback image when video is disabled"
     }
+  ],
+  "presets": [
+    {
+      "name": "Frame content",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
-    
-<div class="contenido-imagen-marco" style="background-color: {{ section.settings.color_fondo }};
-       {% if section.settings.habilitar_imagen_fondo and section.settings.imagen_fondo_seccion != blank %}
-         background-image: url('{{ section.settings.imagen_fondo_seccion | image_url }}');
-         background-size: cover;
-         background-position: center;
-       {% endif %}
-       flex-direction: {% if section.settings.invertir_orden %}row-reverse{% else %}row{% endif %};">
-  
-  <div class="contenedor-textodeimagen-marco">
-    <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};">
+
+<div
+  class='contenido-imagen-marco'
+  style='
+    background-color: {{ section.settings.color_fondo }};
+    {% if section.settings.habilitar_imagen_fondo and section.settings.imagen_fondo_seccion != blank %}
+      background-image: url('{{ section.settings.imagen_fondo_seccion | image_url }}');
+      background-size: cover;
+      background-position: center;
+    {% endif %}
+    flex-direction: {% if section.settings.invertir_orden %}row-reverse{% else %}row{% endif %};
+  '
+>
+  <div class='contenedor-textodeimagen-marco'>
+    <h1 class='{{ section.settings.clase_titulo }}' style='color: {{ section.settings.color_titulo }};'>
       {{ section.settings.titulo }}
     </h1>
-    <h2 class="{{ section.settings.clase_subtitulo }}" style="color: {{ section.settings.color_subtitulo }};">
+    <h2 class='{{ section.settings.clase_subtitulo }}' style='color: {{ section.settings.color_subtitulo }};'>
       {{ section.settings.subtitulo }}
     </h2>
-    <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">
+    <div class='Texto-Poppinds-p' style='color: {{ section.settings.color_texto }};'>
       {{ section.settings.texto }}
-  </div>
-
-{% unless section.settings.ocultar_botones %}
-  <div class="contenedor-titular-cuerpo-botones-unicolumna">
-    <a href="{{ section.settings.enlace_boton_1 }}" class="boton-portada"
-         style="
-           background-color: {% if section.settings.boton_1_transparente %} transparent {% else %} {{ section.settings.color_boton_1 }} {% endif %};
-           color: {{ section.settings.color_texto_boton_1 }};
-           border: 2px solid {{ section.settings.color_boton_1 }};
-         ">
-        {{ section.settings.texto_boton_1 }}
-      </a>
-      {% if section.settings.mostrar_dos_botones %}
-        <a href="{{ section.settings.enlace_boton_2 }}" class="boton-portada"
-           style="
-             background-color: {% if section.settings.boton_2_transparente %} transparent {% else %} {{ section.settings.color_boton_2 }} {% endif %};
-             color: {{ section.settings.color_texto_boton_2 }};
-             border: 2px solid {{ section.settings.color_boton_2 }};
-           ">
-          {{ section.settings.texto_boton_2 }}
-        </a>
-      {% endif %}
-  </div>
-{% endunless %}
-</div>
-
-
-  <div class="contenedor-imagen-marco" style="
-     height: 100%; 
-     {% if section.settings.habilitar_video_fondo and section.settings.url_video_fondo != blank %}
-       position: relative;
-       overflow: hidden;
-     {% else %}
-       background-image: url('{% if section.settings.imagen_fondo_contenedor != blank %}{{ section.settings.imagen_fondo_contenedor | image_url }}{% elsif section.settings.imagen_fallback_video != blank %}{{ section.settings.imagen_fallback_video | image_url }}{% else %}{% endif %}');
-       background-size: cover;
-       background-position: center;
-       background-repeat: no-repeat;
-     {% endif %}">
-  
-  {% if section.settings.habilitar_video_fondo and section.settings.url_video_fondo != blank %}
-    <video class="video-fondo" autoplay loop muted playsinline style="
-           position: absolute;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-           z-index: 0;">
-      <source src="{{ section.settings.url_video_fondo }}" type="video/mp4">
-    </video>
-    <!-- Imagen de fallback para cuando el video no se puede cargar -->
-    <div class="imagen-fallback-video" style="
-           position: absolute;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           background-image: url('{% if section.settings.imagen_fallback_video != blank %}{{ section.settings.imagen_fallback_video | image_url }}{% elsif section.settings.imagen_fondo_contenedor != blank %}{{ section.settings.imagen_fondo_contenedor | image_url }}{% else %}{% endif %}');
-           background-size: cover;
-           background-position: center;
-           background-repeat: no-repeat;
-           z-index: -1;">
     </div>
-  {% endif %}
-  
-  <div class="Image-frame" style="; height: calc(41rem + 1vw); width: 100%; display: block; background-image: url('{% if section.settings.imagen_fondo_interior != blank %}{{ section.settings.imagen_fondo_interior | image_url }}{% else %}{% endif %}');
-       background-size: contain;
-       background-position: center;
-       background-repeat: no-repeat;">
+
+    {% unless section.settings.ocultar_botones %}
+      <div class='contenedor-titular-cuerpo-botones-unicolumna'>
+        <a
+          href='{{ section.settings.enlace_boton_1 }}'
+          class='boton-portada'
+          style='
+            background-color: {% if section.settings.boton_1_transparente %} transparent {% else %} {{ section.settings.color_boton_1 }} {% endif %};
+            color: {{ section.settings.color_texto_boton_1 }};
+            border: 2px solid {{ section.settings.color_boton_1 }};
+          '
+        >
+          {{ section.settings.texto_boton_1 }}
+        </a>
+        {% if section.settings.mostrar_dos_botones %}
+          <a
+            href='{{ section.settings.enlace_boton_2 }}'
+            class='boton-portada'
+            style='
+              background-color: {% if section.settings.boton_2_transparente %} transparent {% else %} {{ section.settings.color_boton_2 }} {% endif %};
+              color: {{ section.settings.color_texto_boton_2 }};
+              border: 2px solid {{ section.settings.color_boton_2 }};
+            '
+          >
+            {{ section.settings.texto_boton_2 }}
+          </a>
+        {% endif %}
+      </div>
+    {% endunless %}
+  </div>
+
+  <div
+    class='contenedor-imagen-marco'
+    style='
+      height: 100%;
+      {% if section.settings.habilitar_video_fondo and section.settings.url_video_fondo != blank %}
+        position: relative;
+        overflow: hidden;
+      {% else %}
+        background-image: url('{% if section.settings.imagen_fondo_contenedor != blank %}{{ section.settings.imagen_fondo_contenedor | image_url }}{% elsif section.settings.imagen_fallback_video != blank %}{{ section.settings.imagen_fallback_video | image_url }}{% else %}{% endif %}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      {% endif %}
+    '
+  >
+    {% if section.settings.habilitar_video_fondo and section.settings.url_video_fondo != blank %}
+      <video
+        class='video-fondo'
+        autoplay
+        loop
+        muted
+        playsinline
+        style='
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 0;
+        '
+      >
+        <source src='{{ section.settings.url_video_fondo }}' type='video/mp4'>
+      </video>
+      <!-- Imagen de fallback para cuando el video no se puede cargar -->
+      <div
+        class='imagen-fallback-video'
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('{% if section.settings.imagen_fallback_video != blank %}{{ section.settings.imagen_fallback_video | image_url }}{% elsif section.settings.imagen_fondo_contenedor != blank %}{{ section.settings.imagen_fondo_contenedor | image_url }}{% else %}{% endif %}');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          z-index: -1;
+        "
+      ></div>
+    {% endif %}
+
+    <div
+      class='Image-frame'
+      style="
+        ; height: calc(41rem + 1vw); width: 100%; display: block; background-image: url('{% if section.settings.imagen_fondo_interior != blank %}{{ section.settings.imagen_fondo_interior | image_url }}{% else %}{% endif %}');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+    ></div>
   </div>
 </div>
- 
- 
-</div>
-
 
 {% style %}
   .video-fondo {
     transition: opacity 0.5s ease;
   }
-  
+
   /* Estilos para dispositivos móviles donde los videos autoplay pueden estar restringidos */
   @media (hover: none) and (pointer: coarse) {
     .video-fondo {
@@ -354,5 +374,3 @@
     }
   }
 {% endstyle %}
-
-

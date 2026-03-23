@@ -189,32 +189,64 @@
 }
 {% endschema %}
 
-<div class="section-{{ section.id }} contenedor-multicolumna-logos_columna" id="section-contenedor-multicolumna-{{ section.id }}" style="background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px;">
-  <div class="contenedor-multicolumna_columna">
+<div
+  class='section-{{ section.id }} contenedor-multicolumna-logos_columna'
+  id='section-contenedor-multicolumna-{{ section.id }}'
+  style='background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px;'
+>
+  <div class='contenedor-multicolumna_columna'>
     {%- for block in section.blocks -%}
-      <div class="bloque-multicolumna_columna" style="background-color: {% if block.settings.transparent_background %}transparent{% else %}{{ block.settings.block_background_color }}{% endif %};" {{ block.shopify_attributes }}>
-        <div class="bloque-multicolumna-contenido_columna">
-          <div class="bloque-multicolumna-imagen_columna">
+      <div
+        class='bloque-multicolumna_columna'
+        style='background-color: {% if block.settings.transparent_background %}transparent{% else %}{{ block.settings.block_background_color }}{% endif %};'
+        {{ block.shopify_attributes }}
+      >
+        <div class='bloque-multicolumna-contenido_columna'>
+          <div class='bloque-multicolumna-imagen_columna'>
             {%- if block.settings.top_image != blank -%}
-              <img src="{{ block.settings.top_image | image_url: width: 400 }}" alt="Image block">
+              <img src='{{ block.settings.top_image | image_url: width: 400 }}' alt='Image block'>
             {%- endif -%}
           </div>
-          <div class="bloque-multicolumna-textos_columna">
+          <div class='bloque-multicolumna-textos_columna'>
             {%- if block.settings.title_date_event != blank -%}
-              <p class="Texto-Poppinds" style="color: {{ block.settings.title_color_date_event }}; margin-bottom: 0; margin-top: 0;">{{ block.settings.title_date_event }}</p>
+              <p
+                class='Texto-Poppinds'
+                style='color: {{ block.settings.title_color_date_event }}; margin-bottom: 0; margin-top: 0;'
+              >
+                {{ block.settings.title_date_event }}
+              </p>
             {%- endif -%}
             {%- if block.settings.title_bloque != blank -%}
-              <h3 class="{{ block.settings.clase_title_bloque }}" style="color: {{ block.settings.title_color_bloque }};">{{ block.settings.title_bloque }}</h3>
+              <h3
+                class='{{ block.settings.clase_title_bloque }}'
+                style='color: {{ block.settings.title_color_bloque }};'
+              >
+                {{ block.settings.title_bloque }}
+              </h3>
             {%- endif -%}
             {%- if block.settings.subtitulo_bloque != blank -%}
-              <h4 class="{{ block.settings.clase_subtitulo_bloque }}" style="color: {{ block.settings.subtitulo_color_bloque }}; margin-bottom: 0;">{{ block.settings.subtitulo_bloque }}</h4>
+              <h4
+                class='{{ block.settings.clase_subtitulo_bloque }}'
+                style='color: {{ block.settings.subtitulo_color_bloque }}; margin-bottom: 0;'
+              >
+                {{ block.settings.subtitulo_bloque }}
+              </h4>
             {%- endif -%}
             {%- if block.settings.text != blank -%}
-              <div class="Texto-Poppinds-p-pequeño-2_columna" style="color: {{ block.settings.text_color }}; line-height: calc(1em + .8vw);">{{ block.settings.text }}</div>
+              <div
+                class='Texto-Poppinds-p-pequeño-2_columna'
+                style='color: {{ block.settings.text_color }}; line-height: calc(1em + .8vw);'
+              >
+                {{ block.settings.text }}
+              </div>
             {%- endif -%}
             {%- if block.settings.mostrar_boton -%}
-              <div class="boton-multicolumna_columna">
-                <a href="{{ block.settings.enlace_boton }}" class="boton-generico_columna" style="background-color: {{ block.settings.color_boton }}; color: white; padding: 0.5rem 1rem; text-decoration: none; display: inline-block;">
+              <div class='boton-multicolumna_columna'>
+                <a
+                  href='{{ block.settings.enlace_boton }}'
+                  class='boton-generico_columna'
+                  style='background-color: {{ block.settings.color_boton }}; color: white; padding: 0.5rem 1rem; text-decoration: none; display: inline-block;'
+                >
                   {{ block.settings.texto_boton }}
                 </a>
               </div>
@@ -227,56 +259,55 @@
 </div>
 
 {%- style -%}
-#section-contenedor-multicolumna-{{ section.id }} .contenedor-multicolumna_columna {
-  display: flex;
-  flex-direction: column;
-  gap: {{ section.settings.column_gap }}px;
-  width: 100%;
-}
-
-.bloque-multicolumna_columna {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-.bloque-multicolumna-contenido_columna {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.bloque-multicolumna-imagen_columna {
-  flex: 0 0 auto;
-}
-
-.bloque-multicolumna-imagen_columna img {
-  width: 20rem;
-  height: auto;
-}
-
-.bloque-multicolumna-textos_columna {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  gap: 0.5rem;
-}
-
-@media (max-width: 612px) {
-  .bloque-multicolumna-contenido_columna {
+  #section-contenedor-multicolumna-{{ section.id }} .contenedor-multicolumna_columna {
+    display: flex;
     flex-direction: column;
+    gap: {{ section.settings.column_gap }}px;
+    width: 100%;
+  }
+
+  .bloque-multicolumna_columna {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .bloque-multicolumna-contenido_columna {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .bloque-multicolumna-imagen_columna {
+    flex: 0 0 auto;
   }
 
   .bloque-multicolumna-imagen_columna img {
-    width: 100%;
+    width: 20rem;
+    height: auto;
   }
 
   .bloque-multicolumna-textos_columna {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: 0.5rem;
   }
-}
-{%- endstyle -%}
 
+  @media (max-width: 612px) {
+    .bloque-multicolumna-contenido_columna {
+      flex-direction: column;
+    }
+
+    .bloque-multicolumna-imagen_columna img {
+      width: 100%;
+    }
+
+    .bloque-multicolumna-textos_columna {
+      width: 100%;
+    }
+  }
+{%- endstyle -%}

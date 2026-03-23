@@ -160,43 +160,44 @@
   endif
 -%}
 
-<div 
-  class="infinite-logo-slider section-{{ section.id }}" 
-  style="{{ bg_style }} padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px {{ section.settings.padding_bottom }}px;"
+<div
+  class='infinite-logo-slider section-{{ section.id }}'
+  style='{{ bg_style }} padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px {{ section.settings.padding_bottom }}px;'
 >
   {%- if section.settings.title != blank -%}
-    <div class="logo-slider-title-wrapper">
-      <h2 class="{{ section.settings.title_font }}" style="color: {{ section.settings.title_color }};">
+    <div class='logo-slider-title-wrapper'>
+      <h2 class='{{ section.settings.title_font }}' style='color: {{ section.settings.title_color }};'>
         {{ section.settings.title }}
       </h2>
     </div>
   {%- endif -%}
 
   {%- if section.blocks.size > 0 -%}
-    <div class="logo-slider-track-wrapper">
-      <div class="logo-slider-track">
+    <div class='logo-slider-track-wrapper'>
+      <div class='logo-slider-track'>
         {%- comment -%} First iteration of logos {%- endcomment -%}
         {%- for block in section.blocks -%}
-          <div class="logo-slider-item" {{ block.shopify_attributes }}>
+          <div class='logo-slider-item' {{ block.shopify_attributes }}>
             {%- if block.settings.logo_link != blank -%}
-              <a href="{{ block.settings.logo_link }}" class="logo-link">
+              <a href='{{ block.settings.logo_link }}' class='logo-link'>
             {%- endif -%}
-            
+
             {%- if block.settings.logo_image != blank -%}
               {{
                 block.settings.logo_image
                 | image_url: width: 400
-                | image_tag: class: 'logo-image', loading: 'lazy', alt: block.settings.logo_image.alt | default: 'Logo'
+                | image_tag: class: 'logo-image', loading: 'lazy', alt: block.settings.logo_image.alt
+                | default: 'Logo'
               }}
             {%- else -%}
-              <div class="logo-placeholder">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <div class='logo-placeholder'>
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
                   <rect x="10" y="10" width="80" height="80" fill="currentColor" opacity="0.1"/>
                   <text x="50" y="60" font-size="20" text-anchor="middle" fill="currentColor" opacity="0.3">Logo {{ forloop.index }}</text>
                 </svg>
               </div>
             {%- endif -%}
-            
+
             {%- if block.settings.logo_link != blank -%}
               </a>
             {%- endif -%}
@@ -205,26 +206,27 @@
 
         {%- comment -%} Second iteration for seamless loop {%- endcomment -%}
         {%- for block in section.blocks -%}
-          <div class="logo-slider-item">
+          <div class='logo-slider-item'>
             {%- if block.settings.logo_link != blank -%}
-              <a href="{{ block.settings.logo_link }}" class="logo-link">
+              <a href='{{ block.settings.logo_link }}' class='logo-link'>
             {%- endif -%}
-            
+
             {%- if block.settings.logo_image != blank -%}
               {{
                 block.settings.logo_image
                 | image_url: width: 400
-                | image_tag: class: 'logo-image', loading: 'lazy', alt: block.settings.logo_image.alt | default: 'Logo'
+                | image_tag: class: 'logo-image', loading: 'lazy', alt: block.settings.logo_image.alt
+                | default: 'Logo'
               }}
             {%- else -%}
-              <div class="logo-placeholder">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <div class='logo-placeholder'>
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
                   <rect x="10" y="10" width="80" height="80" fill="currentColor" opacity="0.1"/>
                   <text x="50" y="60" font-size="20" text-anchor="middle" fill="currentColor" opacity="0.3">Logo {{ forloop.index }}</text>
                 </svg>
               </div>
             {%- endif -%}
-            
+
             {%- if block.settings.logo_link != blank -%}
               </a>
             {%- endif -%}
@@ -233,8 +235,8 @@
       </div>
     </div>
   {%- else -%}
-    <div class="logo-slider-empty-state">
-      <p style="color: {{ section.settings.title_color }}; opacity: 0.6; text-align: center; padding: 2rem;">
+    <div class='logo-slider-empty-state'>
+      <p style='color: {{ section.settings.title_color }}; opacity: 0.6; text-align: center; padding: 2rem;'>
         Add logo blocks to display them here
       </p>
     </div>

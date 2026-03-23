@@ -38,17 +38,19 @@
 }
 {% endschema %}
 
-<div class="contenedor-cinta" style="
-  width: 100vw;
-  min-height: 20px;
-  max-height: 30px;
-  height: {{ section.settings.height }}px;
-  {% if section.settings.use_background_image and section.settings.background_image != blank %}
-    background-image: url({{ section.settings.background_image | image_url }});
-    background-size: cover;
-    background-position: center;
-  {% else %}
-    background-color: {{ section.settings.background_color }};
-  {% endif %}
-">
-</div>
+<div
+  class='contenedor-cinta'
+  style='
+    width: 100vw;
+    min-height: 20px;
+    max-height: 30px;
+    height: {{ section.settings.height }}px;
+    {% if section.settings.use_background_image and section.settings.background_image != blank %}
+      background-image: url({{ section.settings.background_image | image_url }});
+      background-size: cover;
+      background-position: center;
+    {% else %}
+      background-color: {{ section.settings.background_color }};
+    {% endif %}
+  '
+></div>

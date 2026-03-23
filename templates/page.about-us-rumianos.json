@@ -1,1 +1,359 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":28}},"main_portada_unicolumna_lateral_cwMeXA":{"type":"main-portada-unicolumna-lateral","settings":{"alinear_derecha":false,"imagen_fondo":"shopify:\/\/shop_images\/image_5f7708ea-63ae-4d81-9c6e-7e59d0f663d4.jpg","usar_color_fondo":false,"color_fondo":"#f5f5f5","color_contenedor":"#9a7a4b","fondo_transparente":true,"ancho_contenedor":650,"titulo":"100 Years of Impact","clase_titulo":"Titulo-Nickson-four-h1-portada","color_titulo":"#002554","ocultar_subtito":false,"subtitulo":"One Delicious Mission","clase_subtitulo":"Titulo-Nickson-six-h2","color_subtitulo":"#986d27","texto":"<p>We nurture farms, families, and the future through organic excellence. From how our cows are raised and cared for to the processing and production of all things dairy, quality and sustainability are the core of everything we do.<\/p>","color_texto":"#002554","ocultar_botones":true,"mostrar_dos_botones":false,"texto_boton_1":"More information","enlace_boton_1":"","color_boton_1":"#002554","color_texto_boton_1":"#ffffff","boton_1_transparente":false,"texto_boton_2":"Contact","enlace_boton_2":"","color_boton_2":"#002554","color_texto_boton_2":"#002554","boton_2_transparente":true}},"main_contenido_marco_9epBNc":{"type":"main-contenido-marco","settings":{"invertir_orden":true,"habilitar_imagen_fondo":true,"color_fondo":"#eddec1","titulo":"Rooted in Tradition","clase_titulo":"Titulo-Nickson-six-h1","color_titulo":"#002554","subtitulo":"Growing Sustainably","clase_subtitulo":"Titulo-Nickson-four-h1","color_subtitulo":"#986d27","texto":"<p>Founded in 1919, Rumiano Cheese Company began partnering with small family producers across the Northern California bioregion to help stabilize milk commodities and create a collective competitive advantage.<\/p><p>For over a century, we’ve celebrated responsible stewardship and led the way in producing pasture-raised organic cheese and butter with a commitment to sustainability across every aspect of our operations.<\/p>","color_texto":"#002554","ocultar_botones":true,"mostrar_dos_botones":false,"texto_boton_1":"Learn About Our Legacy  →","enlace_boton_1":"","color_boton_1":"#002554","color_texto_boton_1":"#ffffff","boton_1_transparente":false,"texto_boton_2":"Contact","enlace_boton_2":"","color_boton_2":"#002554","color_texto_boton_2":"#ffffff","boton_2_transparente":true,"imagen_fondo_interior":"shopify:\/\/shop_images\/Imagen-origen.png","habilitar_video_fondo":false,"url_video_fondo":""}},"main_contenedor_titular_cuerpo_unicolumna_UHH4Cn":{"type":"main-contenedor-titular-cuerpo-unicolumna","name":"Container body single column title","settings":{"background_color":"#EDDEC1","habilitar_imagen_fondo":false,"padding_top":20,"padding_bottom":20,"titulo":"Shared Values","clase_titulo":"Titulo-Nickson-four-h1","color_titulo":"#002554","ocultar_subtito":false,"subtitulo":"To fuel our growth","clase_subtitulo":"Titulo-Nickson-six-h2","color_subtitulo":"#C9A76D","texto":"<p>To continue to support and grow the local teams, farms, customers and communities we’ve so proudly served for four generations, we’ve joined the Sartori Cheese family who shares our values and continues to honor the traditions we hold dear.<\/p>","color_texto":"#002554","ocultar_botones":false,"mostrar_dos_botones":false,"texto_boton_1":"Learn about Sartori  →","enlace_boton_1":"https:\/\/www.sartoricheese.com\/our-story\/","color_boton_1":"#002554","color_texto_boton_1":"#FFFFFF","boton_1_transparente":false,"texto_boton_2":"Contact","enlace_boton_2":"","color_boton_2":"#002554","color_texto_boton_2":"#002554","boton_2_transparente":true}},"main_contenedor_multicolumnas_bloques_CUyGtC":{"type":"main-contenedor-multicolumnas-bloques","blocks":{"bloque_multicolumna_awLDi4":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/About_Us-img_4.png","clase_imagen":"Mediano-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"Community Commitment","clase_subtitulo":"Titulo-Nickson-four-h3","title_color":"#002554","text":"<p>We pay local farms fair milk prices for their careful stewardship of the land and environmentally friendly farming practices.<\/p>","text_color":"#333333"}},"bloque_multicolumna_HWAhJR":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/Icon-bloque-2.png","clase_imagen":"Mediano-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"Local production","clase_subtitulo":"Titulo-Nickson-four-h3","title_color":"#002554","text":"<p>Our dairies are within a 100-mile radius of our cheese-making facility to reduce food miles, lower our carbon footprint and ensure product freshness.<\/p>","text_color":"#333333"}},"bloque_multicolumna_xW44mx":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/Icon-bloque-3.png","clase_imagen":"Mediano-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"RECYCLED WATER","clase_subtitulo":"Titulo-Nickson-four-h3","title_color":"#002554","text":"<p>87% of our daily water use is recycled from the cheese making process in our in-house treatment plant allowing us to clean and reuse approximately 48,000 gallons daily.<\/p>","text_color":"#333333"}},"bloque_multicolumna_GRUpx9":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/About_Us-img_2.png","clase_imagen":"Mediano-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"Certified credentials","clase_subtitulo":"Titulo-Nickson-four-h3","title_color":"#002554","text":"<p>We adhere to the rigorous standards required to maintain USDA Organic, American Humane, and NON-GMO Verified Certifications.<\/p>","text_color":"#333333"}}},"block_order":["bloque_multicolumna_awLDi4","bloque_multicolumna_HWAhJR","bloque_multicolumna_xW44mx","bloque_multicolumna_GRUpx9"],"settings":{"background_color":"#eddec1","enable_background_image":false,"padding_top":40,"padding_sides":20,"columns_desktop":4,"column_gap":35}},"main_portada_unicolumna_lateral_bEwfBH":{"type":"main-portada-unicolumna-lateral","settings":{"alinear_derecha":false,"imagen_fondo":"shopify:\/\/shop_images\/Redwoodcoast.jpg","usar_color_fondo":false,"color_fondo":"#f5f5f5","color_contenedor":"#eddec1","fondo_transparente":false,"ancho_contenedor":650,"titulo":"Where Flavor Begins","clase_titulo":"Titulo-Nickson-four-h1","color_titulo":"#002554","ocultar_subtito":true,"subtitulo":"This is a subtitle","clase_subtitulo":"Titulo-Nickson-six-h2","color_subtitulo":"#c9a76d","texto":"<p>At Rumiano, extraordinary cheese starts with extraordinary care, from the fertile soils of California's Redwood Coast to the happy cows with year-round pasture access and the family farms that supply our nutritious, delicious organic milk.<\/p>","color_texto":"#002554","ocultar_botones":true,"mostrar_dos_botones":false,"texto_boton_1":"More information","enlace_boton_1":"","color_boton_1":"#002554","color_texto_boton_1":"#ffffff","boton_1_transparente":false,"texto_boton_2":"Contact","enlace_boton_2":"","color_boton_2":"#002554","color_texto_boton_2":"#002554","boton_2_transparente":true}},"main_contenedor_multicolumnas_bloques_9CqwQm":{"type":"main-contenedor-multicolumnas-bloques","blocks":{"bloque_multicolumna_RpFp97":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/About_Us-sec-2-img_1_1b06fdc7-9a84-4b77-9ebc-b8cb666e9ab9.jpg","clase_imagen":"Grande-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"The land","clase_subtitulo":"Titulo-Nickson-four-h3","title_color":"#002554","text":"<p>The temperate climate and soil conditions of the Redwood Coast grow natural biodiverse pastures as the foundation for our dairy systems.<\/p>","text_color":"#333333"}},"bloque_multicolumna_QLrrez":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/About_Us-sec-2-img_2.png","clase_imagen":"Grande-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"Our Farmers","clase_subtitulo":"Titulo-Nickson-four-h3","title_color":"#002554","text":"<p>Local family farmers work the land and provide proper care and nutrition for the animals, and for the next generation.<\/p>","text_color":"#333333"}},"bloque_multicolumna_xKq6zf":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/About_Us-sec-2-img_3.png","clase_imagen":"Grande-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"Happy Cows","clase_subtitulo":"Titulo-Nickson-four-h3","title_color":"#002554","text":"<p>Spacious living and year-round access to  lush pastures provide cows better quality nutrition (for better quality cheese).<\/p>","text_color":"#333333"}},"bloque_multicolumna_HkPrX8":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/About_Us-sec-2-img_4.png","clase_imagen":"Grande-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"Best Practices","clase_subtitulo":"Titulo-Nickson-four-h3","title_color":"#002554","text":"<p>Farming as it should be (small scale, no-till, open pastures) is better for the soil, the animals, our food systems and our planet<\/p>","text_color":"#333333"}}},"block_order":["bloque_multicolumna_RpFp97","bloque_multicolumna_QLrrez","bloque_multicolumna_xKq6zf","bloque_multicolumna_HkPrX8"],"settings":{"background_color":"#eddec1","enable_background_image":false,"padding_top":35,"padding_sides":10,"columns_desktop":4,"column_gap":0}},"main_splitting_tape_GEJDVK":{"type":"main-splitting-tape","settings":{"background_color":"#f4f4f4","use_background_image":true,"background_image":"shopify:\/\/shop_images\/Divider_25cb2804-8b20-4d51-89bb-6603d68f0f8e.jpg","height":25}},"main_contenido_marco_m3F486":{"type":"main-contenido-marco","settings":{"invertir_orden":false,"habilitar_imagen_fondo":false,"color_fondo":"#002554","titulo":"The Heart","clase_titulo":"Titulo-Nickson-four-h1","color_titulo":"#fff9f1","subtitulo":"of Rumiano","clase_subtitulo":"Titulo-Nickson-four-h1","color_subtitulo":"#c9a76d","texto":"<p>Behind every block of Rumiano cheese is a group of dedicated farmers and community members who share our commitment to sustainability and quality. Together, we form an ecosystem that is healthy for land, animals, people and planet. <\/p>","color_texto":"#ffffff","ocultar_botones":true,"mostrar_dos_botones":false,"texto_boton_1":"Learn About Our Legacy  →","enlace_boton_1":"","color_boton_1":"#002554","color_texto_boton_1":"#ffffff","boton_1_transparente":false,"texto_boton_2":"Contact","enlace_boton_2":"","color_boton_2":"#002554","color_texto_boton_2":"#ffffff","boton_2_transparente":true,"imagen_fondo_interior":"shopify:\/\/shop_images\/About_Us-sec-5.jpg","habilitar_video_fondo":false,"url_video_fondo":""}},"main_contenedor_cuadricula_reja_kNdD7F":{"type":"main-contenedor-cuadricula-reja","settings":{"color_fondo":"#002554","clase_titulo":"Titulo-Nickson-four-h3","color_titulo":"#c9a76d","color_texto":"#ffffff","titulo-1":"Family-Owned Farms","texto-1":"<p>Partnering with multi-generational farms rooted in tradition.<\/p>","imagen_fondo-2":"shopify:\/\/shop_images\/About-back-sec-3.jpg","titulo-2":"Sustainable Practices","texto-2":"<p>Emphasizing regenerative agriculture and animal welfare.<\/p>","imagen_fondo-3":"shopify:\/\/shop_images\/image-colab.jpg","titulo-3":"Collaboration","texto-3":"<p>Working hand-in-hand for highest standards in organic dairy.<\/p>","imagen_fondo-4":"shopify:\/\/shop_images\/Portada-seccicion-4.jpg","titulo-4":"Shared Vision","texto-4":"<p>Supporting vibrant rural communities and a healthier planet.<\/p>"}}},"order":["main","main_portada_unicolumna_lateral_cwMeXA","main_contenido_marco_9epBNc","main_contenedor_titular_cuerpo_unicolumna_UHH4Cn","main_contenedor_multicolumnas_bloques_CUyGtC","main_portada_unicolumna_lateral_bEwfBH","main_contenedor_multicolumnas_bloques_9CqwQm","main_splitting_tape_GEJDVK","main_contenido_marco_m3F486","main_contenedor_cuadricula_reja_kNdD7F"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": { "padding_top": 28, "padding_bottom": 28 }
+    },
+    "main_portada_unicolumna_lateral_cwMeXA": {
+      "type": "main-portada-unicolumna-lateral",
+      "settings": {
+        "alinear_derecha": false,
+        "imagen_fondo": "shopify:\/\/shop_images\/image_5f7708ea-63ae-4d81-9c6e-7e59d0f663d4.jpg",
+        "usar_color_fondo": false,
+        "color_fondo": "#f5f5f5",
+        "color_contenedor": "#9a7a4b",
+        "fondo_transparente": true,
+        "ancho_contenedor": 650,
+        "titulo": "100 Years of Impact",
+        "clase_titulo": "Titulo-Nickson-four-h1-portada",
+        "color_titulo": "#002554",
+        "ocultar_subtito": false,
+        "subtitulo": "One Delicious Mission",
+        "clase_subtitulo": "Titulo-Nickson-six-h2",
+        "color_subtitulo": "#986d27",
+        "texto": "<p>We nurture farms, families, and the future through organic excellence. From how our cows are raised and cared for to the processing and production of all things dairy, quality and sustainability are the core of everything we do.<\/p>",
+        "color_texto": "#002554",
+        "ocultar_botones": true,
+        "mostrar_dos_botones": false,
+        "texto_boton_1": "More information",
+        "enlace_boton_1": "",
+        "color_boton_1": "#002554",
+        "color_texto_boton_1": "#ffffff",
+        "boton_1_transparente": false,
+        "texto_boton_2": "Contact",
+        "enlace_boton_2": "",
+        "color_boton_2": "#002554",
+        "color_texto_boton_2": "#002554",
+        "boton_2_transparente": true
+      }
+    },
+    "main_contenido_marco_9epBNc": {
+      "type": "main-contenido-marco",
+      "settings": {
+        "invertir_orden": true,
+        "habilitar_imagen_fondo": true,
+        "color_fondo": "#eddec1",
+        "titulo": "Rooted in Tradition",
+        "clase_titulo": "Titulo-Nickson-six-h1",
+        "color_titulo": "#002554",
+        "subtitulo": "Growing Sustainably",
+        "clase_subtitulo": "Titulo-Nickson-four-h1",
+        "color_subtitulo": "#986d27",
+        "texto": "<p>Founded in 1919, Rumiano Cheese Company began partnering with small family producers across the Northern California bioregion to help stabilize milk commodities and create a collective competitive advantage.<\/p><p>For over a century, we’ve celebrated responsible stewardship and led the way in producing pasture-raised organic cheese and butter with a commitment to sustainability across every aspect of our operations.<\/p>",
+        "color_texto": "#002554",
+        "ocultar_botones": true,
+        "mostrar_dos_botones": false,
+        "texto_boton_1": "Learn About Our Legacy  →",
+        "enlace_boton_1": "",
+        "color_boton_1": "#002554",
+        "color_texto_boton_1": "#ffffff",
+        "boton_1_transparente": false,
+        "texto_boton_2": "Contact",
+        "enlace_boton_2": "",
+        "color_boton_2": "#002554",
+        "color_texto_boton_2": "#ffffff",
+        "boton_2_transparente": true,
+        "imagen_fondo_interior": "shopify:\/\/shop_images\/Imagen-origen.png",
+        "habilitar_video_fondo": false,
+        "url_video_fondo": ""
+      }
+    },
+    "main_contenedor_titular_cuerpo_unicolumna_UHH4Cn": {
+      "type": "main-contenedor-titular-cuerpo-unicolumna",
+      "name": "Container body single column title",
+      "settings": {
+        "background_color": "#EDDEC1",
+        "habilitar_imagen_fondo": false,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "titulo": "Shared Values",
+        "clase_titulo": "Titulo-Nickson-four-h1",
+        "color_titulo": "#002554",
+        "ocultar_subtito": false,
+        "subtitulo": "To fuel our growth",
+        "clase_subtitulo": "Titulo-Nickson-six-h2",
+        "color_subtitulo": "#C9A76D",
+        "texto": "<p>To continue to support and grow the local teams, farms, customers and communities we’ve so proudly served for four generations, we’ve joined the Sartori Cheese family who shares our values and continues to honor the traditions we hold dear.<\/p>",
+        "color_texto": "#002554",
+        "ocultar_botones": false,
+        "mostrar_dos_botones": false,
+        "texto_boton_1": "Learn about Sartori  →",
+        "enlace_boton_1": "https:\/\/www.sartoricheese.com\/our-story\/",
+        "color_boton_1": "#002554",
+        "color_texto_boton_1": "#FFFFFF",
+        "boton_1_transparente": false,
+        "texto_boton_2": "Contact",
+        "enlace_boton_2": "",
+        "color_boton_2": "#002554",
+        "color_texto_boton_2": "#002554",
+        "boton_2_transparente": true
+      }
+    },
+    "main_contenedor_multicolumnas_bloques_CUyGtC": {
+      "type": "main-contenedor-multicolumnas-bloques",
+      "blocks": {
+        "bloque_multicolumna_awLDi4": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/About_Us-img_4.png",
+            "clase_imagen": "Mediano-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "Community Commitment",
+            "clase_subtitulo": "Titulo-Nickson-four-h3",
+            "title_color": "#002554",
+            "text": "<p>We pay local farms fair milk prices for their careful stewardship of the land and environmentally friendly farming practices.<\/p>",
+            "text_color": "#333333"
+          }
+        },
+        "bloque_multicolumna_HWAhJR": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/Icon-bloque-2.png",
+            "clase_imagen": "Mediano-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "Local production",
+            "clase_subtitulo": "Titulo-Nickson-four-h3",
+            "title_color": "#002554",
+            "text": "<p>Our dairies are within a 100-mile radius of our cheese-making facility to reduce food miles, lower our carbon footprint and ensure product freshness.<\/p>",
+            "text_color": "#333333"
+          }
+        },
+        "bloque_multicolumna_xW44mx": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/Icon-bloque-3.png",
+            "clase_imagen": "Mediano-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "RECYCLED WATER",
+            "clase_subtitulo": "Titulo-Nickson-four-h3",
+            "title_color": "#002554",
+            "text": "<p>87% of our daily water use is recycled from the cheese making process in our in-house treatment plant allowing us to clean and reuse approximately 48,000 gallons daily.<\/p>",
+            "text_color": "#333333"
+          }
+        },
+        "bloque_multicolumna_GRUpx9": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/About_Us-img_2.png",
+            "clase_imagen": "Mediano-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "Certified credentials",
+            "clase_subtitulo": "Titulo-Nickson-four-h3",
+            "title_color": "#002554",
+            "text": "<p>We adhere to the rigorous standards required to maintain USDA Organic, American Humane, and NON-GMO Verified Certifications.<\/p>",
+            "text_color": "#333333"
+          }
+        }
+      },
+      "block_order": [
+        "bloque_multicolumna_awLDi4",
+        "bloque_multicolumna_HWAhJR",
+        "bloque_multicolumna_xW44mx",
+        "bloque_multicolumna_GRUpx9"
+      ],
+      "settings": {
+        "background_color": "#eddec1",
+        "enable_background_image": false,
+        "padding_top": 40,
+        "padding_sides": 20,
+        "columns_desktop": 4,
+        "column_gap": 35
+      }
+    },
+    "main_portada_unicolumna_lateral_bEwfBH": {
+      "type": "main-portada-unicolumna-lateral",
+      "settings": {
+        "alinear_derecha": false,
+        "imagen_fondo": "shopify:\/\/shop_images\/Redwoodcoast.jpg",
+        "usar_color_fondo": false,
+        "color_fondo": "#f5f5f5",
+        "color_contenedor": "#eddec1",
+        "fondo_transparente": false,
+        "ancho_contenedor": 650,
+        "titulo": "Where Flavor Begins",
+        "clase_titulo": "Titulo-Nickson-four-h1",
+        "color_titulo": "#002554",
+        "ocultar_subtito": true,
+        "subtitulo": "This is a subtitle",
+        "clase_subtitulo": "Titulo-Nickson-six-h2",
+        "color_subtitulo": "#c9a76d",
+        "texto": "<p>At Rumiano, extraordinary cheese starts with extraordinary care, from the fertile soils of California's Redwood Coast to the happy cows with year-round pasture access and the family farms that supply our nutritious, delicious organic milk.<\/p>",
+        "color_texto": "#002554",
+        "ocultar_botones": true,
+        "mostrar_dos_botones": false,
+        "texto_boton_1": "More information",
+        "enlace_boton_1": "",
+        "color_boton_1": "#002554",
+        "color_texto_boton_1": "#ffffff",
+        "boton_1_transparente": false,
+        "texto_boton_2": "Contact",
+        "enlace_boton_2": "",
+        "color_boton_2": "#002554",
+        "color_texto_boton_2": "#002554",
+        "boton_2_transparente": true
+      }
+    },
+    "main_contenedor_multicolumnas_bloques_9CqwQm": {
+      "type": "main-contenedor-multicolumnas-bloques",
+      "blocks": {
+        "bloque_multicolumna_RpFp97": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/About_Us-sec-2-img_1_1b06fdc7-9a84-4b77-9ebc-b8cb666e9ab9.jpg",
+            "clase_imagen": "Grande-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "The land",
+            "clase_subtitulo": "Titulo-Nickson-four-h3",
+            "title_color": "#002554",
+            "text": "<p>The temperate climate and soil conditions of the Redwood Coast grow natural biodiverse pastures as the foundation for our dairy systems.<\/p>",
+            "text_color": "#333333"
+          }
+        },
+        "bloque_multicolumna_QLrrez": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/About_Us-sec-2-img_2.png",
+            "clase_imagen": "Grande-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "Our Farmers",
+            "clase_subtitulo": "Titulo-Nickson-four-h3",
+            "title_color": "#002554",
+            "text": "<p>Local family farmers work the land and provide proper care and nutrition for the animals, and for the next generation.<\/p>",
+            "text_color": "#333333"
+          }
+        },
+        "bloque_multicolumna_xKq6zf": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/About_Us-sec-2-img_3.png",
+            "clase_imagen": "Grande-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "Happy Cows",
+            "clase_subtitulo": "Titulo-Nickson-four-h3",
+            "title_color": "#002554",
+            "text": "<p>Spacious living and year-round access to  lush pastures provide cows better quality nutrition (for better quality cheese).<\/p>",
+            "text_color": "#333333"
+          }
+        },
+        "bloque_multicolumna_HkPrX8": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/About_Us-sec-2-img_4.png",
+            "clase_imagen": "Grande-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "Best Practices",
+            "clase_subtitulo": "Titulo-Nickson-four-h3",
+            "title_color": "#002554",
+            "text": "<p>Farming as it should be (small scale, no-till, open pastures) is better for the soil, the animals, our food systems and our planet<\/p>",
+            "text_color": "#333333"
+          }
+        }
+      },
+      "block_order": [
+        "bloque_multicolumna_RpFp97",
+        "bloque_multicolumna_QLrrez",
+        "bloque_multicolumna_xKq6zf",
+        "bloque_multicolumna_HkPrX8"
+      ],
+      "settings": {
+        "background_color": "#eddec1",
+        "enable_background_image": false,
+        "padding_top": 35,
+        "padding_sides": 10,
+        "columns_desktop": 4,
+        "column_gap": 0
+      }
+    },
+    "main_splitting_tape_GEJDVK": {
+      "type": "main-splitting-tape",
+      "settings": {
+        "background_color": "#f4f4f4",
+        "use_background_image": true,
+        "background_image": "shopify:\/\/shop_images\/Divider_25cb2804-8b20-4d51-89bb-6603d68f0f8e.jpg",
+        "height": 25
+      }
+    },
+    "main_contenido_marco_m3F486": {
+      "type": "main-contenido-marco",
+      "settings": {
+        "invertir_orden": false,
+        "habilitar_imagen_fondo": false,
+        "color_fondo": "#002554",
+        "titulo": "The Heart",
+        "clase_titulo": "Titulo-Nickson-four-h1",
+        "color_titulo": "#fff9f1",
+        "subtitulo": "of Rumiano",
+        "clase_subtitulo": "Titulo-Nickson-four-h1",
+        "color_subtitulo": "#c9a76d",
+        "texto": "<p>Behind every block of Rumiano cheese is a group of dedicated farmers and community members who share our commitment to sustainability and quality. Together, we form an ecosystem that is healthy for land, animals, people and planet. <\/p>",
+        "color_texto": "#ffffff",
+        "ocultar_botones": true,
+        "mostrar_dos_botones": false,
+        "texto_boton_1": "Learn About Our Legacy  →",
+        "enlace_boton_1": "",
+        "color_boton_1": "#002554",
+        "color_texto_boton_1": "#ffffff",
+        "boton_1_transparente": false,
+        "texto_boton_2": "Contact",
+        "enlace_boton_2": "",
+        "color_boton_2": "#002554",
+        "color_texto_boton_2": "#ffffff",
+        "boton_2_transparente": true,
+        "imagen_fondo_interior": "shopify:\/\/shop_images\/About_Us-sec-5.jpg",
+        "habilitar_video_fondo": false,
+        "url_video_fondo": ""
+      }
+    },
+    "main_contenedor_cuadricula_reja_kNdD7F": {
+      "type": "main-contenedor-cuadricula-reja",
+      "settings": {
+        "color_fondo": "#002554",
+        "clase_titulo": "Titulo-Nickson-four-h3",
+        "color_titulo": "#c9a76d",
+        "color_texto": "#ffffff",
+        "titulo-1": "Family-Owned Farms",
+        "texto-1": "<p>Partnering with multi-generational farms rooted in tradition.<\/p>",
+        "imagen_fondo-2": "shopify:\/\/shop_images\/About-back-sec-3.jpg",
+        "titulo-2": "Sustainable Practices",
+        "texto-2": "<p>Emphasizing regenerative agriculture and animal welfare.<\/p>",
+        "imagen_fondo-3": "shopify:\/\/shop_images\/image-colab.jpg",
+        "titulo-3": "Collaboration",
+        "texto-3": "<p>Working hand-in-hand for highest standards in organic dairy.<\/p>",
+        "imagen_fondo-4": "shopify:\/\/shop_images\/Portada-seccicion-4.jpg",
+        "titulo-4": "Shared Vision",
+        "texto-4": "<p>Supporting vibrant rural communities and a healthier planet.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_portada_unicolumna_lateral_cwMeXA",
+    "main_contenido_marco_9epBNc",
+    "main_contenedor_titular_cuerpo_unicolumna_UHH4Cn",
+    "main_contenedor_multicolumnas_bloques_CUyGtC",
+    "main_portada_unicolumna_lateral_bEwfBH",
+    "main_contenedor_multicolumnas_bloques_9CqwQm",
+    "main_splitting_tape_GEJDVK",
+    "main_contenido_marco_m3F486",
+    "main_contenedor_cuadricula_reja_kNdD7F"
+  ]
+}

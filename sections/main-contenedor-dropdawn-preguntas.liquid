@@ -30,11 +30,11 @@
       "default": "#333333"
     },
     {
-  "type": "checkbox",
-  "id": "mostrar_imagen",
-  "label": "Show background image",
-  "default": true
-},
+      "type": "checkbox",
+      "id": "mostrar_imagen",
+      "label": "Show background image",
+      "default": true
+    },
     {
       "type": "image_picker",
       "id": "background_image",
@@ -81,45 +81,49 @@
     {
       "name": "Contenedor FAQ",
       "category": "Secciones",
-      "blocks": [
-        { "type": "bloque_dropdown" },
-        { "type": "bloque_dropdown" }
-      ]
+      "blocks": [{ "type": "bloque_dropdown" }, { "type": "bloque_dropdown" }]
     }
   ]
 }
 {% endschema %}
 
-<div style="display: flex; flex-flow: column nowrap; gap: 0; background-color: {{ section.settings.background_color }}">
-  <div class="contenedor-general-dropdawn-preguntas" style="display: flex; flex-direction: column; padding: 5rem;">
-  <div class="contenedor-interior-dropdawn-preguntas">
-    {% for block in section.blocks %}
-      <div class="bloque-dropdawn" style="background-color: {{ block.settings.block_background_color }};" {{ block.shopify_attributes }}>
-        <div class="bloque-dropdawn-header" onclick="toggleDropdown(this)">
-          <span class="{{ section.settings.font_family }}" style="color: {{ section.settings.text_color }};">{{ block.settings.title }}</span>
-          <span class="bloque-icono">+</span>
+<div style='display: flex; flex-flow: column nowrap; gap: 0; background-color: {{ section.settings.background_color }}'>
+  <div class='contenedor-general-dropdawn-preguntas' style='display: flex; flex-direction: column; padding: 5rem;'>
+    <div class='contenedor-interior-dropdawn-preguntas'>
+      {% for block in section.blocks %}
+        <div
+          class='bloque-dropdawn'
+          style='background-color: {{ block.settings.block_background_color }};'
+          {{ block.shopify_attributes }}
+        >
+          <div class='bloque-dropdawn-header' onclick='toggleDropdown(this)'>
+            <span class='{{ section.settings.font_family }}' style='color: {{ section.settings.text_color }};'>
+              {{- block.settings.title -}}
+            </span>
+            <span class='bloque-icono'>+</span>
+          </div>
+          <div class='bloque-dropdawn-content' style='display: none; color: {{ section.settings.text_color }};'>
+            {{ block.settings.content }}
+          </div>
         </div>
-        <div class="bloque-dropdawn-content" style="display: none; color: {{ section.settings.text_color }};">
-          {{ block.settings.content }}
-        </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
-</div>
 
-{% if section.settings.mostrar_imagen %}
-  <div class="contenedor-general-dropdawn-imagen" style="
-    width: 100vw;
-    max-height: 700px;
-    height: {{ section.settings.image_container_height }}px;
-    background-image: url({{ section.settings.background_image | image_url }});
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;">
-  </div>
-{% endif %}
-
-
+  {% if section.settings.mostrar_imagen %}
+    <div
+      class='contenedor-general-dropdawn-imagen'
+      style='
+        width: 100vw;
+        max-height: 700px;
+        height: {{ section.settings.image_container_height }}px;
+        background-image: url({{ section.settings.background_image | image_url }});
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      '
+    ></div>
+  {% endif %}
 </div>
 
 <script>

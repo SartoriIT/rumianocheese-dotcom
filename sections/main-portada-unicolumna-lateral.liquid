@@ -64,7 +64,7 @@
           "value": "Titulo-Nickson-four-h1-portada",
           "label": "Nickson Four-Big"
         },
-         {
+        {
           "value": "Titulo-Nickson-six-h1-portada",
           "label": "Nickson Six-Big"
         },
@@ -85,11 +85,11 @@
       "label": "Title color",
       "default": "#002554"
     },
-     {
-          "type": "checkbox",
-          "id": "ocultar_subtito",
-          "label": "Hide subtitle",
-          "default": false
+    {
+      "type": "checkbox",
+      "id": "ocultar_subtito",
+      "label": "Hide subtitle",
+      "default": false
     },
     {
       "type": "text",
@@ -109,7 +109,7 @@
         {
           "value": "Titulo-Nickson-six-h2",
           "label": "Nickson Six-H2"
-        }   
+        }
       ],
       "default": "Titulo-Nickson-six-h2"
     },
@@ -132,10 +132,10 @@
       "default": "#666666"
     },
     {
-          "type": "checkbox",
-          "id": "ocultar_botones",
-          "label": "Hide buttons",
-          "default": false
+      "type": "checkbox",
+      "id": "ocultar_botones",
+      "label": "Hide buttons",
+      "default": false
     },
     {
       "type": "checkbox",
@@ -211,64 +211,69 @@
 }
 {% endschema %}
 
-<div class="contenedor-portada-unicolumna-lateral" 
-  style="
-    background-image: {% if section.settings.usar_color_fondo == false and section.settings.imagen_fondo != blank %} 
-      url('{{ section.settings.imagen_fondo | image_url }}') 
+<div
+  class='contenedor-portada-unicolumna-lateral'
+  style='
+    background-image: {% if section.settings.usar_color_fondo == false and section.settings.imagen_fondo != blank %}
+      url('{{ section.settings.imagen_fondo | image_url }}')
     {% endif %};
     background-color: {% if section.settings.usar_color_fondo %} {{ section.settings.color_fondo }} {% else %} transparent {% endif %};
     justify-content: {% if section.settings.alinear_derecha %} flex-end {% else %} flex-start {% endif %};
     height: var(--Altura-bloque);
-">
-  <div class="contenedor-interior-unicolumna-lateral" style="
-    width: {{ section.settings.ancho_contenedor }}px;
-    background-color: {% if section.settings.fondo_transparente %} transparent {% else %} {{ section.settings.color_contenedor }} {% endif %};
-    padding: 2rem;
-  ">
-    <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};">
+  '
+>
+  <div
+    class='contenedor-interior-unicolumna-lateral'
+    style='
+      width: {{ section.settings.ancho_contenedor }}px;
+      background-color: {% if section.settings.fondo_transparente %} transparent {% else %} {{ section.settings.color_contenedor }} {% endif %};
+      padding: 2rem;
+    '
+  >
+    <h1 class='{{ section.settings.clase_titulo }}' style='color: {{ section.settings.color_titulo }};'>
       {{ section.settings.titulo }}
     </h1>
 
-     {% unless section.settings.ocultar_subtito %}
-    <h2 class="{{ section.settings.clase_subtitulo }}" style="color: {{ section.settings.color_subtitulo }};">
-      {{ section.settings.subtitulo }}
-    </h2>
-      {% endunless %}
-    
-    <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">
-      {{ section.settings.texto }}
-    </div>
-   
-    {% unless section.settings.ocultar_botones %}
-    <div class="contenedor-interior-botones-unicolumna-lateral">
-        <a href="{{ section.settings.enlace_boton_1 }}" class="boton-portada"
-         style="
-           background-color: {% if section.settings.boton_1_transparente %} transparent {% else %} {{ section.settings.color_boton_1 }} {% endif %};
-           color: {{ section.settings.color_texto_boton_1 }};
-           border: 2px solid {{ section.settings.color_boton_1 }};
-         ">
-        {{ section.settings.texto_boton_1 }}
-      </a>
-      {% if section.settings.mostrar_dos_botones %}
-        <a href="{{ section.settings.enlace_boton_2 }}" class="boton-portada"
-           style="
-             background-color: {% if section.settings.boton_2_transparente %} transparent {% else %} {{ section.settings.color_boton_2 }} {% endif %};
-             color: {{ section.settings.color_texto_boton_2 }};
-             border: 2px solid {{ section.settings.color_boton_2 }};
-           ">
-          {{ section.settings.texto_boton_2 }}
-        </a>
-      {% endif %}
-    </div>
+    {% unless section.settings.ocultar_subtito %}
+      <h2 class='{{ section.settings.clase_subtitulo }}' style='color: {{ section.settings.color_subtitulo }};'>
+        {{ section.settings.subtitulo }}
+      </h2>
     {% endunless %}
 
+    <div class='Texto-Poppinds-p' style='color: {{ section.settings.color_texto }};'>
+      {{ section.settings.texto }}
+    </div>
 
-    
+    {% unless section.settings.ocultar_botones %}
+      <div class='contenedor-interior-botones-unicolumna-lateral'>
+        <a
+          href='{{ section.settings.enlace_boton_1 }}'
+          class='boton-portada'
+          style='
+            background-color: {% if section.settings.boton_1_transparente %} transparent {% else %} {{ section.settings.color_boton_1 }} {% endif %};
+            color: {{ section.settings.color_texto_boton_1 }};
+            border: 2px solid {{ section.settings.color_boton_1 }};
+          '
+        >
+          {{ section.settings.texto_boton_1 }}
+        </a>
+        {% if section.settings.mostrar_dos_botones %}
+          <a
+            href='{{ section.settings.enlace_boton_2 }}'
+            class='boton-portada'
+            style='
+              background-color: {% if section.settings.boton_2_transparente %} transparent {% else %} {{ section.settings.color_boton_2 }} {% endif %};
+              color: {{ section.settings.color_texto_boton_2 }};
+              border: 2px solid {{ section.settings.color_boton_2 }};
+            '
+          >
+            {{ section.settings.texto_boton_2 }}
+          </a>
+        {% endif %}
+      </div>
+    {% endunless %}
   </div>
 </div>
 
-
-
 {% style %}
-
 {% endstyle %}

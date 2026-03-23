@@ -1,1 +1,511 @@
-{"sections":{"main_portada_unicolumna_UADzLr":{"type":"main-portada-unicolumna","disabled":true,"settings":{"altura_contenedor":560,"usar_video_fondo":false,"link_video_fondo":"https:\/\/streamable.com\/l\/ybw92a\/mp4.mp4","habilitar_sonido_video":true,"mostrar_switch_sonido":true,"activar_filtro_video":true,"grados_filtro":180,"primer_color_filtro":"#2a7b9b","opacidad_primer_color":1,"segundo_color_filtro":"#eddd53","opacidad_segundo_color":0,"imagen_fondo_desktop":"shopify:\/\/shop_images\/hero-imageback.jpg","imagen_fondo_tablet":"shopify:\/\/shop_images\/hero-imageback.jpg","imagen_fondo_mobile":"shopify:\/\/shop_images\/hero-imageback.jpg","color_fondo_contenedor":"#f5f5f5","color_contenedor":"#c9a76d","fondo_transparente":true,"ancho_contenedor":640,"titulo":"Taste the Difference","clase_titulo":"Titulo-Nickson-four-h1-portada","color_titulo":"#002554","subtitulo":"Flavor from the grass up","clase_subtitulo":"Titulo-Nickson-six-h2-portada","color_subtitulo":"#9a7a4b","texto":"<p>Our delicious organic dairy is made with milk from cows grazing year-round on the lush green pastures of California's Redwood Coast.<\/p>","color_texto":"#001b3d","ocultar_botones":false,"mostrar_dos_botones":true,"texto_boton_1":"Shop Now →","enlace_boton_1":"https:\/\/rumianocheese.com\/pages\/products-1","color_boton_1":"#002554","color_texto_boton_1":"#ffffff","boton_1_transparente":false,"texto_boton_2":"Learn more","enlace_boton_2":"https:\/\/rumianocheese.com\/pages\/about-us-2","color_boton_2":"#ffffff","color_texto_boton_2":"#002554","boton_2_transparente":false}},"main_hero_centercontent_dEpCMe":{"type":"main-hero-centercontent","name":"Hero - CenterContent","settings":{"container_height":640,"container_width":720,"container_color":"#ffffff","transparent_background":true,"container_width_mobile":100,"use_video_background":false,"video_url":"","enable_video_sound":false,"show_sound_toggle":true,"background_image_desktop":"shopify:\/\/shop_images\/hero-imageback-desktop_5d094752-1c13-46cb-ad69-4f53c00ba678.jpg","background_image_tablet":"shopify:\/\/shop_images\/hero-imageback_b10c4079-e1f4-4851-ae22-9a75b7cfb836.jpg","background_image_mobile":"shopify:\/\/shop_images\/hero-imageback.jpg","background_color":"#f5f5f5","enable_gradient_overlay":false,"gradient_angle":180,"gradient_color_1":"#2a7b9b","gradient_opacity_1":1,"gradient_color_2":"#eddd53","gradient_opacity_2":0,"title":"Taste the Difference","title_font":"Titulo-Nickson-four-h1-portada","title_color":"#002554","subtitle":"Flavor from the grass up","subtitle_font":"Titulo-Nickson-six-h2-portada","subtitle_color":"#9a7a4b","text":"<p>Our delicious organic dairy is made with milk from cows grazing year-round on the lush green pastures of California's Redwood Coast.<\/p>","text_color":"#002554","hide_buttons":false,"show_second_button":true,"button_1_text":"Shop Now →","button_1_link":"https:\/\/rumianocheese.com\/pages\/products-1","button_1_bg_color":"#002554","button_1_text_color":"#ffffff","button_1_transparent":false,"button_2_text":"Learn more","button_2_link":"https:\/\/rumianocheese.com\/pages\/about-us-2","button_2_bg_color":"#ffffff","button_2_text_color":"#002554","button_2_transparent":false}},"main_slider_logocarousel_CUh97C":{"type":"main-slider-logocarousel","blocks":{"logo_7C4JPA":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_WholeFoods.svg","logo_link":""}},"logo_CXM7V7":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_Sprouts.svg","logo_link":""}},"logo_B7LTXC":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_Jimbos.svg","logo_link":""}},"logo_UjJMdG":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_Raleys.svg","logo_link":""}},"logo_4Afk6a":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_NaturalGroceries.svg","logo_link":""}},"logo_9KfMRa":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_BristolFarms.svg","logo_link":""}},"logo_4dyYRj":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_MomsOrganicMarket.svg","logo_link":""}},"logo_4jdfKa":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_FreshThyme.svg","logo_link":""}},"logo_NJemww":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_LazyAcres.svg","logo_link":""}},"logo_KEjeDA":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_OregonsMarketOfChoice.svg","logo_link":""}},"logo_yJyGkp":{"type":"logo","settings":{"logo_image":"shopify:\/\/shop_images\/StoreLogo_PCCComunityMarkets.svg","logo_link":""}}},"block_order":["logo_7C4JPA","logo_CXM7V7","logo_B7LTXC","logo_UjJMdG","logo_4Afk6a","logo_9KfMRa","logo_4dyYRj","logo_4jdfKa","logo_NJemww","logo_KEjeDA","logo_yJyGkp"],"name":"Infinite Logo Slider","settings":{"background_color":"#002554","enable_background_image":false,"title":"Find us at","title_font":"Titulo-Nickson-four-h1","title_color":"#fafbfc","padding_top":40,"padding_bottom":40,"padding_sides":0,"logo_spacing":8,"logo_width":15,"animation_speed":50,"animation_speed_mobile":80,"pause_on_hover":false}},"main_contenido_unicolumna_imagen_iT4M63":{"type":"main-contenido-unicolumna-imagen","disabled":true,"settings":{"invertir_orden":false,"color_fondo":"#002554","titulo":"Holiday","clase_titulo":"Titulo-Nickson-six-h1","color_titulo":"#ffffff","subtitulo":"Gift Boxes","clase_subtitulo":"Titulo-Nickson-four-h2","color_subtitulo":"#c9a76d","texto":"<p>We believe the best gifts don’t just sit on a shelf—they create moments of genuine joy. Each box includes an assortment of our finest organic treats, packed with the quality you trust and the flavors you love.<\/p>","color_texto":"#ffffff","mostrar_segundo_boton":false,"texto_boton_1":"Shop Now  →","enlace_boton_1":"shopify:\/\/pages\/products-1","color_boton_1":"#c9a76d","color_texto_boton_1":"#002554","texto_boton_2":"Contacto","enlace_boton_2":"","color_boton_2":"#334fb4","color_texto_boton_2":"#ffffff","imagen_fondo":"shopify:\/\/shop_images\/Rumiano_Homepage_Gift_Boxes.png"}},"main_coleccion_de_productos_J69zy4":{"type":"main-coleccion-de-productos","settings":{"background_color":"#fff9f1","titulo":"Discover Our Organic Favorites","clase_titulo":"Titulo-Nickson-six-h1","color_titulo":"#002554","texto":"<p>From classic cheddar to creamy new cheese dip, Rumiano offers flavors crafted with care for every occasion.<\/p>","color_texto":"#001b3d","ocultar_botones":false,"mostrar_dos_botones":false,"texto_boton_1":"See All Products  →","enlace_boton_1":"shopify:\/\/pages\/products-1","color_boton_1":"#c9a76d","color_texto_boton_1":"#002554","boton_1_transparente":false,"texto_boton_2":"Contact","enlace_boton_2":"https:\/\/rumianocheese.com\/pages\/products","color_boton_2":"#002554","color_texto_boton_2":"#002554","boton_2_transparente":true,"collection":"frontpage","columns":3,"rows":1,"producto-provedor":"#002554","producto-titulo":"#002554","clase_titulo_productos":"Titulo-Nickson-four-h5","producto-categoria":"#9a7a4b","color_precio_producto":"#002554","producto-peso":"#9a7a4b","color_descripcion_producto":"#666666","color_boton_ver":"#002554","color_texto_boton_ver":"#002554","boton_ver_transparente":true,"ocultar_boton_ver":false,"texto_boton_wheretobuy":"Where to buy","text_button_addtocart":"Add to Cart","enlace_boton_wheretobuy":"https:\/\/rumianocheese.com\/pages\/where-to-buy","color_boton_wheretobuy":"#002554","color_texto_boton_wheretobuy":"#ffffff","boton_wheretobuy_transparente":false,"color_boton_agregar":"#002554","color_texto_boton_agregar":"#ffffff","boton_agregar_transparente":false,"transparent_cards":true,"card_background_color":"#f5f5f5"}},"main_contenido_unicolumna_imagen_9daBnn":{"type":"main-contenido-unicolumna-imagen","settings":{"invertir_orden":false,"color_fondo":"#002554","titulo":"THE DIFFERENCE","clase_titulo":"Titulo-Nickson-six-h1","color_titulo":"#ffffff","subtitulo":"IS DELICIOUS","clase_subtitulo":"Titulo-Nickson-four-h2","color_subtitulo":"#c9a76d","texto":"<p>Our environmentally friendly approach to cheesemaking is the difference that makes delicious, nutritious organic cheese noticeably golden yellow in color and full of flavor. <br\/>The combination of responsible farming and artisanal craftsmanship ensures every bite of Rumiano cheese bursts with rich, creamy goodness.<\/p>","color_texto":"#ffffff","mostrar_segundo_boton":false,"texto_boton_1":"Learn More  →","enlace_boton_1":"https:\/\/rumianocheese.com\/pages\/about-us-2","color_boton_1":"#c9a76d","color_texto_boton_1":"#002554","texto_boton_2":"Contacto","enlace_boton_2":"","color_boton_2":"#334fb4","color_texto_boton_2":"#ffffff","imagen_fondo":"shopify:\/\/shop_images\/PostImage.png"}},"main_blog_custom_niDgAn":{"type":"main-blog-custom","settings":{"background_color":"#ffffff","enable_background_image":true,"titulo":"Inspiration","clase_titulo":"Titulo-Nickson-four-h1","color_titulo":"#002554","subtitulo":"for Every Occasion","clase_subtitulo":"Titulo-Nickson-six-h2","color_subtitulo":"#9a7a4b","texto":"<p>Our blog is your go-to source for creative ways to enjoy Rumiano Organic cheese. From hosting a party to preparing a quick meal, discover ideas that celebrate flavor to find your perfect dish.<\/p>","color_texto":"#001b3d","ocultar_botones":true,"mostrar_dos_botones":false,"texto_boton_1":"See All Entrees →","enlace_boton_1":"https:\/\/www.youtube.com\/user\/RumianoCheese","color_boton_1":"#002554","color_texto_boton_1":"#ffffff","boton_1_transparente":false,"texto_boton_2":"Contact","enlace_boton_2":"","color_boton_2":"#002554","color_texto_boton_2":"#002554","boton_2_transparente":true,"blog":"cheeseboard","post_limit":3,"divider_color":"#002554","transparent_cards":false,"card_background_color":"#fff9f1","clase_blog_color":"#c9a76d","date_color":"#002554","title_color":"#002554","clase_titulo_blog":"Titulo-Nickson-four-h6","abstract_color":"#666666"}},"main_contenido_marco_bznHLf":{"type":"main-contenido-marco","settings":{"invertir_orden":false,"imagen_fondo_seccion":"shopify:\/\/shop_images\/Background-historia.png","habilitar_imagen_fondo":true,"color_fondo":"#002554","titulo":"A Century of Craftsmanship","clase_titulo":"Titulo-Nickson-four-h1","color_titulo":"#002554","subtitulo":"A Future of Sustainability","clase_subtitulo":"Titulo-Nickson-six-h2","color_subtitulo":"#002554","texto":"<p>Since 1919, we’ve sourced organic milk from small family farms who have been using responsible regenerative practices for generations. Learn how those grass-fed, pasture-raised practices create happy cows and tasty cheese.<\/p>","color_texto":"#001b3d","ocultar_botones":true,"mostrar_dos_botones":false,"texto_boton_1":"Learn About Our Legacy  →","enlace_boton_1":"","color_boton_1":"#002554","color_texto_boton_1":"#ffffff","boton_1_transparente":false,"texto_boton_2":"Contacto","enlace_boton_2":"","color_boton_2":"#002554","color_texto_boton_2":"#ffffff","boton_2_transparente":true,"imagen_fondo_contenedor":"shopify:\/\/shop_images\/Back_Image.jpg","imagen_fondo_interior":"shopify:\/\/shop_images\/Group_14.png","habilitar_video_fondo":false,"url_video_fondo":""}},"main_contenedor_titular_cuerpo_unicolumna_QxCjeQ":{"type":"main-contenedor-titular-cuerpo-unicolumna","settings":{"background_color":"#fff9f1","habilitar_imagen_fondo":false,"imagen_fondo_seccion":"shopify:\/\/shop_images\/Imagen-fondo-home-v2.jpg","padding_top":40,"padding_bottom":40,"titulo":"Better for the Earth","clase_titulo":"Titulo-Nickson-six-h1","color_titulo":"#002554","ocultar_subtito":false,"subtitulo":"Better for You","clase_subtitulo":"Titulo-Nickson-four-h2","color_subtitulo":"#002554","texto":"<p>Careful stewardship of the land and animals ensures the best grass-fed milk for organic cheese, butter and dairy that’s equally good for people and planet.<\/p>","color_texto":"#666666","ocultar_botones":true,"mostrar_dos_botones":false,"texto_boton_1":"Explore our impact  →","enlace_boton_1":"","color_boton_1":"#c9a76d","color_texto_boton_1":"#002554","boton_1_transparente":false,"texto_boton_2":"Contact","enlace_boton_2":"","color_boton_2":"#002554","color_texto_boton_2":"#002554","boton_2_transparente":true}},"main_contenedor_multicolumnas_bloques_UcjKXb":{"type":"main-contenedor-multicolumnas-bloques","blocks":{"bloque_multicolumna_TrkUp8":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/Education.img-4.png","clase_imagen":"Mediano-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"RAIN-FED GRASSSLANDS","clase_subtitulo":"Titulo-Nickson-six-h3","title_color":"#002554","text":"<p>With an average rainfall of over 100 inches a year, Northern California’s lush Redwood Coast provides cows a natural lifestyle grazing on biodiverse grasslands.<\/p>","text_color":"#001b3d"}},"bloque_multicolumna_t4wB9P":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/Education.img-2.png","clase_imagen":"Mediano-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"Pasture-raised COWS","clase_subtitulo":"Titulo-Nickson-four-h3","title_color":"#002554","text":"<p>A thriving, healthy herd is our top priority. Our American Humane Certified cows are grass-fed year-round without the use of antibiotics or growth hormones.<\/p>","text_color":"#001b3d"}},"bloque_multicolumna_pRyDjC":{"type":"bloque_multicolumna","settings":{"top_image":"shopify:\/\/shop_images\/Icon-atributo-03.png","clase_imagen":"Mediano-imagen-multicolumna","block_background_color":"#f5f5f5","transparent_background":true,"title":"LOCAL FAMILY FARMS","clase_subtitulo":"Titulo-Nickson-four-h3","title_color":"#002554","text":"<p>Our local family farms that provide socially conscious care for cows are also within 100-mile radius to lower our carbon footprint and ensure fresher products.<\/p>","text_color":"#001b3d"}}},"block_order":["bloque_multicolumna_TrkUp8","bloque_multicolumna_t4wB9P","bloque_multicolumna_pRyDjC"],"name":"Content-Form","settings":{"background_color":"#fff9f1","enable_background_image":false,"padding_top":40,"padding_sides":20,"columns_desktop":3,"column_gap":35}},"main_mail_suscribirse_ddq9hh":{"type":"main-mail-suscribirse","settings":{"invertir_orden":false,"color_fondo":"#002554","titulo":"Exclusive Recipes","clase_titulo":"Titulo-Nickson-four-h1","color_titulo":"#eddec1","subtitulo":"Special Savings","clase_subtitulo":"Titulo-Nickson-six-h2","color_subtitulo":"#c9a76d","texto":"<p>Sign up for recipes, pairing tips, and eco-friendly inspiration—plus discounts on your favorite organic cheeses!<\/p>","color_texto":"#ffffff","mostrar_segundo_boton":false,"texto_boton_1":"Más información","enlace_boton_1":"","color_boton_1":"#c9a76d","color_texto_boton_1":"#ffffff","texto_boton_2":"Contacto","enlace_boton_2":"","color_boton_2":"#f5f5f5","color_texto_boton_2":"#ffffff"}},"shogun_custom_html_xUHWYM":{"type":"shogun-custom-html","disabled":true,"custom_css":[".contain-formhubspot {padding: 5rem;}"],"settings":{"html":"<div class=\"contain-formhubspot\">\n<script charset=\"utf-8\" type=\"text\/javascript\" src=\"\/\/js.hsforms.net\/forms\/embed\/v2.js\"><\/script>\n<script>\n  hbspt.forms.create({\n    portalId: \"43418765\",\n    formId: \"7d1babe2-8026-4f5d-b34d-ce813edaae6b\",\n    region: \"na1\"\n  });\n<\/script>\n\n<\/div>"}}},"order":["main_portada_unicolumna_UADzLr","main_hero_centercontent_dEpCMe","main_slider_logocarousel_CUh97C","main_contenido_unicolumna_imagen_iT4M63","main_coleccion_de_productos_J69zy4","main_contenido_unicolumna_imagen_9daBnn","main_blog_custom_niDgAn","main_contenido_marco_bznHLf","main_contenedor_titular_cuerpo_unicolumna_QxCjeQ","main_contenedor_multicolumnas_bloques_UcjKXb","main_mail_suscribirse_ddq9hh","shogun_custom_html_xUHWYM"]}
+{
+  "sections": {
+    "main_portada_unicolumna_UADzLr": {
+      "type": "main-portada-unicolumna",
+      "disabled": true,
+      "settings": {
+        "altura_contenedor": 560,
+        "usar_video_fondo": false,
+        "link_video_fondo": "https:\/\/streamable.com\/l\/ybw92a\/mp4.mp4",
+        "habilitar_sonido_video": true,
+        "mostrar_switch_sonido": true,
+        "activar_filtro_video": true,
+        "grados_filtro": 180,
+        "primer_color_filtro": "#2a7b9b",
+        "opacidad_primer_color": 1,
+        "segundo_color_filtro": "#eddd53",
+        "opacidad_segundo_color": 0,
+        "imagen_fondo_desktop": "shopify:\/\/shop_images\/hero-imageback.jpg",
+        "imagen_fondo_tablet": "shopify:\/\/shop_images\/hero-imageback.jpg",
+        "imagen_fondo_mobile": "shopify:\/\/shop_images\/hero-imageback.jpg",
+        "color_fondo_contenedor": "#f5f5f5",
+        "color_contenedor": "#c9a76d",
+        "fondo_transparente": true,
+        "ancho_contenedor": 640,
+        "titulo": "Taste the Difference",
+        "clase_titulo": "Titulo-Nickson-four-h1-portada",
+        "color_titulo": "#002554",
+        "subtitulo": "Flavor from the grass up",
+        "clase_subtitulo": "Titulo-Nickson-six-h2-portada",
+        "color_subtitulo": "#9a7a4b",
+        "texto": "<p>Our delicious organic dairy is made with milk from cows grazing year-round on the lush green pastures of California's Redwood Coast.<\/p>",
+        "color_texto": "#001b3d",
+        "ocultar_botones": false,
+        "mostrar_dos_botones": true,
+        "texto_boton_1": "Shop Now →",
+        "enlace_boton_1": "https:\/\/rumianocheese.com\/pages\/products-1",
+        "color_boton_1": "#002554",
+        "color_texto_boton_1": "#ffffff",
+        "boton_1_transparente": false,
+        "texto_boton_2": "Learn more",
+        "enlace_boton_2": "https:\/\/rumianocheese.com\/pages\/about-us-2",
+        "color_boton_2": "#ffffff",
+        "color_texto_boton_2": "#002554",
+        "boton_2_transparente": false
+      }
+    },
+    "main_hero_centercontent_dEpCMe": {
+      "type": "main-hero-centercontent",
+      "name": "Hero - CenterContent",
+      "settings": {
+        "container_height": 640,
+        "container_width": 720,
+        "container_color": "#ffffff",
+        "transparent_background": true,
+        "container_width_mobile": 100,
+        "use_video_background": false,
+        "video_url": "",
+        "enable_video_sound": false,
+        "show_sound_toggle": true,
+        "background_image_desktop": "shopify:\/\/shop_images\/hero-imageback-desktop_5d094752-1c13-46cb-ad69-4f53c00ba678.jpg",
+        "background_image_tablet": "shopify:\/\/shop_images\/hero-imageback_b10c4079-e1f4-4851-ae22-9a75b7cfb836.jpg",
+        "background_image_mobile": "shopify:\/\/shop_images\/hero-imageback.jpg",
+        "background_color": "#f5f5f5",
+        "enable_gradient_overlay": false,
+        "gradient_angle": 180,
+        "gradient_color_1": "#2a7b9b",
+        "gradient_opacity_1": 1,
+        "gradient_color_2": "#eddd53",
+        "gradient_opacity_2": 0,
+        "title": "Taste the Difference",
+        "title_font": "Titulo-Nickson-four-h1-portada",
+        "title_color": "#002554",
+        "subtitle": "Flavor from the grass up",
+        "subtitle_font": "Titulo-Nickson-six-h2-portada",
+        "subtitle_color": "#9a7a4b",
+        "text": "<p>Our delicious organic dairy is made with milk from cows grazing year-round on the lush green pastures of California's Redwood Coast.<\/p>",
+        "text_color": "#002554",
+        "hide_buttons": false,
+        "show_second_button": true,
+        "button_1_text": "Shop Now →",
+        "button_1_link": "https:\/\/rumianocheese.com\/pages\/products-1",
+        "button_1_bg_color": "#002554",
+        "button_1_text_color": "#ffffff",
+        "button_1_transparent": false,
+        "button_2_text": "Learn more",
+        "button_2_link": "https:\/\/rumianocheese.com\/pages\/about-us-2",
+        "button_2_bg_color": "#ffffff",
+        "button_2_text_color": "#002554",
+        "button_2_transparent": false
+      }
+    },
+    "main_slider_logocarousel_CUh97C": {
+      "type": "main-slider-logocarousel",
+      "blocks": {
+        "logo_7C4JPA": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_WholeFoods.svg",
+            "logo_link": ""
+          }
+        },
+        "logo_CXM7V7": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_Sprouts.svg",
+            "logo_link": ""
+          }
+        },
+        "logo_B7LTXC": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_Jimbos.svg",
+            "logo_link": ""
+          }
+        },
+        "logo_UjJMdG": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_Raleys.svg",
+            "logo_link": ""
+          }
+        },
+        "logo_4Afk6a": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_NaturalGroceries.svg",
+            "logo_link": ""
+          }
+        },
+        "logo_9KfMRa": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_BristolFarms.svg",
+            "logo_link": ""
+          }
+        },
+        "logo_4dyYRj": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_MomsOrganicMarket.svg",
+            "logo_link": ""
+          }
+        },
+        "logo_4jdfKa": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_FreshThyme.svg",
+            "logo_link": ""
+          }
+        },
+        "logo_NJemww": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_LazyAcres.svg",
+            "logo_link": ""
+          }
+        },
+        "logo_KEjeDA": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_OregonsMarketOfChoice.svg",
+            "logo_link": ""
+          }
+        },
+        "logo_yJyGkp": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/StoreLogo_PCCComunityMarkets.svg",
+            "logo_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_7C4JPA",
+        "logo_CXM7V7",
+        "logo_B7LTXC",
+        "logo_UjJMdG",
+        "logo_4Afk6a",
+        "logo_9KfMRa",
+        "logo_4dyYRj",
+        "logo_4jdfKa",
+        "logo_NJemww",
+        "logo_KEjeDA",
+        "logo_yJyGkp"
+      ],
+      "name": "Infinite Logo Slider",
+      "settings": {
+        "background_color": "#002554",
+        "enable_background_image": false,
+        "title": "Find us at",
+        "title_font": "Titulo-Nickson-four-h1",
+        "title_color": "#fafbfc",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_sides": 0,
+        "logo_spacing": 8,
+        "logo_width": 15,
+        "animation_speed": 50,
+        "animation_speed_mobile": 80,
+        "pause_on_hover": false
+      }
+    },
+    "main_contenido_unicolumna_imagen_iT4M63": {
+      "type": "main-contenido-unicolumna-imagen",
+      "disabled": true,
+      "settings": {
+        "invertir_orden": false,
+        "color_fondo": "#002554",
+        "titulo": "Holiday",
+        "clase_titulo": "Titulo-Nickson-six-h1",
+        "color_titulo": "#ffffff",
+        "subtitulo": "Gift Boxes",
+        "clase_subtitulo": "Titulo-Nickson-four-h2",
+        "color_subtitulo": "#c9a76d",
+        "texto": "<p>We believe the best gifts don’t just sit on a shelf—they create moments of genuine joy. Each box includes an assortment of our finest organic treats, packed with the quality you trust and the flavors you love.<\/p>",
+        "color_texto": "#ffffff",
+        "mostrar_segundo_boton": false,
+        "texto_boton_1": "Shop Now  →",
+        "enlace_boton_1": "shopify:\/\/pages\/products-1",
+        "color_boton_1": "#c9a76d",
+        "color_texto_boton_1": "#002554",
+        "texto_boton_2": "Contacto",
+        "enlace_boton_2": "",
+        "color_boton_2": "#334fb4",
+        "color_texto_boton_2": "#ffffff",
+        "imagen_fondo": "shopify:\/\/shop_images\/Rumiano_Homepage_Gift_Boxes.png"
+      }
+    },
+    "main_coleccion_de_productos_J69zy4": {
+      "type": "main-coleccion-de-productos",
+      "settings": {
+        "background_color": "#fff9f1",
+        "titulo": "Discover Our Organic Favorites",
+        "clase_titulo": "Titulo-Nickson-six-h1",
+        "color_titulo": "#002554",
+        "texto": "<p>From classic cheddar to creamy new cheese dip, Rumiano offers flavors crafted with care for every occasion.<\/p>",
+        "color_texto": "#001b3d",
+        "ocultar_botones": false,
+        "mostrar_dos_botones": false,
+        "texto_boton_1": "See All Products  →",
+        "enlace_boton_1": "shopify:\/\/pages\/products-1",
+        "color_boton_1": "#c9a76d",
+        "color_texto_boton_1": "#002554",
+        "boton_1_transparente": false,
+        "texto_boton_2": "Contact",
+        "enlace_boton_2": "https:\/\/rumianocheese.com\/pages\/products",
+        "color_boton_2": "#002554",
+        "color_texto_boton_2": "#002554",
+        "boton_2_transparente": true,
+        "collection": "frontpage",
+        "columns": 3,
+        "rows": 1,
+        "producto-provedor": "#002554",
+        "producto-titulo": "#002554",
+        "clase_titulo_productos": "Titulo-Nickson-four-h5",
+        "producto-categoria": "#9a7a4b",
+        "color_precio_producto": "#002554",
+        "producto-peso": "#9a7a4b",
+        "color_descripcion_producto": "#666666",
+        "color_boton_ver": "#002554",
+        "color_texto_boton_ver": "#002554",
+        "boton_ver_transparente": true,
+        "ocultar_boton_ver": false,
+        "texto_boton_wheretobuy": "Where to buy",
+        "text_button_addtocart": "Add to Cart",
+        "enlace_boton_wheretobuy": "https:\/\/rumianocheese.com\/pages\/where-to-buy",
+        "color_boton_wheretobuy": "#002554",
+        "color_texto_boton_wheretobuy": "#ffffff",
+        "boton_wheretobuy_transparente": false,
+        "color_boton_agregar": "#002554",
+        "color_texto_boton_agregar": "#ffffff",
+        "boton_agregar_transparente": false,
+        "transparent_cards": true,
+        "card_background_color": "#f5f5f5"
+      }
+    },
+    "main_contenido_unicolumna_imagen_9daBnn": {
+      "type": "main-contenido-unicolumna-imagen",
+      "settings": {
+        "invertir_orden": false,
+        "color_fondo": "#002554",
+        "titulo": "THE DIFFERENCE",
+        "clase_titulo": "Titulo-Nickson-six-h1",
+        "color_titulo": "#ffffff",
+        "subtitulo": "IS DELICIOUS",
+        "clase_subtitulo": "Titulo-Nickson-four-h2",
+        "color_subtitulo": "#c9a76d",
+        "texto": "<p>Our environmentally friendly approach to cheesemaking is the difference that makes delicious, nutritious organic cheese noticeably golden yellow in color and full of flavor. <br\/>The combination of responsible farming and artisanal craftsmanship ensures every bite of Rumiano cheese bursts with rich, creamy goodness.<\/p>",
+        "color_texto": "#ffffff",
+        "mostrar_segundo_boton": false,
+        "texto_boton_1": "Learn More  →",
+        "enlace_boton_1": "https:\/\/rumianocheese.com\/pages\/about-us-2",
+        "color_boton_1": "#c9a76d",
+        "color_texto_boton_1": "#002554",
+        "texto_boton_2": "Contacto",
+        "enlace_boton_2": "",
+        "color_boton_2": "#334fb4",
+        "color_texto_boton_2": "#ffffff",
+        "imagen_fondo": "shopify:\/\/shop_images\/PostImage.png"
+      }
+    },
+    "main_blog_custom_niDgAn": {
+      "type": "main-blog-custom",
+      "settings": {
+        "background_color": "#ffffff",
+        "enable_background_image": true,
+        "titulo": "Inspiration",
+        "clase_titulo": "Titulo-Nickson-four-h1",
+        "color_titulo": "#002554",
+        "subtitulo": "for Every Occasion",
+        "clase_subtitulo": "Titulo-Nickson-six-h2",
+        "color_subtitulo": "#9a7a4b",
+        "texto": "<p>Our blog is your go-to source for creative ways to enjoy Rumiano Organic cheese. From hosting a party to preparing a quick meal, discover ideas that celebrate flavor to find your perfect dish.<\/p>",
+        "color_texto": "#001b3d",
+        "ocultar_botones": true,
+        "mostrar_dos_botones": false,
+        "texto_boton_1": "See All Entrees →",
+        "enlace_boton_1": "https:\/\/www.youtube.com\/user\/RumianoCheese",
+        "color_boton_1": "#002554",
+        "color_texto_boton_1": "#ffffff",
+        "boton_1_transparente": false,
+        "texto_boton_2": "Contact",
+        "enlace_boton_2": "",
+        "color_boton_2": "#002554",
+        "color_texto_boton_2": "#002554",
+        "boton_2_transparente": true,
+        "blog": "cheeseboard",
+        "post_limit": 3,
+        "divider_color": "#002554",
+        "transparent_cards": false,
+        "card_background_color": "#fff9f1",
+        "clase_blog_color": "#c9a76d",
+        "date_color": "#002554",
+        "title_color": "#002554",
+        "clase_titulo_blog": "Titulo-Nickson-four-h6",
+        "abstract_color": "#666666"
+      }
+    },
+    "main_contenido_marco_bznHLf": {
+      "type": "main-contenido-marco",
+      "settings": {
+        "invertir_orden": false,
+        "imagen_fondo_seccion": "shopify:\/\/shop_images\/Background-historia.png",
+        "habilitar_imagen_fondo": true,
+        "color_fondo": "#002554",
+        "titulo": "A Century of Craftsmanship",
+        "clase_titulo": "Titulo-Nickson-four-h1",
+        "color_titulo": "#002554",
+        "subtitulo": "A Future of Sustainability",
+        "clase_subtitulo": "Titulo-Nickson-six-h2",
+        "color_subtitulo": "#002554",
+        "texto": "<p>Since 1919, we’ve sourced organic milk from small family farms who have been using responsible regenerative practices for generations. Learn how those grass-fed, pasture-raised practices create happy cows and tasty cheese.<\/p>",
+        "color_texto": "#001b3d",
+        "ocultar_botones": true,
+        "mostrar_dos_botones": false,
+        "texto_boton_1": "Learn About Our Legacy  →",
+        "enlace_boton_1": "",
+        "color_boton_1": "#002554",
+        "color_texto_boton_1": "#ffffff",
+        "boton_1_transparente": false,
+        "texto_boton_2": "Contacto",
+        "enlace_boton_2": "",
+        "color_boton_2": "#002554",
+        "color_texto_boton_2": "#ffffff",
+        "boton_2_transparente": true,
+        "imagen_fondo_contenedor": "shopify:\/\/shop_images\/Back_Image.jpg",
+        "imagen_fondo_interior": "shopify:\/\/shop_images\/Group_14.png",
+        "habilitar_video_fondo": false,
+        "url_video_fondo": ""
+      }
+    },
+    "main_contenedor_titular_cuerpo_unicolumna_QxCjeQ": {
+      "type": "main-contenedor-titular-cuerpo-unicolumna",
+      "settings": {
+        "background_color": "#fff9f1",
+        "habilitar_imagen_fondo": false,
+        "imagen_fondo_seccion": "shopify:\/\/shop_images\/Imagen-fondo-home-v2.jpg",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "titulo": "Better for the Earth",
+        "clase_titulo": "Titulo-Nickson-six-h1",
+        "color_titulo": "#002554",
+        "ocultar_subtito": false,
+        "subtitulo": "Better for You",
+        "clase_subtitulo": "Titulo-Nickson-four-h2",
+        "color_subtitulo": "#002554",
+        "texto": "<p>Careful stewardship of the land and animals ensures the best grass-fed milk for organic cheese, butter and dairy that’s equally good for people and planet.<\/p>",
+        "color_texto": "#666666",
+        "ocultar_botones": true,
+        "mostrar_dos_botones": false,
+        "texto_boton_1": "Explore our impact  →",
+        "enlace_boton_1": "",
+        "color_boton_1": "#c9a76d",
+        "color_texto_boton_1": "#002554",
+        "boton_1_transparente": false,
+        "texto_boton_2": "Contact",
+        "enlace_boton_2": "",
+        "color_boton_2": "#002554",
+        "color_texto_boton_2": "#002554",
+        "boton_2_transparente": true
+      }
+    },
+    "main_contenedor_multicolumnas_bloques_UcjKXb": {
+      "type": "main-contenedor-multicolumnas-bloques",
+      "blocks": {
+        "bloque_multicolumna_TrkUp8": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/Education.img-4.png",
+            "clase_imagen": "Mediano-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "RAIN-FED GRASSSLANDS",
+            "clase_subtitulo": "Titulo-Nickson-six-h3",
+            "title_color": "#002554",
+            "text": "<p>With an average rainfall of over 100 inches a year, Northern California’s lush Redwood Coast provides cows a natural lifestyle grazing on biodiverse grasslands.<\/p>",
+            "text_color": "#001b3d"
+          }
+        },
+        "bloque_multicolumna_t4wB9P": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/Education.img-2.png",
+            "clase_imagen": "Mediano-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "Pasture-raised COWS",
+            "clase_subtitulo": "Titulo-Nickson-four-h3",
+            "title_color": "#002554",
+            "text": "<p>A thriving, healthy herd is our top priority. Our American Humane Certified cows are grass-fed year-round without the use of antibiotics or growth hormones.<\/p>",
+            "text_color": "#001b3d"
+          }
+        },
+        "bloque_multicolumna_pRyDjC": {
+          "type": "bloque_multicolumna",
+          "settings": {
+            "top_image": "shopify:\/\/shop_images\/Icon-atributo-03.png",
+            "clase_imagen": "Mediano-imagen-multicolumna",
+            "block_background_color": "#f5f5f5",
+            "transparent_background": true,
+            "title": "LOCAL FAMILY FARMS",
+            "clase_subtitulo": "Titulo-Nickson-four-h3",
+            "title_color": "#002554",
+            "text": "<p>Our local family farms that provide socially conscious care for cows are also within 100-mile radius to lower our carbon footprint and ensure fresher products.<\/p>",
+            "text_color": "#001b3d"
+          }
+        }
+      },
+      "block_order": [
+        "bloque_multicolumna_TrkUp8",
+        "bloque_multicolumna_t4wB9P",
+        "bloque_multicolumna_pRyDjC"
+      ],
+      "name": "Content-Form",
+      "settings": {
+        "background_color": "#fff9f1",
+        "enable_background_image": false,
+        "padding_top": 40,
+        "padding_sides": 20,
+        "columns_desktop": 3,
+        "column_gap": 35
+      }
+    },
+    "main_mail_suscribirse_ddq9hh": {
+      "type": "main-mail-suscribirse",
+      "settings": {
+        "invertir_orden": false,
+        "color_fondo": "#002554",
+        "titulo": "Exclusive Recipes",
+        "clase_titulo": "Titulo-Nickson-four-h1",
+        "color_titulo": "#eddec1",
+        "subtitulo": "Special Savings",
+        "clase_subtitulo": "Titulo-Nickson-six-h2",
+        "color_subtitulo": "#c9a76d",
+        "texto": "<p>Sign up for recipes, pairing tips, and eco-friendly inspiration—plus discounts on your favorite organic cheeses!<\/p>",
+        "color_texto": "#ffffff",
+        "mostrar_segundo_boton": false,
+        "texto_boton_1": "Más información",
+        "enlace_boton_1": "",
+        "color_boton_1": "#c9a76d",
+        "color_texto_boton_1": "#ffffff",
+        "texto_boton_2": "Contacto",
+        "enlace_boton_2": "",
+        "color_boton_2": "#f5f5f5",
+        "color_texto_boton_2": "#ffffff"
+      }
+    },
+    "shogun_custom_html_xUHWYM": {
+      "type": "shogun-custom-html",
+      "disabled": true,
+      "custom_css": [".contain-formhubspot {padding: 5rem;}"],
+      "settings": {
+        "html": "<div class=\"contain-formhubspot\">\n<script charset=\"utf-8\" type=\"text\/javascript\" src=\"\/\/js.hsforms.net\/forms\/embed\/v2.js\"><\/script>\n<script>\n  hbspt.forms.create({\n    portalId: \"43418765\",\n    formId: \"7d1babe2-8026-4f5d-b34d-ce813edaae6b\",\n    region: \"na1\"\n  });\n<\/script>\n\n<\/div>"
+      }
+    }
+  },
+  "order": [
+    "main_portada_unicolumna_UADzLr",
+    "main_hero_centercontent_dEpCMe",
+    "main_slider_logocarousel_CUh97C",
+    "main_contenido_unicolumna_imagen_iT4M63",
+    "main_coleccion_de_productos_J69zy4",
+    "main_contenido_unicolumna_imagen_9daBnn",
+    "main_blog_custom_niDgAn",
+    "main_contenido_marco_bznHLf",
+    "main_contenedor_titular_cuerpo_unicolumna_QxCjeQ",
+    "main_contenedor_multicolumnas_bloques_UcjKXb",
+    "main_mail_suscribirse_ddq9hh",
+    "shogun_custom_html_xUHWYM"
+  ]
+}

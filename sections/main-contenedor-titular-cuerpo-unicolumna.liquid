@@ -11,15 +11,15 @@
       "default": "#EDDEC1"
     },
     {
-          "type": "checkbox",
-          "id": "habilitar_imagen_fondo",
-          "label": "Use background image",
-          "default": false
+      "type": "checkbox",
+      "id": "habilitar_imagen_fondo",
+      "label": "Use background image",
+      "default": false
     },
     {
-          "type": "image_picker",
-          "id": "imagen_fondo_seccion",
-          "label": "Background image"
+      "type": "image_picker",
+      "id": "imagen_fondo_seccion",
+      "label": "Background image"
     },
     {
       "type": "range",
@@ -59,7 +59,7 @@
         {
           "value": "Titulo-Nickson-six-h1",
           "label": "Nickson Six"
-        }   
+        }
       ],
       "default": "Titulo-Nickson-four-h1"
     },
@@ -69,11 +69,11 @@
       "label": "Title color",
       "default": "#002554"
     },
-     {
-          "type": "checkbox",
-          "id": "ocultar_subtito",
-          "label": "Hide subtitle",
-          "default": false
+    {
+      "type": "checkbox",
+      "id": "ocultar_subtito",
+      "label": "Hide subtitle",
+      "default": false
     },
     {
       "type": "text",
@@ -93,7 +93,7 @@
         {
           "value": "Titulo-Nickson-six-h2",
           "label": "Nickson Six"
-        }   
+        }
       ],
       "default": "Titulo-Nickson-six-h2"
     },
@@ -115,11 +115,11 @@
       "label": "Color text",
       "default": "#666666"
     },
-     {
-          "type": "checkbox",
-          "id": "ocultar_botones",
-          "label": "Hide buttons",
-          "default": false
+    {
+      "type": "checkbox",
+      "id": "ocultar_botones",
+      "label": "Hide buttons",
+      "default": false
     },
     {
       "type": "checkbox",
@@ -196,51 +196,63 @@
 }
 {% endschema %}
 
-<div class="Contenedor-titular-cuerpo-unicolumna section-{{ section.id }}" style="background-color:{{ section.settings.background_color }};
-       {% if section.settings.habilitar_imagen_fondo and section.settings.imagen_fondo_seccion != blank %}
-         background-image: url('{{ section.settings.imagen_fondo_seccion | image_url }}');
-         background-size: cover;
-         background-position: center;
-       {% endif %}; padding-top: {{ section.settings.padding_top }}px;  padding-bottom: {{ section.settings.padding_bottom }}px;">
-  
-  <div class="Contenedor-interior-texto-titular-unicolumna">
-     <h1 class="{{ section.settings.clase_titulo }} titulo-class-mobile" style="color: {{ section.settings.color_titulo }};">
-    {{ section.settings.titulo }}
-  </h1>
-     {% unless section.settings.ocultar_subtito %}
-  <h2 class="{{ section.settings.clase_subtitulo }}"  style="color: {{ section.settings.color_subtitulo }};">
-    {{ section.settings.subtitulo  }}
-  </h2>
+<div
+  class='Contenedor-titular-cuerpo-unicolumna section-{{ section.id }}'
+  style='
+    background-color:{{ section.settings.background_color }};
+    {% if section.settings.habilitar_imagen_fondo and section.settings.imagen_fondo_seccion != blank %}
+      background-image: url('{{ section.settings.imagen_fondo_seccion | image_url }}');
+      background-size: cover;
+      background-position: center;
+    {% endif %}; padding-top: {{ section.settings.padding_top }}px;  padding-bottom: {{ section.settings.padding_bottom }}px;
+  '
+>
+  <div class='Contenedor-interior-texto-titular-unicolumna'>
+    <h1
+      class='{{ section.settings.clase_titulo }} titulo-class-mobile'
+      style='color: {{ section.settings.color_titulo }};'
+    >
+      {{ section.settings.titulo }}
+    </h1>
+    {% unless section.settings.ocultar_subtito %}
+      <h2 class='{{ section.settings.clase_subtitulo }}' style='color: {{ section.settings.color_subtitulo }};'>
+        {{ section.settings.subtitulo }}
+      </h2>
     {% endunless %}
-  <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">
+    <div class='Texto-Poppinds-p' style='color: {{ section.settings.color_texto }};'>
       {{ section.settings.texto }}
-  </div>
- 
-  {% unless section.settings.ocultar_botones %}
-  <div class="contenedor-titular-cuerpo-botones-unicolumna">
-    <a href="{{ section.settings.enlace_boton_1 }}" class="boton-portada"
-         style="
-           background-color: {% if section.settings.boton_1_transparente %} transparent {% else %} {{ section.settings.color_boton_1 }} {% endif %};
-           color: {{ section.settings.color_texto_boton_1 }};
-           border: 2px solid {{ section.settings.color_boton_1 }};
-         ">
-        {{ section.settings.texto_boton_1 }}
-      </a>
-      {% if section.settings.mostrar_dos_botones %}
-        <a href="{{ section.settings.enlace_boton_2 }}" class="boton-portada"
-           style="
-             background-color: {% if section.settings.boton_2_transparente %} transparent {% else %} {{ section.settings.color_boton_2 }} {% endif %};
-             color: {{ section.settings.color_texto_boton_2 }};
-             border: 2px solid {{ section.settings.color_boton_2 }};
-           ">
-          {{ section.settings.texto_boton_2 }}
+    </div>
+
+    {% unless section.settings.ocultar_botones %}
+      <div class='contenedor-titular-cuerpo-botones-unicolumna'>
+        <a
+          href='{{ section.settings.enlace_boton_1 }}'
+          class='boton-portada'
+          style='
+            background-color: {% if section.settings.boton_1_transparente %} transparent {% else %} {{ section.settings.color_boton_1 }} {% endif %};
+            color: {{ section.settings.color_texto_boton_1 }};
+            border: 2px solid {{ section.settings.color_boton_1 }};
+          '
+        >
+          {{ section.settings.texto_boton_1 }}
         </a>
-      {% endif %}
-  </div>
-  {% endunless %}
+        {% if section.settings.mostrar_dos_botones %}
+          <a
+            href='{{ section.settings.enlace_boton_2 }}'
+            class='boton-portada'
+            style='
+              background-color: {% if section.settings.boton_2_transparente %} transparent {% else %} {{ section.settings.color_boton_2 }} {% endif %};
+              color: {{ section.settings.color_texto_boton_2 }};
+              border: 2px solid {{ section.settings.color_boton_2 }};
+            '
+          >
+            {{ section.settings.texto_boton_2 }}
+          </a>
+        {% endif %}
+      </div>
+    {% endunless %}
   </div>
 </div>
 
 {%- style -%}
-
 {%- endstyle -%}

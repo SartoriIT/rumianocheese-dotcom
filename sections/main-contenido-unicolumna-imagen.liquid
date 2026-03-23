@@ -23,20 +23,20 @@
       "default": "This is a title"
     },
     {
-          "type": "select",
-           "id": "clase_titulo",
-           "label": "Font family",
-           "options": [
-             {
-               "value": "Titulo-Nickson-four-h1",
-               "label": "Nickson Four"
-             },
-             {
-               "value": "Titulo-Nickson-six-h1",
-               "label": "Nickson Six"
-             }   
-           ],
-           "default": "Titulo-Nickson-four-h1"
+      "type": "select",
+      "id": "clase_titulo",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h1",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h1",
+          "label": "Nickson Six"
+        }
+      ],
+      "default": "Titulo-Nickson-four-h1"
     },
     {
       "type": "color",
@@ -55,17 +55,17 @@
       "id": "clase_subtitulo",
       "label": "Font family",
       "options": [
-            {
-              "value": "Titulo-Nickson-four-h2",
-              "label": "Nickson Four"
-            },
-            {
-              "value": "Titulo-Nickson-six-h2",
-              "label": "Nickson Six"
-            }   
-          ],
-          "default": "Titulo-Nickson-six-h2"
-        },    
+        {
+          "value": "Titulo-Nickson-four-h2",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h2",
+          "label": "Nickson Six"
+        }
+      ],
+      "default": "Titulo-Nickson-six-h2"
+    },
     {
       "type": "color",
       "id": "color_subtitulo",
@@ -151,48 +151,56 @@
 }
 {% endschema %}
 
-
-<div class="contenido-unicolumna-imagen" 
-     style="
-       background-color: {{ section.settings.color_fondo }};
-       flex-direction: {% if section.settings.invertir_orden %}row-reverse{% else %}row{% endif %}; ">
-  <div class="contenedor-unicolumna-textodeimagen">
-    <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};">
+<div
+  class='contenido-unicolumna-imagen'
+  style='
+    background-color: {{ section.settings.color_fondo }};
+    flex-direction: {% if section.settings.invertir_orden %}row-reverse{% else %}row{% endif %};
+  '
+>
+  <div class='contenedor-unicolumna-textodeimagen'>
+    <h1 class='{{ section.settings.clase_titulo }}' style='color: {{ section.settings.color_titulo }};'>
       {{ section.settings.titulo }}
     </h1>
-    <h2 class="{{ section.settings.clase_subtitulo }}" style="color: {{ section.settings.color_subtitulo }};" class="prueba-h1">
+    <h2
+      class='{{ section.settings.clase_subtitulo }}'
+      style='color: {{ section.settings.color_subtitulo }};'
+      class='prueba-h1'
+    >
       {{ section.settings.subtitulo }}
     </h2>
-    <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">
+    <div class='Texto-Poppinds-p' style='color: {{ section.settings.color_texto }};'>
       {{ section.settings.texto }}
     </div>
-    <div class="contenedor-unicolumna-imagen-botones">
-      <a href="{{ section.settings.enlace_boton_1 }}" class="boton-portada"
-         style="background-color: {{ section.settings.color_boton_1 }}; color: {{ section.settings.color_texto_boton_1 }};">
+    <div class='contenedor-unicolumna-imagen-botones'>
+      <a
+        href='{{ section.settings.enlace_boton_1 }}'
+        class='boton-portada'
+        style='background-color: {{ section.settings.color_boton_1 }}; color: {{ section.settings.color_texto_boton_1 }};'
+      >
         {{ section.settings.texto_boton_1 }}
       </a>
       {% if section.settings.mostrar_segundo_boton %}
-        <a href="{{ section.settings.enlace_boton_2 }}" class="boton-portada"
-           style="background-color: {{ section.settings.color_boton_2 }}; color: {{ section.settings.color_texto_boton_2 }};">
+        <a
+          href='{{ section.settings.enlace_boton_2 }}'
+          class='boton-portada'
+          style='background-color: {{ section.settings.color_boton_2 }}; color: {{ section.settings.color_texto_boton_2 }};'
+        >
           {{ section.settings.texto_boton_2 }}
         </a>
       {% endif %}
     </div>
   </div>
-  <div class="contenedor-imagen"
-       style="
-         background-image: url('{% if section.settings.imagen_fondo != blank %}{{ section.settings.imagen_fondo | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Imagen-newsletter.jpg?v=1739889914{% endif %}');
-         background-size: cover;
-         background-position: center;
-         background-repeat: no-repeat;
-       ">
-  </div>
+  <div
+    class='contenedor-imagen'
+    style="
+      background-image: url('{% if section.settings.imagen_fondo != blank %}{{ section.settings.imagen_fondo | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Imagen-newsletter.jpg?v=1739889914{% endif %}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    "
+  ></div>
 </div>
 
-
-
 {% style %}
-
-  
 {% endstyle %}
-

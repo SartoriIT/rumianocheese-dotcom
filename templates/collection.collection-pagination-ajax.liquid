@@ -1,64 +1,107 @@
 {% layout none %}
 {% paginate collection.products by section.settings.productos_por_pagina %}
-<div id="productos-grid-{{ section.id }}" class="contenedor-interior-coleccion-productos" 
-     style="display: grid; grid-template-columns: repeat({{ section.settings.columns }}, 1fr); grid-gap: 20px;">
-  {% for product in collection.products %}
-    <div class="card-item-coleccion" style="background-color: {% if section.settings.transparent_cards %}transparent{% else %}{{ section.settings.card_background_color }}{% endif %};" >
-      <a href="{{ product.url }}" style="margin-bottom: 2rem;">
-         <img src="{{ product.featured_image | image_url: width: 290, height: 290 }}" alt="{{ product.title }}" class="producto-imagen">
-      </a>
-     
-      <div class="contenedor-nombre-categorias">
-        <div class="contenedor-interior-nombre-categorias">
-         <p class="producto-proveedor Titulo-Nickson-four-h6" style="margin: 0; color: {{ section.settings.producto-provedor}};">{{ product.vendor }}</p>
-         <a href="{{ product.url }}" style="cursor: pointer; text-decoration: none;">
-          <h3 class="{{ section.settings.clase_titulo_productos }}" style="color: {{ section.settings.producto-titulo}}; margin-bottom: 0 !important;">{{ product.title }}</h3> 
-         </a>  
-        <p class="producto-categoria Titulo-Nickson-six-h6" style="color: {{ section.settings.producto-categoria}}; margin: 0;">{{ product.type }}</p>
-        </div>
-         <p class="producto-precio Titulo-Nickson-four-h5" style="color: {{ section.settings.color_precio_producto }};">{{ product.price | money }}</p>
-      </div>
-      <p class="producto-descripcion Texto-Poppinds-p-pequeño-2" style="color: {{ section.settings.color_descripcion_producto }};">{{ product.description | strip_html | truncate: 60 }}</p>
-       <!-- Botones de acción -->
-      <div class="contenedor-botones-card" style="display: flex; flex-flow: row nowrap; gap: 1rem;  margin-top: 1rem; width: 100%; justify-content: flex-start;">
-
-        <!-- Botón Agregar al carrito -->
-        <form method="post" action="/cart/add">
-          <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-          <button type="submit"
-                  style="
-                    padding: calc(.4rem + 0.4vw);
-                    background-color: {% if section.settings.boton_agregar_transparente %}transparent{% else %}{{ section.settings.color_boton_agregar }}{% endif %};
-                    color: {{ section.settings.color_texto_boton_agregar }};
-                    border: 2px solid {{ section.settings.color_boton_agregar }};
-                    font-weight: 800;
-                    cursor: pointer;
-                    line-height: calc(1rem + 0.8vw);
-                    font-size: calc(0.6rem + 0.8vw) !important;" 
-            class="boton-portada">
-            Add to cart
-          </button>
-        </form>
-
-        <!-- Botón Ver Producto -->
-        {% unless section.settings.ocultar_boton_ver %}
-        <a href="{{ product.url }}" class="boton-portada"
-           style="
-             padding: calc(.4rem + 0.4vw);
-             background-color: {% if section.settings.boton_ver_transparente %}transparent{% else %}{{ section.settings.color_boton_ver }}{% endif %};
-             color: {{ section.settings.color_texto_boton_ver }};
-             border: 2px solid {{ section.settings.color_boton_ver }};
-             text-align: center;
-             text-decoration: none;
-             font-weight: 800;
-             line-height: calc(1rem + 0.8vw);
-             font-size: calc(0.6rem + 0.8vw) !important;
-           ">
-          View Product
+  <div
+    id='productos-grid-{{ section.id }}'
+    class='contenedor-interior-coleccion-productos'
+    style='display: grid; grid-template-columns: repeat({{ section.settings.columns }}, 1fr); grid-gap: 20px;'
+  >
+    {% for product in collection.products %}
+      <div
+        class='card-item-coleccion'
+        style='background-color: {% if section.settings.transparent_cards %}transparent{% else %}{{ section.settings.card_background_color }}{% endif %};'
+      >
+        <a href='{{ product.url }}' style='margin-bottom: 2rem;'>
+          <img
+            src='{{ product.featured_image | image_url: width: 290, height: 290 }}'
+            alt='{{ product.title }}'
+            class='producto-imagen'
+          >
         </a>
-        {% endunless %}
+
+        <div class='contenedor-nombre-categorias'>
+          <div class='contenedor-interior-nombre-categorias'>
+            <p
+              class='producto-proveedor Titulo-Nickson-four-h6'
+              style='margin: 0; color: {{ section.settings.producto-provedor}};'
+            >
+              {{ product.vendor }}
+            </p>
+            <a href='{{ product.url }}' style='cursor: pointer; text-decoration: none;'>
+              <h3
+                class='{{ section.settings.clase_titulo_productos }}'
+                style='color: {{ section.settings.producto-titulo}}; margin-bottom: 0 !important;'
+              >
+                {{ product.title }}
+              </h3>
+            </a>
+            <p
+              class='producto-categoria Titulo-Nickson-six-h6'
+              style='color: {{ section.settings.producto-categoria}}; margin: 0;'
+            >
+              {{ product.type }}
+            </p>
+          </div>
+          <p
+            class='producto-precio Titulo-Nickson-four-h5'
+            style='color: {{ section.settings.color_precio_producto }};'
+          >
+            {{ product.price | money }}
+          </p>
+        </div>
+        <p
+          class='producto-descripcion Texto-Poppinds-p-pequeño-2'
+          style='color: {{ section.settings.color_descripcion_producto }};'
+        >
+          {{ product.description | strip_html | truncate: 60 }}
+        </p>
+        <!-- Botones de acción -->
+        <div
+          class='contenedor-botones-card'
+          style='display: flex; flex-flow: row nowrap; gap: 1rem;  margin-top: 1rem; width: 100%; justify-content: flex-start;'
+        >
+          <!-- Botón Agregar al carrito -->
+          <form method='post' action='/cart/add'>
+            <input type='hidden' name='id' value='{{ product.variants.first.id }}'>
+            <button
+              type='submit'
+              style='
+                padding: calc(.4rem + 0.4vw);
+                background-color: {% if section.settings.boton_agregar_transparente %}transparent{% else %}{{ section.settings.color_boton_agregar }}{% endif %};
+                color: {{ section.settings.color_texto_boton_agregar }};
+                border: 2px solid {{ section.settings.color_boton_agregar }};
+                font-weight: 800;
+                cursor: pointer;
+                line-height: calc(1rem + 0.8vw);
+                font-size: calc(0.6rem + 0.8vw) !important;
+              '
+              class='boton-portada'
+            >
+              Add to cart
+            </button>
+          </form>
+
+          <!-- Botón Ver Producto -->
+          {% unless section.settings.ocultar_boton_ver %}
+            <a
+              href='{{ product.url }}'
+              class='boton-portada'
+              style='
+                padding: calc(.4rem + 0.4vw);
+                background-color: {% if section.settings.boton_ver_transparente %}transparent{% else %}{{ section.settings.color_boton_ver }}{% endif %};
+                color: {{ section.settings.color_texto_boton_ver }};
+                border: 2px solid {{ section.settings.color_boton_ver }};
+                text-align: center;
+                text-decoration: none;
+                font-weight: 800;
+                line-height: calc(1rem + 0.8vw);
+                font-size: calc(0.6rem + 0.8vw) !important;
+              '
+            >
+              View Product
+            </a>
+          {% endunless %}
+        </div>
       </div>
-    </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
 {% endpaginate %}

@@ -1,178 +1,207 @@
 {% schema %}
-  {
-    "name": "Email Imagen",
-    "tag": "section",
-    "class": "email-unicolumna-imagen",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "invertir_orden",
-        "label": "Align to the right",
-        "default": false
-      },
-      {
-        "type": "color",
-        "id": "color_fondo",
-        "label": "Background color",
-        "default": "#002554"
-      },
-      {
-        "type": "text",
-        "id": "titulo",
-        "label": "Título",
-        "default": "This is a title"
-      },
-      {
-        "type": "select",
-        "id": "clase_titulo",
-        "label": "Font family",
-        "options": [
-          {
-            "value": "Titulo-Nickson-four-h1",
-            "label": "Nickson Four"
-          }, {
-            "value": "Titulo-Nickson-six-h1",
-            "label": "Nickson Six"
-          }
-        ],
-        "default": "Titulo-Nickson-four-h1"
-      }, {
-        "type": "color",
-        "id": "color_titulo",
-        "label": "Title color",
-        "default": "#EDDEC1"
-      }, {
-        "type": "text",
-        "id": "subtitulo",
-        "label": "Subtitle",
-        "default": "This is a subtitle"
-      }, {
-        "type": "select",
-        "id": "clase_subtitulo",
-        "label": "Font family",
-        "options": [
-          {
-            "value": "Titulo-Nickson-four-h3",
-            "label": "Nickson Four"
-          }, {
-            "value": "Titulo-Nickson-six-h3",
-            "label": "Nickson Six"
-          }
-        ],
-        "default": "Titulo-Nickson-six-h3"
-      }, {
-        "type": "color",
-        "id": "color_subtitulo",
-        "label": "Color subtitle",
-        "default": "#C9A76D"
-      }, {
-        "type": "richtext",
-        "id": "texto",
-        "label": "Texto",
-        "default": "<p>This is an example of text</p>"
-      }, {
-        "type": "color",
-        "id": "color_texto",
-        "label": "Color text",
-        "default": "#FFFFFF"
-      }, {
-        "type": "checkbox",
-        "id": "mostrar_segundo_boton",
-        "label": "Show second button",
-        "default": false
-      }, {
-        "type": "text",
-        "id": "texto_boton_1",
-        "label": "Texto del Botón 1",
-        "default": "More information"
-      }, {
-        "type": "url",
-        "id": "enlace_boton_1",
-        "label": "Link button 1"
-      }, {
-        "type": "color",
-        "id": "color_boton_1",
-        "label": "Color button 1",
-        "default": "#C9A76D"
-      }, {
-        "type": "color",
-        "id": "color_texto_boton_1",
-        "label": "Text color button 1",
-        "default": "#FFFFFF"
-      }, {
-        "type": "text",
-        "id": "texto_boton_2",
-        "label": "Text button 2",
-        "default": "Contact"
-      }, {
-        "type": "url",
-        "id": "enlace_boton_2",
-        "label": "Link button 2"
-      }, {
-        "type": "color",
-        "id": "color_boton_2",
-        "label": "Color button 2",
-        "default": "#002554"
-      }, {
-        "type": "color",
-        "id": "color_texto_boton_2",
-        "label": "Text color button 2",
-        "default": "#FFFFFF"
-      }, {
-        "type": "image_picker",
-        "id": "imagen_fondo",
-        "label": "Image"
-      }
-    ],
-    "presets": [
-      {
-        "name": "Mail suscribirse",
-        "category": "Custom"
-      }
-    ]
-  }
+{
+  "name": "Email Imagen",
+  "tag": "section",
+  "class": "email-unicolumna-imagen",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "invertir_orden",
+      "label": "Align to the right",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "color_fondo",
+      "label": "Background color",
+      "default": "#002554"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "This is a title"
+    },
+    {
+      "type": "select",
+      "id": "clase_titulo",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h1",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h1",
+          "label": "Nickson Six"
+        }
+      ],
+      "default": "Titulo-Nickson-four-h1"
+    },
+    {
+      "type": "color",
+      "id": "color_titulo",
+      "label": "Title color",
+      "default": "#EDDEC1"
+    },
+    {
+      "type": "text",
+      "id": "subtitulo",
+      "label": "Subtitle",
+      "default": "This is a subtitle"
+    },
+    {
+      "type": "select",
+      "id": "clase_subtitulo",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h3",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h3",
+          "label": "Nickson Six"
+        }
+      ],
+      "default": "Titulo-Nickson-six-h3"
+    },
+    {
+      "type": "color",
+      "id": "color_subtitulo",
+      "label": "Color subtitle",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "richtext",
+      "id": "texto",
+      "label": "Texto",
+      "default": "<p>This is an example of text</p>"
+    },
+    {
+      "type": "color",
+      "id": "color_texto",
+      "label": "Color text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "mostrar_segundo_boton",
+      "label": "Show second button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "texto_boton_1",
+      "label": "Texto del Botón 1",
+      "default": "More information"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_1",
+      "label": "Link button 1"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_1",
+      "label": "Color button 1",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_1",
+      "label": "Text color button 1",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "texto_boton_2",
+      "label": "Text button 2",
+      "default": "Contact"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_2",
+      "label": "Link button 2"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_2",
+      "label": "Color button 2",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_2",
+      "label": "Text color button 2",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_fondo",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mail suscribirse",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
 
-<div class="contenido-unicolumna-imagen" style="
-       background-color: {{ section.settings.color_fondo }};
-       flex-direction: {% if section.settings.invertir_orden %}row-reverse{% else %}row{% endif %};
-     ">
-  <div class="contenedor-unicolumna-textodeimagen">
-    <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};">
+<div
+  class='contenido-unicolumna-imagen'
+  style='
+    background-color: {{ section.settings.color_fondo }};
+    flex-direction: {% if section.settings.invertir_orden %}row-reverse{% else %}row{% endif %};
+  '
+>
+  <div class='contenedor-unicolumna-textodeimagen'>
+    <h1 class='{{ section.settings.clase_titulo }}' style='color: {{ section.settings.color_titulo }};'>
       {{ section.settings.titulo }}
     </h1>
-    <h2 class="{{ section.settings.clase_subtitulo }}" style="color: {{ section.settings.color_subtitulo }};">
+    <h2 class='{{ section.settings.clase_subtitulo }}' style='color: {{ section.settings.color_subtitulo }};'>
       {{ section.settings.subtitulo }}
     </h2>
-    <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">
+    <div class='Texto-Poppinds-p' style='color: {{ section.settings.color_texto }};'>
       {{ section.settings.texto }}
     </div>
     <form
-      class="newsletter-form"
-      id="custom-newsletter-form"
-      style="margin:0;">
-      <label for="custom-email" style="color:white;">Email Address
-        <span class="asterisk">*</span>
+      class='newsletter-form'
+      id='custom-newsletter-form'
+      style='margin:0;'
+    >
+      <label for='custom-email' style='color:white;'
+        >Email Address
+        <span class='asterisk'>*</span>
       </label>
       <input
-        class="newsletter-form-input"
-        type="email"
-        id="custom-email"
-        required>
-      <p class="form-response-message" id="newsletter-message"></p>
+        class='newsletter-form-input'
+        type='email'
+        id='custom-email'
+        required
+      >
+      <p class='form-response-message' id='newsletter-message'></p>
       <button
-        class="newsletter-form-submit"
-        type="submit"
-        style="background-color:#c9a76d;color:#fff;">Subscribe</button>
+        class='newsletter-form-submit'
+        type='submit'
+        style='background-color:#c9a76d;color:#fff;'
+      >
+        Subscribe
+      </button>
     </form>
   </div>
-  <div class="contenedor-imagen" style="
-         height: 100%;
-         background-image: url('{% if section.settings.imagen_fondo != blank %}{{ section.settings.imagen_fondo | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Imagen-newsletter.jpg?v=1739889914{% endif %}');
-         background-size: cover;
-         background-position: center;
-       ">
-</div>
+  <div
+    class='contenedor-imagen'
+    style="
+      height: 100%;
+      background-image: url('{% if section.settings.imagen_fondo != blank %}{{ section.settings.imagen_fondo | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Imagen-newsletter.jpg?v=1739889914{% endif %}');
+      background-size: cover;
+      background-position: center;
+    "
+  ></div>
 </div>
 
 {% style %}
@@ -212,43 +241,42 @@
 {% endstyle %}
 
 <script>
-  document.getElementById("custom-newsletter-form").addEventListener("submit", async (e) => {
+  document.getElementById('custom-newsletter-form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const email = document.getElementById("custom-email").value;
-    const msg = document.getElementById("newsletter-message");
+    const email = document.getElementById('custom-email').value;
+    const msg = document.getElementById('newsletter-message');
 
     // Clear previous result
-    msg.textContent = "";
-    msg.style.color = "white";
+    msg.textContent = '';
+    msg.style.color = 'white';
 
     try {
-      const res = await fetch("https://jndkum9mjh.execute-api.us-west-2.amazonaws.com/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email })
+      const res = await fetch('https://jndkum9mjh.execute-api.us-west-2.amazonaws.com/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
       });
       const data = await res.json();
 
       if (res.status == 409) {
-        msg.textContent = "Email is already subscribed. Please try another email.";  
-        msg.style.color = "#6cc070";
+        msg.textContent = 'Email is already subscribed. Please try another email.';
+        msg.style.color = '#6cc070';
       } else {
-        msg.textContent = "Thank you for subscribing!";
-        msg.style.color = "#6cc070";
-        document.getElementById("custom-email").value = "";
-        setTimeout(()=> {
-          msg.textContent = "";
-        }, 3000)
+        msg.textContent = 'Thank you for subscribing!';
+        msg.style.color = '#6cc070';
+        document.getElementById('custom-email').value = '';
+        setTimeout(() => {
+          msg.textContent = '';
+        }, 3000);
       }
-      
+
       if (!res.ok) {
         throw new Error(data.message || `Request failed with status ${res.status}`);
       }
-
     } catch (err) {
-      msg.textContent = data.message || "Something went wrong. Please try again.";
-      msg.style.color = "#ff6b6b";
+      msg.textContent = data.message || 'Something went wrong. Please try again.';
+      msg.style.color = '#ff6b6b';
       console.error(err);
     }
   });

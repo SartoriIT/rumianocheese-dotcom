@@ -4,34 +4,33 @@
   "tag": "section",
   "class": "contenedor-reja",
   "settings": [
-    
-     {
+    {
       "type": "color",
       "id": "color_fondo",
       "label": "Background color",
       "default": "#002554"
     },
     {
-          "type": "select",
-           "id": "clase_titulo",
-           "label": "Font family",
-           "options": [
-             {
-               "value": "Titulo-Nickson-four-h3",
-               "label": "Nickson Four"
-             },
-             {
-               "value": "Titulo-Nickson-six-h3",
-               "label": "Nickson Six"
-             },   
-           ],
-           "default": "Titulo-Nickson-four-h3"
+      "type": "select",
+      "id": "clase_titulo",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h3",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h3",
+          "label": "Nickson Six"
+        }
+      ],
+      "default": "Titulo-Nickson-four-h3"
     },
     {
-          "type": "color",
-          "id": "color_titulo",
-          "label": "Title color",
-          "default": "#C9A76D"
+      "type": "color",
+      "id": "color_titulo",
+      "label": "Title color",
+      "default": "#C9A76D"
     },
     {
       "type": "color",
@@ -44,11 +43,11 @@
       "id": "imagen_fondo-1",
       "label": "Image"
     },
-     {
-          "type": "text",
-          "id": "titulo-1",
-          "label": "Title",
-          "default": "Family-Owned Farms"
+    {
+      "type": "text",
+      "id": "titulo-1",
+      "label": "Title",
+      "default": "Family-Owned Farms"
     },
     {
       "type": "richtext",
@@ -61,11 +60,11 @@
       "id": "imagen_fondo-2",
       "label": "Image"
     },
-     {
-          "type": "text",
-          "id": "titulo-2",
-          "label": "Title",
-          "default": "Sustainable Practices"
+    {
+      "type": "text",
+      "id": "titulo-2",
+      "label": "Title",
+      "default": "Sustainable Practices"
     },
     {
       "type": "richtext",
@@ -78,11 +77,11 @@
       "id": "imagen_fondo-3",
       "label": "Image"
     },
-     {
-          "type": "text",
-          "id": "titulo-3",
-          "label": "Title",
-          "default": "Collaboration"
+    {
+      "type": "text",
+      "id": "titulo-3",
+      "label": "Title",
+      "default": "Collaboration"
     },
     {
       "type": "richtext",
@@ -96,10 +95,10 @@
       "label": "Image"
     },
     {
-          "type": "text",
-          "id": "titulo-4",
-          "label": "Title",
-          "default": "Shared Vision"
+      "type": "text",
+      "id": "titulo-4",
+      "label": "Title",
+      "default": "Shared Vision"
     },
     {
       "type": "richtext",
@@ -107,10 +106,8 @@
       "label": "Text",
       "default": "<p>Supporting vibrant rural communities and a healthier planet.</p>"
     }
-    
- 
   ],
-  "presets": [    
+  "presets": [
     {
       "name": "Contenedor Reja"
     }
@@ -118,71 +115,88 @@
 }
 {% endschema %}
 
-<div class="contenedor-general-reja" style="background-color: {{ section.settings.color_fondo }};">
-    <div class="contenedor-interior-bloque-reja">
-       <div class="contenedor-imagen-reja"
-       style="
-         background-image: url('{% if section.settings.imagen_fondo-1 != blank %}{{ section.settings.imagen_fondo-1 | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Portada-seccicion-1.jpg?v=1742925268{% endif %}');
-         background-size: cover;
-         background-position: center;
-       ">
-       </div>
-      <div class="contenedor-texto-reja">
-         <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};"> {{ section.settings.titulo-1 }}</h1>
-         <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">{{ section.settings.texto-1 }}</div>
+<div class='contenedor-general-reja' style='background-color: {{ section.settings.color_fondo }};'>
+  <div class='contenedor-interior-bloque-reja'>
+    <div
+      class='contenedor-imagen-reja'
+      style="
+        background-image: url('{% if section.settings.imagen_fondo-1 != blank %}{{ section.settings.imagen_fondo-1 | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Portada-seccicion-1.jpg?v=1742925268{% endif %}');
+        background-size: cover;
+        background-position: center;
+      "
+    ></div>
+    <div class='contenedor-texto-reja'>
+      <h1 class='{{ section.settings.clase_titulo }}' style='color: {{ section.settings.color_titulo }};'>
+        {{ section.settings['titulo-1'] }}
+      </h1>
+      <div class='Texto-Poppinds-p' style='color: {{ section.settings.color_texto }};'>
+        {{ section.settings['texto-1'] }}
       </div>
     </div>
-    <div class="contenedor-interior-bloque-reja">
-       <div class="contenedor-imagen-reja"
-       style="
-         background-image: url('{% if section.settings.imagen_fondo-2 != blank %}{{ section.settings.imagen_fondo-2 | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Portada-seccicion-2.jpg?v=1742925293{% endif %}');
-         background-size: cover;
-         background-position: center;
-       ">
-       </div>
-      <div class="contenedor-texto-reja">
-         <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};"> {{ section.settings.titulo-2 }}</h1>
-         <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">{{ section.settings.texto-2 }}</div>
+  </div>
+  <div class='contenedor-interior-bloque-reja'>
+    <div
+      class='contenedor-imagen-reja'
+      style="
+        background-image: url('{% if section.settings.imagen_fondo-2 != blank %}{{ section.settings.imagen_fondo-2 | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Portada-seccicion-2.jpg?v=1742925293{% endif %}');
+        background-size: cover;
+        background-position: center;
+      "
+    ></div>
+    <div class='contenedor-texto-reja'>
+      <h1 class='{{ section.settings.clase_titulo }}' style='color: {{ section.settings.color_titulo }};'>
+        {{ section.settings['titulo-2'] }}
+      </h1>
+      <div class='Texto-Poppinds-p' style='color: {{ section.settings.color_texto }};'>
+        {{ section.settings['texto-2'] }}
       </div>
     </div>
-    <div class="contenedor-interior-bloque-reja">
-       <div class="contenedor-imagen-reja"
-       style="
-         background-image: url('{% if section.settings.imagen_fondo-3 != blank %}{{ section.settings.imagen_fondo-3 | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Portada-seccicion-3.jpg?v=1742925313{% endif %}');
-         background-size: cover;
-         background-position: center;
-       ">
-       </div>
-      <div class="contenedor-texto-reja">
-         <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};"> {{ section.settings.titulo-3 }}</h1>
-         <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">{{ section.settings.texto-3 }}</div>
+  </div>
+  <div class='contenedor-interior-bloque-reja'>
+    <div
+      class='contenedor-imagen-reja'
+      style="
+        background-image: url('{% if section.settings.imagen_fondo-3 != blank %}{{ section.settings.imagen_fondo-3 | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Portada-seccicion-3.jpg?v=1742925313{% endif %}');
+        background-size: cover;
+        background-position: center;
+      "
+    ></div>
+    <div class='contenedor-texto-reja'>
+      <h1 class='{{ section.settings.clase_titulo }}' style='color: {{ section.settings.color_titulo }};'>
+        {{ section.settings['titulo-3'] }}
+      </h1>
+      <div class='Texto-Poppinds-p' style='color: {{ section.settings.color_texto }};'>
+        {{ section.settings['texto-3'] }}
       </div>
     </div>
-    <div class="contenedor-interior-bloque-reja">
-       <div class="contenedor-imagen-reja"
-       style="
-         background-image: url('{% if section.settings.imagen_fondo-4 != blank %}{{ section.settings.imagen_fondo-4 | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Portada-seccicion-4.jpg?v=1742925328{% endif %}');
-         background-size: cover;
-         background-position: center;
-       ">
-       </div>
-      <div class="contenedor-texto-reja">
-         <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};"> {{ section.settings.titulo-4 }}</h1>
-         <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">{{ section.settings.texto-4 }}</div>
+  </div>
+  <div class='contenedor-interior-bloque-reja'>
+    <div
+      class='contenedor-imagen-reja'
+      style="
+        background-image: url('{% if section.settings.imagen_fondo-4 != blank %}{{ section.settings.imagen_fondo-4 | image_url }}{% else %}https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Portada-seccicion-4.jpg?v=1742925328{% endif %}');
+        background-size: cover;
+        background-position: center;
+      "
+    ></div>
+    <div class='contenedor-texto-reja'>
+      <h1 class='{{ section.settings.clase_titulo }}' style='color: {{ section.settings.color_titulo }};'>
+        {{ section.settings['titulo-4'] }}
+      </h1>
+      <div class='Texto-Poppinds-p' style='color: {{ section.settings.color_texto }};'>
+        {{ section.settings['texto-4'] }}
       </div>
     </div>
- 
-   
+  </div>
 </div>
 
 <style>
-  
   .contenedor-general-reja {
     width: 100vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: calc(2rem + 1vw);;
+    gap: calc(2rem + 1vw);
     padding: var(--Padding-bloque);
     padding-top: 7rem;
   }
@@ -191,7 +205,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    height: calc(30rem + 1vw);;
+    height: calc(30rem + 1vw);
     width: calc(43rem + 2vw);
   }
 
@@ -203,6 +217,4 @@
   .contenedor-texto-reja {
     padding: 1rem 0;
   }
-
-
 </style>

@@ -1,5 +1,3 @@
-
-
 {% schema %}
 {
   "name": "Contenedor Multicolumna",
@@ -138,10 +136,13 @@
 
 {%- unless product.tags contains section.settings.tag_ocultar -%}
   {%- if section.settings.tag_mostrar == blank or product.tags contains section.settings.tag_mostrar -%}
-    <div class="section-{{ section.id }} contenedor-multicolumna-logos" id="section-contenedor-multicolumna-{{ section.id }}" style="background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px;">
-
-      <div class="Contenedor-titulo-slider">
-        <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};">
+    <div
+      class='section-{{ section.id }} contenedor-multicolumna-logos'
+      id='section-contenedor-multicolumna-{{ section.id }}'
+      style='background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px;'
+    >
+      <div class='Contenedor-titulo-slider'>
+        <h1 class='{{ section.settings.clase_titulo }}' style='color: {{ section.settings.color_titulo }};'>
           {{ section.settings.titulo }}
         </h1>
       </div>
@@ -157,7 +158,7 @@
         endfor
       %}
 
-      <div class="contenedor-multicolumna-slider">
+      <div class='contenedor-multicolumna-slider'>
         {%- for i in (1..2) -%}
           {%- for block in section.blocks -%}
             {%- liquid
@@ -190,21 +191,26 @@
               endif
             -%}
 
-            <!-- debug: bid_handle='{{ bid_handle }}' | show_by_tag='{{ show_by_tag }}' | use_switches='{{ use_switches }}' | product_tags='{% for t in product.tags %}{{ t | handleize }}{% unless forloop.last %},{% endunless %}{% endfor %}' -->
+            <!--
+              debug: bid_handle='{{ bid_handle }}' | show_by_tag='{{ show_by_tag }}' | use_switches='{{ use_switches }}' | product_tags='{% for t in product.tags %}{{ t | handleize }}{% unless forloop.last %},{% endunless %}{% endfor %}'
+            -->
 
             <div
-              id="{{ final_id }}"
-              style="display: {% if visible %}block{% else %}none{% endif %};"
+              id='{{ final_id }}'
+              style='display: {% if visible %}block{% else %}none{% endif %};'
               {{ block.shopify_attributes }}
             >
-              <div class="bloque-multicolumna-slider-image" style="
-                background-image: url('{{ block.settings.top_image | default: 'https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Recurso_5.png?v=1739406687' | image_url }}');
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-                width: 15rem;
-                height: auto;">
-              </div>
+              <div
+                class='bloque-multicolumna-slider-image'
+                style="
+                  background-image: url('{{ block.settings.top_image | default: 'https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Recurso_5.png?v=1739406687' | image_url }}');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  width: 15rem;
+                  height: auto;
+                "
+              ></div>
             </div>
           {%- endfor -%}
         {%- endfor -%}
@@ -214,26 +220,36 @@
 {%- endunless -%}
 
 {%- style -%}
-.contenedor-multicolumna-logos { overflow: hidden; }
-.Contenedor-titulo-slider {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-.contenedor-multicolumna-slider {
-  display: flex;
-  gap: 10rem;
-  animation: scroll-left 30s linear infinite;
-  width: max-content;
-}
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.bloque-multicolumna-slider-image { aspect-ratio: 1 / 1; }
-/* Responsive */
-@media (max-width: 768px) {
-  .contenedor-multicolumna-slider { animation-duration: 120s; }
-}
+  .contenedor-multicolumna-logos {
+    overflow: hidden;
+  }
+  .Contenedor-titulo-slider {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedor-multicolumna-slider {
+    display: flex;
+    gap: 10rem;
+    animation: scroll-left 30s linear infinite;
+    width: max-content;
+  }
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .bloque-multicolumna-slider-image {
+    aspect-ratio: 1 / 1;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contenedor-multicolumna-slider {
+      animation-duration: 120s;
+    }
+  }
 {%- endstyle -%}
