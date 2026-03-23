@@ -1,0 +1,164 @@
+{% schema %}
+{
+  "name": "Contenedor Dropdown",
+  "tag": "section",
+  "class": "contenedor-dropdown",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "select",
+      "id": "font_family",
+      "label": "Font family",
+      "options": [
+        { "value": "Titulo-Nickson-four-h3", "label": "Nickson Four" },
+        { "value": "Titulo-Nickson-six-h3", "label": "Nickson Six" },
+        { "value": "Titulo-Nickson-four-h5", "label": "Nickson Four h5" },
+        { "value": "Titulo-Nickson-six-h5", "label": "Nickson Six h5" },
+        { "value": "Texto-Poppinds-p-pequeño-portada", "label": "Texto Poppinds" }
+      ],
+      "default": "Titulo-Nickson-four-h3"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+  "type": "checkbox",
+  "id": "mostrar_imagen",
+  "label": "Show background image",
+  "default": true
+},
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "range",
+      "id": "image_container_height",
+      "label": "Image container height (px)",
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "default": 400
+    }
+  ],
+  "blocks": [
+    {
+      "type": "bloque_dropdown",
+      "name": "Bloque Dropdown",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "¿Cuál es tu pregunta?"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Answer",
+          "default": "<p>Esta es la respuesta a tu pregunta.</p>"
+        },
+        {
+          "type": "color",
+          "id": "block_background_color",
+          "label": "Block Background Color",
+          "default": "#f5f5f5"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Contenedor FAQ",
+      "category": "Secciones",
+      "blocks": [
+        { "type": "bloque_dropdown" },
+        { "type": "bloque_dropdown" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<div style="display: flex; flex-flow: column nowrap; gap: 0; background-color: {{ section.settings.background_color }}">
+  <div class="contenedor-general-dropdawn-preguntas" style="display: flex; flex-direction: column; padding: 5rem;">
+  <div class="contenedor-interior-dropdawn-preguntas">
+    {% for block in section.blocks %}
+      <div class="bloque-dropdawn" style="background-color: {{ block.settings.block_background_color }};" {{ block.shopify_attributes }}>
+        <div class="bloque-dropdawn-header" onclick="toggleDropdown(this)">
+          <span class="{{ section.settings.font_family }}" style="color: {{ section.settings.text_color }};">{{ block.settings.title }}</span>
+          <span class="bloque-icono">+</span>
+        </div>
+        <div class="bloque-dropdawn-content" style="display: none; color: {{ section.settings.text_color }};">
+          {{ block.settings.content }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% if section.settings.mostrar_imagen %}
+  <div class="contenedor-general-dropdawn-imagen" style="
+    width: 100vw;
+    max-height: 700px;
+    height: {{ section.settings.image_container_height }}px;
+    background-image: url({{ section.settings.background_image | image_url }});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;">
+  </div>
+{% endif %}
+
+
+</div>
+
+<script>
+  function toggleDropdown(header) {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector('.bloque-icono');
+    const isVisible = content.style.display === 'block';
+
+    content.style.display = isVisible ? 'none' : 'block';
+    icon.textContent = isVisible ? '+' : '-';
+  }
+</script>
+
+<style>
+  .bloque-dropdawn {
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .bloque-dropdawn-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .bloque-dropdawn-content {
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .bloque-icono {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .contenedor-general-dropdawn-imagen {
+    margin-top: 3rem;
+  }
+</style>

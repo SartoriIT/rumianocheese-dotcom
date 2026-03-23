@@ -1,0 +1,131 @@
+{% schema %}
+{
+  "name": "Where to Buy - Destini",
+  "tag": "section",
+  "class": "destini-widget-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Destini Widget Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "Where to Buy",
+      "info": "Leave empty to hide title"
+    },
+    {
+      "type": "text",
+      "id": "locator_id",
+      "label": "Locator ID",
+      "default": "4660",
+      "info": "Your Destini Locator ID"
+    },
+    {
+      "type": "text",
+      "id": "alpha_code",
+      "label": "Alpha Code",
+      "default": "1234",
+      "info": "Your Destini Alpha Code"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_apo",
+      "label": "Use APO parameter",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "apo_value",
+      "label": "APO Value",
+      "default": "none",
+      "info": "Optional APO parameter (only used if checkbox above is enabled)"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "label": "Padding top (px)"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "label": "Padding bottom (px)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Where to Buy - Destini",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
+
+{%- liquid
+  assign apo_attr = ''
+  if section.settings.use_apo and section.settings.apo_value != 'none'
+    assign apo_attr = section.settings.apo_value
+  endif
+-%}
+
+<div 
+  class="destini-widget-container" 
+  style="background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px;"
+>
+  <div class="destini-widget-wrapper">
+    {%- if section.settings.section_title != blank -%}
+      <h2 class="destini-widget-title">{{ section.settings.section_title }}</h2>
+    {%- endif -%}
+    
+    <div
+      id="destini-locator-{{ section.settings.locator_id }}"
+      class="destini-locator-class"
+      data-locator-id="{{ section.settings.locator_id }}"
+      data-alpha-code="{{ section.settings.alpha_code }}"
+      data-apo="{{ apo_attr }}"
+    ></div>
+  </div>
+</div>
+
+<script src="https://lets.shop/productWidgetSnippet.js" charset="utf-8"></script>
+
+<style>
+  .destini-widget-container {
+    width: 100%;
+  }
+
+  .destini-widget-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .destini-widget-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 2rem 0;
+    color: #333;
+  }
+
+  @media screen and (max-width: 749px) {
+    .destini-widget-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+</style>

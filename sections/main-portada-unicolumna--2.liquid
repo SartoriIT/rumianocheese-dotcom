@@ -1,0 +1,462 @@
+
+
+{% schema %}
+{
+  "name": "Portada Unicolumna",
+  "tag": "section",
+  "class": "portada-unicolumna",
+  "settings": [
+    {
+      "type": "range",
+      "id": "altura_contenedor",
+      "label": "Altura del contenedor",
+      "min": 500,
+      "max": 1200,
+      "step": 10,
+      "default": 700,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "usar_video_fondo",
+      "label": "Usar video de fondo",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "link_video_fondo",
+      "label": "Enlace del video (formato mp4)"
+    },
+    {
+      "type": "checkbox",
+      "id": "habilitar_sonido_video",
+      "label": "Habilitar sonido del video",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mostrar_switch_sonido",
+      "label": "Mostrar interruptor de sonido",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "activar_filtro_video",
+      "label": "Activar filtro de degradado",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "grados_filtro",
+      "label": "Ángulo del degradado",
+      "min": 0,
+      "max": 360,
+      "step": 4,
+      "default": 180,
+      "unit": "°"
+    },
+    {
+      "type": "color",
+      "id": "primer_color_filtro",
+      "label": "Primer color del degradado",
+      "default": "#2A7B9B"
+    },
+    {
+      "type": "range",
+      "id": "opacidad_primer_color",
+      "label": "Opacidad primer color",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "segundo_color_filtro",
+      "label": "Segundo color del degradado",
+      "default": "#EDDD53"
+    },
+    {
+      "type": "range",
+      "id": "opacidad_segundo_color",
+      "label": "Opacidad segundo color",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_fondo_desktop",
+      "label": "Imagen de fondo para desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_fondo_tablet",
+      "label": "Imagen de fondo para tablet"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_fondo_mobile",
+      "label": "Imagen de fondo para móvil"
+    },
+    {
+      "type": "color",
+      "id": "color_fondo_contenedor",
+      "label": "Color de fondo",
+      "default": "#F5F5F5"
+    },
+    {
+      "type": "color",
+      "id": "color_contenedor",
+      "label": "Color del contenedor",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "checkbox",
+      "id": "fondo_transparente",
+      "label": "Contenedor transparente",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "ancho_contenedor",
+      "label": "Ancho del contenedor",
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "default": 650,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "Taste the Difference"
+    },
+    {
+      "type": "select",
+      "id": "clase_titulo",
+      "label": "Familia tipográfica",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h1-portada",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h1-portada",
+          "label": "Nickson Six"
+        }   
+      ],
+      "default": "Titulo-Nickson-four-h1-portada"
+    },
+    {
+      "type": "color",
+      "id": "color_titulo",
+      "label": "Color del título",
+      "default": "#002554"
+    },
+    {
+      "type": "text",
+      "id": "subtitulo",
+      "label": "Subtítulo",
+      "default": "Where Flavor Meets Purpose"
+    },
+    {
+      "type": "select",
+      "id": "clase_subtitulo",
+      "label": "Familia tipográfica",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h2-portada",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h2-portada",
+          "label": "Nickson Six"
+        }   
+      ],
+      "default": "Titulo-Nickson-six-h2-portada"
+    },
+    {
+      "type": "color",
+      "id": "color_subtitulo",
+      "label": "Color del subtítulo",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "richtext",
+      "id": "texto",
+      "label": "Texto",
+      "default": "<p>Discover the finest organic cheese, rooted in sustainability, crafted for your table.</p>"
+    },
+    {
+      "type": "color",
+      "id": "color_texto",
+      "label": "Color del texto",
+      "default": "#666666"
+    },
+    {
+      "type": "checkbox",
+      "id": "ocultar_botones",
+      "label": "Ocultar botones",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mostrar_dos_botones",
+      "label": "Mostrar segundo botón",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "texto_boton_1",
+      "label": "Texto botón 1",
+      "default": "Shop Now →"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_1",
+      "label": "Enlace botón 1"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_1",
+      "label": "Color botón 1",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_1",
+      "label": "Color texto botón 1",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "boton_1_transparente",
+      "label": "Botón transparente",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "texto_boton_2",
+      "label": "Texto botón 2",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_2",
+      "label": "Enlace botón 2"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_2",
+      "label": "Color botón 2",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_2",
+      "label": "Color texto botón 2",
+      "default": "#002554"
+    },
+    {
+      "type": "checkbox",
+      "id": "boton_2_transparente",
+      "label": "Botón transparente",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Portada con texto centrado",
+      "category": "Personalizado"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+<div class="contenedor-portada-unicolumna" style="height: {{ section.settings.altura_contenedor }}px;">
+  {% if section.settings.usar_video_fondo and section.settings.link_video_fondo != blank %}
+    <div class="contenedor-video-fondo">
+      <video class="video-fondo" autoplay loop playsinline {% unless section.settings.habilitar_sonido_video %}muted{% endunless %}>
+        <source src="{{ section.settings.link_video_fondo }}" type="video/mp4">
+      </video>
+      {% if section.settings.activar_filtro_video %}
+        <div class="filtro-video" style="display:block !important;"></div>
+      {% endif %}
+    </div>
+    
+    {% if section.settings.mostrar_switch_sonido %}
+      <button class="control-audio {% unless section.settings.habilitar_sonido_video %}muted{% endunless %}" aria-label="Control de audio">
+        <img src="https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Recurso_1_0a16b127-9f48-4216-990c-f107d28b2280.png?v=1748364110" class="icono-audio" alt="Sonido activado">
+        <img src="https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Recurso_1_56f6f19b-ec26-46d1-bf5a-525a16651510.png?v=1748366393" class="icono-audio-mute" alt="Sonido desactivado">
+      </button>
+    {% endif %}
+  {% else %}
+    <div class="fondo-responsive" style=" display: block;
+      {% if section.settings.emplear_color_fondo %}
+        background-color: {{ section.settings.color_fondo_contenedor }};
+      {% else %}
+        background-image: url('{% if request.device_type == 'mobile' and section.settings.imagen_fondo_mobile != blank %}
+                                {{ section.settings.imagen_fondo_mobile | image_url }}
+                              {% elsif request.device_type == 'tablet' and section.settings.imagen_fondo_tablet != blank %}
+                                {{ section.settings.imagen_fondo_tablet | image_url }}
+                              {% elsif section.settings.imagen_fondo_desktop != blank %}
+                                {{ section.settings.imagen_fondo_desktop | image_url }}
+                              {% endif %}');
+        background-size: cover;
+        background-position: center; 
+      {% endif %}
+    "></div>
+  {% endif %}
+
+  <div class="contenedor-interior-unicolumna" style="width: {{ section.settings.ancho_contenedor }}px; background-color: {% if section.settings.fondo_transparente %}transparent{% else %}{{ section.settings.color_contenedor }}{% endif %};">
+    <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};">
+      {{ section.settings.titulo }}
+    </h1>
+    <h2 class="{{ section.settings.clase_subtitulo }}" style="color: {{ section.settings.color_subtitulo }};">
+      {{ section.settings.subtitulo }}
+    </h2>
+    <div class="texto-portada" style="color: {{ section.settings.color_texto }};">
+      {{ section.settings.texto }}
+    </div>
+
+    {% unless section.settings.ocultar_botones %}
+      <div class="contenedor-botones-portada" style="display: flex; flex-flow: row wrap; gap: 4rem;">
+        <a href="{{ section.settings.enlace_boton_1 }}" class="boton-portada" style="background-color: {% if section.settings.boton_1_transparente %}transparent{% else %}{{ section.settings.color_boton_1 }}{% endif %}; color: {{ section.settings.color_texto_boton_1 }}; border: 2px solid {{ section.settings.color_boton_1 }};">
+          {{ section.settings.texto_boton_1 }}
+        </a>
+        {% if section.settings.mostrar_dos_botones %}
+          <a href="{{ section.settings.enlace_boton_2 }}" class="boton-portada" style="background-color: {% if section.settings.boton_2_transparente %}transparent{% else %}{{ section.settings.color_boton_2 }}{% endif %}; color: {{ section.settings.color_texto_boton_2 }}; border: 2px solid {{ section.settings.color_boton_2 }};">
+            {{ section.settings.texto_boton_2 }}
+          </a>
+        {% endif %}
+      </div>
+    {% endunless %}
+  </div>
+</div>
+
+<style>
+  .contenedor-portada-unicolumna {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .contenedor-video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .filtro-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+      {{ section.settings.grados_filtro }}deg,
+      {{ section.settings.primer_color_filtro | color_modify: 'alpha', section.settings.opacidad_primer_color }} 0%,
+      {{ section.settings.segundo_color_filtro | color_modify: 'alpha', section.settings.opacidad_segundo_color }} 100%
+    );
+  }
+
+  .fondo-responsive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  .contenedor-interior-unicolumna {
+    padding: 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .control-audio {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+  }
+
+  .control-audio img {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    transition: opacity 0.3s ease;
+  }
+
+  .icono-audio-mute {
+    opacity: 0;
+  }
+
+  .control-audio.muted .icono-audio {
+    opacity: 0;
+  }
+
+  .control-audio.muted .icono-audio-mute {
+    opacity: 1;
+  }
+
+  @media (max-width: 749px) {
+    .fondo-responsive {
+      background-image: url('{{ section.settings.imagen_fondo_mobile | image_url }}');
+    }
+    .contenedor-interior-unicolumna {
+      width: 90% !important;
+      padding: 20px;
+    }
+  }
+
+  @media (min-width: 750px) and (max-width: 1023px) {
+    .fondo-responsive {
+      background-image: url('{{ section.settings.imagen_fondo_tablet | image_url }}');
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .fondo-responsive {
+      background-image: url('{{ section.settings.imagen_fondo_desktop | image_url }}');
+    }
+  }
+</style>
+

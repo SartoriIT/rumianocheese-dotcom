@@ -1,0 +1,322 @@
+
+
+
+{% schema %}
+{
+  "name": "Footer Personalizado",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000B1A"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_footer",
+      "label": "Logo footer"
+    },
+    {
+      "type": "url",
+      "id": "logo-link-footer",
+      "label": "Link Rumianos"
+    },
+    {
+      "type": "richtext",
+      "id": "texto",
+      "label": "Text",
+      "default": "<p>Copyright © 2025 Rumiano | All Rights Reserved</p>"
+    },
+    {
+      "type": "color",
+      "id": "color_texto",
+      "label": "Color text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "boton_personalizado_footer_01_text",
+      "label": "Button text",
+      "default": "Clic"
+    },
+    {
+      "type": "color",
+      "id": "boton_personalizado_footer_01_background_color",
+      "label": "Button background colour",
+      "default": "#007BFF"
+    },
+    {
+      "type": "color",
+      "id": "boton_personalizado_footer_01_text_color",
+      "label": "Button text colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "url",
+      "id": "boton_personalizado_footer_01_link",
+      "label": "Link",
+      "default": "/"
+    },
+    {
+      "type": "text",
+      "id": "boton_personalizado_footer_02_text",
+      "label": "Second Button Text",
+    
+    },
+    {
+      "type": "color",
+      "id": "boton_personalizado_footer_02_background_color",
+      "label": "Second Button Background Color",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "boton_personalizado_footer_02_text_color",
+      "label": "Second Button Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "url",
+      "id": "boton_personalizado_footer_02_link",
+      "label": "Second Button Link",
+      "default": "/"
+    },
+    {
+      "type": "image_picker",
+      "id": "facebook_image",
+      "label": "Logo Facebook"
+    },
+    {
+      "type": "url",
+      "id": "facebook_link",
+      "label": "Link Facebook"
+    },
+    {
+      "type": "image_picker",
+      "id": "tiktok_image",
+      "label": "Logo TikTok"
+    },
+    {
+      "type": "url",
+      "id": "tiktok_link",
+      "label": "Link TikTok"
+    },
+    {
+      "type": "image_picker",
+      "id": "x_image",
+      "label": "Logo X"
+    },
+    {
+      "type": "url",
+      "id": "x_link",
+      "label": "Link X"
+    },
+    {
+      "type": "image_picker",
+      "id": "instagram_image",
+      "label": "Logo Instagram"
+    },
+    {
+      "type": "url",
+      "id": "instagram_link",
+      "label": "Link Instagram"
+    },
+    {
+      "type": "image_picker",
+      "id": "youtube_image",
+      "label": "Logo YouTube"
+    },
+    {
+      "type": "url",
+      "id": "youtube_link",
+      "label": "Link YouTube"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Click Here"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button Background Color",
+      "default": "#FF0000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ]
+}
+{% endschema %}
+
+
+<div class="contenedor-general-footer" style="background-color: {{ section.settings.background_color }};">
+  <div class="contenedor-interior-footer">
+    <!-- Logo -->
+    <div class="logo-footer">
+      <a href="{{ section.settings.logo-link-footer | default: '#' }}">
+        {% if section.settings.logo_footer != blank %}
+          <img src="{{ section.settings.logo_footer | image_url: width: 300 }}" alt="Logo Rumiano" loading="lazy" width="80" height="auto">
+        {% else %}
+          <img src="https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Logo_738188d4-fd89-4641-9047-0f4ef5d7ccc5.png?v=1741335893" alt="Logo Rumiano" loading="lazy" width="130" height="58">
+        {% endif %}
+      </a>
+    </div>
+
+    <!-- Contenedor Redes y botones personalizados-->
+    <div class="contenedor-redes-botones-footer">
+      <!-- Botones personalizados -->
+      <div class="contenedor-botones-personalizados-footer">
+        {% if section.settings.boton_personalizado_footer_01_text != blank and section.settings.boton_personalizado_footer_01_link != blank %}
+          <a href="{{ section.settings.boton_personalizado_footer_01_link }}" 
+             class="boton-personalizado-footer-01" 
+             style="background-color: {{ section.settings.boton_personalizado_footer_01_background_color }}; color: {{ section.settings.boton_personalizado_footer_01_text_color }}; padding: 10px 20px; text-decoration: none; display: inline-block; text-align: center;">
+            {{ section.settings.boton_personalizado_footer_01_text }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.boton_personalizado_footer_02_text != blank and section.settings.boton_personalizado_footer_02_link != blank %}
+          <a href="{{ section.settings.boton_personalizado_footer_02_link }}" 
+             class="boton-personalizado-footer-02" 
+             style="background-color: {{ section.settings.boton_personalizado_footer_02_background_color }}; color: {{ section.settings.boton_personalizado_footer_02_text_color }}; padding: 10px 20px; text-decoration: none; display: inline-block; text-align: center; margin-left: 10px;">
+            {{ section.settings.boton_personalizado_footer_02_text }}
+          </a>
+        {% endif %}
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="contenedor-logos-redes-footer">
+        {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+          <a href="{{ section.settings.button_link }}" target="_blank" rel="noopener noreferrer" class="boton-footer" style="background-color: {{ section.settings.button_background_color }}; color: {{ section.settings.button_text_color }};">
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.facebook_link != blank %}
+          <a href="{{ section.settings.facebook_link }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            {% if section.settings.facebook_image != blank %}
+              <img src="{{ section.settings.facebook_image | image_url: width: 80 }}" alt="Facebook" loading="lazy" width="30" height="auto">
+            {% else %}
+              <img src="https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Facebook_d38bf1e6-2ba8-413e-b77e-a9816498d010.png?v=1741337719" alt="Facebook" loading="lazy" width="30" height="auto">
+            {% endif %}
+          </a>
+        {% endif %}
+
+        {% if section.settings.tiktok_link != blank %}
+          <a href="{{ section.settings.tiktok_link }}" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            {% if section.settings.tiktok_image != blank %}
+              <img src="{{ section.settings.tiktok_image | image_url: width: 80 }}" alt="TikTok" loading="lazy" width="30" height="auto">
+            {% else %}
+              <img src="https://cdn.shopify.com/s/files/1/0355/3873/1067/files/SM_Tiktok.png?v=1746738254" alt="TikTok" loading="lazy" width="30" height="auto">
+            {% endif %}
+          </a>
+        {% endif %}
+
+        {% if section.settings.x_link != blank %}
+          <a href="{{ section.settings.x_link }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            {% if section.settings.x_image != blank %}
+              <img src="{{ section.settings.x_image | image_url: width: 80 }}" alt="Twitter" loading="lazy" width="30" height="auto">
+            {% else %}
+              <img src="https://cdn.shopify.com/s/files/1/0355/3873/1067/files/SM_X.png?v=1741337714" alt="Twitter" loading="lazy" width="30" height="auto">
+            {% endif %}
+          </a>
+        {% endif %}
+
+        {% if section.settings.instagram_link != blank %}
+          <a href="{{ section.settings.instagram_link }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            {% if section.settings.instagram_image != blank %}
+              <img src="{{ section.settings.instagram_image | image_url: width: 80 }}" alt="Instagram" loading="lazy" width="30" height="auto">
+            {% else %}
+              <img src="https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Instagram_50e9577d-8e10-437f-b5b7-3c16a6621392.png?v=1741337719" alt="Instagram" loading="lazy" width="30" height="auto">
+            {% endif %}
+          </a>
+        {% endif %}
+
+        {% if section.settings.youtube_link != blank %}
+          <a href="{{ section.settings.youtube_link }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            {% if section.settings.youtube_image != blank %}
+              <img src="{{ section.settings.youtube_image | image_url: width: 80 }}" alt="YouTube" loading="lazy" width="30" height="auto">
+            {% else %}
+              <img src="https://cdn.shopify.com/s/files/1/0355/3873/1067/files/YouTube_756226fd-0017-449b-951d-f187a84093ec.png?v=1745377974" alt="YouTube" loading="lazy" width="30" height="auto">
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="contenedor-interior-2-legales">
+    <!-- Texto legal -->
+    <div class="Texto-Poppinds-p-pequeño-2 contenedor-legales" style="color: {{ section.settings.color_texto }};">
+      {{ section.settings.texto }}
+    </div>
+  </div>
+</div>
+
+
+{%- style -%}
+.contenedor-general-footer {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  
+}
+
+.contenedor-interior-footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedor-logos-redes-footer {
+    display: flex;
+    gap: 1rem;
+}
+
+.contenedor-redes-botones-footer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid #002554;
+}
+  
+.contenedor-logos-redes-footer > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-footer{
+  padding: .5rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+  
+@media screen and (max-width: 874px) {
+
+ 
+
+  
+
+{%- endstyle -%}

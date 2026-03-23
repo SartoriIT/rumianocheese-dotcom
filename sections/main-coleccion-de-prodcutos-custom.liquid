@@ -1,0 +1,240 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Colección Paginada",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Productos Destacados"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Colección"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 2,
+      "max": 24,
+      "step": 1,
+      "default": 6,
+      "label": "Productos por página"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Columnas"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Colección Paginada",
+      "category": "Productos"
+    }
+  ]
+}
+{% endschema %}
+
+{% liquid
+  assign collection = section.settings.collection
+  assign products_per_page = section.settings.products_per_page
+  assign total_products = collection.products.size
+  assign total_pages = total_products | divided_by: products_per_page | ceil
+%}
+
+<div class="collection-container page-width">
+  <h2 class="h1">{{ section.settings.title }}</h2>
+  
+  <div id="product-grid-{{ section.id }}" class="product-grid grid grid--{{ section.settings.columns }}-col">
+    {% for product in collection.products limit: products_per_page %}
+      <div class="product-card">
+        <a href="{{ product.url }}">
+          <img src="{{ product.featured_image | img_url: '300x' }}" 
+               alt="{{ product.title }}" 
+               loading="lazy"
+               width="300"
+               height="{{ 300 | divided_by: product.featured_image.aspect_ratio | round }}">
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.price | money }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if total_pages > 1 %}
+    <div class="pagination-buttons">
+      <button id="prev-btn-{{ section.id }}" 
+              class="button pagination-btn" 
+              style="display: none;"
+              aria-label="Página anterior">
+        ← Anterior
+      </button>
+      
+      <button id="next-btn-{{ section.id }}" 
+              class="button pagination-btn"
+              aria-label="Página siguiente">
+        Siguiente →
+      </button>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const sectionId = '{{ section.id }}';
+  const collectionHandle = '{{ collection.handle }}';
+  const productsPerPage = {{ products_per_page }};
+  let currentPage = 1;
+
+  const productGrid = document.getElementById(`product-grid-${sectionId}`);
+  const prevBtn = document.getElementById(`prev-btn-${sectionId}`);
+  const nextBtn = document.getElementById(`next-btn-${sectionId}`);
+
+  // Función mejorada para cargar productos
+  const loadProducts = async (page) => {
+    try {
+      // Mostrar indicador de carga
+      productGrid.innerHTML = `<div class="loading-spinner" style="grid-column: 1/-1; text-align: center; padding: 2rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin">
+          <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
+        </svg>
+      </div>`;
+      
+      // Hacer la petición AJAX
+      const response = await fetch(`/collections/${collectionHandle}?page=${page}&view=ajax-pagination&section_id=${sectionId}&products_per_page=${productsPerPage}`);
+      
+      if (!response.ok) throw new Error("Error al cargar productos");
+      
+      const data = await response.text();
+      
+      // Extraer solo la parte del grid de productos
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, 'text/html');
+      const newContent = doc.getElementById(`product-grid-${sectionId}`)?.innerHTML || '';
+      
+      // Actualizar el DOM
+      productGrid.innerHTML = newContent;
+      currentPage = page;
+      
+      // Actualizar estado de los botones
+      updatePaginationButtons();
+      
+      // Desplazamiento suave
+      setTimeout(() => {
+        productGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+      
+    } catch (error) {
+      console.error("Error:", error);
+      productGrid.innerHTML = `<div class="error-message" style="grid-column: 1/-1; text-align: center; padding: 2rem; color: red;">
+        Error al cargar los productos. <button onclick="window.location.reload()">Recargar página</button>
+      </div>`;
+    }
+  };
+
+  // Verificar estado de paginación
+  const updatePaginationButtons = async () => {
+    try {
+      // Verificar si hay página siguiente
+      const testResponse = await fetch(`/collections/${collectionHandle}?page=${currentPage + 1}&view=ajax-pagination&section_id=${sectionId}&products_per_page=${productsPerPage}`);
+      const testData = await testResponse.text();
+      const parser = new DOMParser();
+      const testDoc = parser.parseFromString(testData, 'text/html');
+      const hasNextPage = testDoc.querySelector('.product-card') !== null;
+      
+      if (prevBtn) prevBtn.style.display = currentPage > 1 ? 'block' : 'none';
+      if (nextBtn) nextBtn.style.display = hasNextPage ? 'block' : 'none';
+      
+    } catch (error) {
+      console.error("Error verificando paginación:", error);
+      if (nextBtn) nextBtn.style.display = 'none';
+    }
+  };
+
+  // Event Listeners mejorados
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (currentPage > 1) {
+        loadProducts(currentPage - 1);
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      loadProducts(currentPage + 1);
+    });
+  }
+
+  // Inicializar
+  updatePaginationButtons();
+});
+</script>
+
+<style>
+  .product-grid {
+    display: grid;
+    gap: 20px;
+    margin: 30px 0;
+  }
+  
+  .product-card {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .pagination-btn {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .pagination-btn:hover {
+    background: #333;
+  }
+  
+  .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+</style>

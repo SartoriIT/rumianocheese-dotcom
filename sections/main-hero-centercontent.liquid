@@ -1,0 +1,509 @@
+{% schema %}
+{
+  "name": "Hero - CenterContent",
+  "tag": "section",
+  "class": "hero-center-content",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Container settings"
+    },
+    {
+      "type": "range",
+      "id": "container_height",
+      "label": "Container height",
+      "min": 500,
+      "max": 1200,
+      "step": 10,
+      "default": 700,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Content width",
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "default": 650,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "container_color",
+      "label": "Content background color",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "checkbox",
+      "id": "transparent_background",
+      "label": "Transparent content background",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "container_width_mobile",
+      "label": "Content width - Mobile (%)",
+      "min": 70,
+      "max": 100,
+      "step": 5,
+      "default": 90,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Background settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_video_background",
+      "label": "Use video background",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL (mp4 format)"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_sound",
+      "label": "Enable video sound",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sound_toggle",
+      "label": "Show sound toggle button",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_desktop",
+      "label": "Background image - Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_tablet",
+      "label": "Background image - Tablet"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Background image - Mobile"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color (fallback)",
+      "default": "#F5F5F5"
+    },
+    {
+      "type": "header",
+      "content": "Video gradient overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_gradient_overlay",
+      "label": "Enable gradient overlay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "gradient_angle",
+      "label": "Gradient angle",
+      "min": 0,
+      "max": 360,
+      "step": 4,
+      "default": 180,
+      "unit": "°"
+    },
+    {
+      "type": "color",
+      "id": "gradient_color_1",
+      "label": "Gradient color 1",
+      "default": "#2A7B9B"
+    },
+    {
+      "type": "range",
+      "id": "gradient_opacity_1",
+      "label": "Opacity color 1",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "gradient_color_2",
+      "label": "Gradient color 2",
+      "default": "#EDDD53"
+    },
+    {
+      "type": "range",
+      "id": "gradient_opacity_2",
+      "label": "Opacity color 2",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Taste the Difference"
+    },
+    {
+      "type": "select",
+      "id": "title_font",
+      "label": "Title font family",
+      "options": [
+        { "value": "Titulo-Nickson-four-h1-portada", "label": "Nickson Four" },
+        { "value": "Titulo-Nickson-six-h1-portada", "label": "Nickson Six" }
+      ],
+      "default": "Titulo-Nickson-four-h1-portada"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#002554"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Where Flavor Meets Purpose"
+    },
+    {
+      "type": "select",
+      "id": "subtitle_font",
+      "label": "Subtitle font family",
+      "options": [
+        { "value": "Titulo-Nickson-four-h2-portada", "label": "Nickson Four" },
+        { "value": "Titulo-Nickson-six-h2-portada", "label": "Nickson Six" }
+      ],
+      "default": "Titulo-Nickson-six-h2-portada"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle color",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Discover the finest organic cheese, rooted in sustainability, crafted for your table.</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_buttons",
+      "label": "Hide all buttons",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_second_button",
+      "label": "Show second button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Button 1 text",
+      "default": "Shop Now →"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "color",
+      "id": "button_1_bg_color",
+      "label": "Button 1 background color",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "button_1_text_color",
+      "label": "Button 1 text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_1_transparent",
+      "label": "Button 1 transparent background",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Button 2 text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Button 2 link"
+    },
+    {
+      "type": "color",
+      "id": "button_2_bg_color",
+      "label": "Button 2 background color",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "button_2_text_color",
+      "label": "Button 2 text color",
+      "default": "#002554"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_2_transparent",
+      "label": "Button 2 transparent background",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero - CenterContent",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="contenedor-portada-unicolumna" style="height: {{ section.settings.container_height }}px;">
+  {% if section.settings.use_video_background and section.settings.video_url != blank %}
+    <div class="contenedor-video-fondo">
+      <video class="video-fondo" autoplay loop playsinline {% unless section.settings.enable_video_sound %}muted{% endunless %}>
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+      {% if section.settings.enable_gradient_overlay %}
+        <div class="filtro-video" style="display:block !important;"></div>
+      {% endif %}
+    </div>
+    
+    {% if section.settings.show_sound_toggle %}
+      <button class="control-audio {% unless section.settings.enable_video_sound %}muted{% endunless %}" aria-label="Control de audio">
+        <img src="https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Recurso_1_0a16b127-9f48-4216-990c-f107d28b2280.png?v=1748364110" class="icono-audio" alt="Sonido activado" width="22" height="22">
+        <img src="https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Recurso_1_56f6f19b-ec26-46d1-bf5a-525a16651510.png?v=1748366393" class="icono-audio-mute" alt="Sonido desactivado" width="22" height="22">
+      </button>
+    {% endif %}
+  {% else %}
+    <div class="fondo-responsive" style="display: block;
+      {% if section.settings.emplear_color_fondo %}
+        background-color: {{ section.settings.background_color }};
+      {% else %}
+        background-image: url('{% if request.device_type == 'mobile' and section.settings.background_image_mobile != blank %}
+                                {{ section.settings.background_image_mobile | image_url }}
+                              {% elsif request.device_type == 'tablet' and section.settings.background_image_tablet != blank %}
+                                {{ section.settings.background_image_tablet | image_url }}
+                              {% elsif section.settings.background_image_desktop != blank %}
+                                {{ section.settings.background_image_desktop | image_url }}
+                              {% endif %}');
+        background-size: cover;
+        background-position: center bottom; 
+      {% endif %}
+    "></div>
+  {% endif %}
+
+  <div class="contenedor-interior-unicolumna" style="width: {{ section.settings.container_width }}px; background-color: {% if section.settings.transparent_background %}transparent{% else %}{{ section.settings.container_color }}{% endif %};">
+    <h1 class="{{ section.settings.title_font }}" style="color: {{ section.settings.title_color }};">
+      {{ section.settings.title }}
+    </h1>
+    <h2 class="{{ section.settings.subtitle_font }}" style="color: {{ section.settings.subtitle_color }};">
+      {{ section.settings.subtitle }}
+    </h2>
+    <div class="texto-portada" style="color: {{ section.settings.text_color }};">
+      {{ section.settings.text }}
+    </div>
+
+    {% unless section.settings.hide_buttons %}
+      <div class="contenedor-botones-portada" style="display: flex; flex-flow: row wrap; gap: 4rem;">
+        <a href="{{ section.settings.button_1_link }}" class="boton-portada" style="background-color: {% if section.settings.button_1_transparent %}transparent{% else %}{{ section.settings.button_1_bg_color }}{% endif %}; color: {{ section.settings.button_1_text_color }}; border: 2px solid {{ section.settings.button_1_bg_color }};">
+          {{ section.settings.button_1_text }}
+        </a>
+        {% if section.settings.show_second_button %}
+          <a href="{{ section.settings.button_2_link }}" class="boton-portada" style="background-color: {% if section.settings.button_2_transparent %}transparent{% else %}{{ section.settings.button_2_bg_color }}{% endif %}; color: {{ section.settings.button_2_text_color }}; border: 2px solid {{ section.settings.button_2_bg_color }};">
+            {{ section.settings.button_2_text }}
+          </a>
+        {% endif %}
+      </div>
+    {% endunless %}
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const audioControl = document.querySelector('.control-audio');
+  const videoElement = document.querySelector('.video-fondo');
+  
+  if(audioControl && videoElement) {
+    audioControl.addEventListener('click', function() {
+      this.classList.toggle('muted');
+      videoElement.muted = !videoElement.muted;
+    });
+  }
+});
+</script>
+
+
+<style>
+  .contenedor-portada-unicolumna {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .contenedor-video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    display: block !important;
+  }
+
+  .filtro-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+      {{ section.settings.gradient_angle }}deg,
+      {{ section.settings.gradient_color_1 | color_modify: 'alpha', section.settings.gradient_opacity_1 }} 0%,
+      {{ section.settings.gradient_color_2 | color_modify: 'alpha', section.settings.gradient_opacity_2 }} 100%
+    );
+  }
+
+  .fondo-responsive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center bottom;
+    z-index: 0;
+  }
+
+  .contenedor-interior-unicolumna {
+    padding: 40px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+
+  .control-audio {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .control-audio img {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    transition: opacity 0.3s ease;
+  }
+
+  .icono-audio-mute {
+    opacity: 0;
+  }
+
+  .control-audio.muted .icono-audio {
+    opacity: 0;
+  }
+
+  .control-audio.muted .icono-audio-mute {
+    opacity: 1;
+  }
+
+  @media (max-width: 749px) {
+    .fondo-responsive {
+      background-image: url('{{ section.settings.background_image_mobile | image_url }}');
+    }
+    .contenedor-interior-unicolumna {
+      width: {{ section.settings.container_width_mobile }}% !important;
+      padding: 20px;
+    }
+    .contenedor-botones-portada {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .boton-portada {
+      text-align: center;
+      width: auto;
+      min-width: 200px;
+    }
+  }
+
+  @media (min-width: 750px) and (max-width: 1023px) {
+    .fondo-responsive {
+      background-image: url('{{ section.settings.background_image_tablet | image_url }}');
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .fondo-responsive {
+      background-image: url('{{ section.settings.background_image_desktop | image_url }}');
+    }
+  }
+
+  @media (max-width: 423px) {
+    .contenedor-botones-portada{
+      gap:2rem !important;
+    }
+  }
+</style>

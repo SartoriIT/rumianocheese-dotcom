@@ -1,0 +1,478 @@
+
+
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Colección de Productos",
+  "tag": "section",
+  "class": "contenedor-coleccion-productos",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFF9F1"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Container background image"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Title",
+      "default": "Discover Our Organic Favorites"
+    },
+    {
+      "type": "select",
+      "id": "clase_titulo",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h1",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h1",
+          "label": "Nickson Six"
+        }   
+      ],
+      "default": "Titulo-Nickson-four-h1"
+    },
+    {
+      "type": "color",
+      "id": "color_titulo",
+      "label": "Title color",
+      "default": "#002554"
+    },
+    {
+      "type": "richtext",
+      "id": "texto",
+      "label": "Text",
+      "default": "<p>From creamy Havarti to tangy Cheddar, Rumiano Organic offers flavors crafted with care for every occasion.</p>"
+    },
+    {
+      "type": "color",
+      "id": "color_texto",
+      "label": "Color text",
+      "default": "#666666"
+    },
+    {
+      "type": "checkbox",
+      "id": "ocultar_botones",
+      "label": "Hide buttons",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mostrar_dos_botones",
+      "label": "Show second button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "texto_boton_1",
+      "label": "Text botton 1",
+      "default": "See All Products  →"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_1",
+      "label": "Link button 1"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_1",
+      "label": "Color botton 1",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_1",
+      "label": "Texto color botton 1",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "boton_1_transparente",
+      "label": "Make transparent button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "texto_boton_2",
+      "label": "Text button 2",
+      "default": "Contact"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_2",
+      "label": "Link botton 2"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_2",
+      "label": "Color botton 2",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_2",
+      "label": "Text color botton 2",
+      "default": "#002554"
+    },
+    {
+      "type": "checkbox",
+      "id": "boton_2_transparente",
+      "label": "Make transparent button",
+      "default": true
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select collection"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "Number of columns"
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 1,
+      "label": "Number of rows"
+    },
+
+  {
+      "type": "color",
+      "id": "producto-provedor",
+      "label": "Supplier color",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "producto-titulo",
+      "label": "Title color",
+      "default": "#002554"
+    },
+    {
+      "type": "select",
+      "id": "clase_titulo_productos",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h6",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h6",
+          "label": "Nickson Six"
+        }   
+      ],
+      "default": "Titulo-Nickson-six-h6"
+    },
+    {
+      "type": "color",
+      "id": "producto-categoria",
+      "label": "Category color",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "color",
+      "id": "color_precio_producto",
+      "label": "Price color",
+      "default": "#002554"
+    },
+    {
+  "type": "color",
+  "id": "producto-peso",
+  "label": "Weight-color",
+  "default": "#002554"  // Puedes ajustar el color por defecto según tu diseño
+    },
+    {
+      "type": "color",
+      "id": "color_descripcion_producto",
+      "label": "Color description",
+      "default": "#666666"
+    },
+
+     {
+      "type": "color",
+      "id": "color_boton_ver",
+      "label": "Button color See product",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_ver",
+      "label": "Button color see products",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "boton_ver_transparente",
+      "label": "See transparent product button",
+      "default": false
+    },
+    
+    {
+      "type": "checkbox",
+      "id": "ocultar_boton_ver",
+      "label": "Hide Add to cart and Where to buy buttons",
+      "default": false
+    },
+
+       {
+      "type": "text",
+      "id": "texto_boton_wheretobuy",
+      "label": "Text 'Where to buy' button",
+      "default": "Where to buy"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_wheretobuy",
+      "label": "Link 'Where to buy' button"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_wheretobuy",
+      "label": "Color 'Where to buy' button",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_wheretobuy",
+      "label": "Text color 'Where to buy' button",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "boton_wheretobuy_transparente",
+      "label": "Make Where to buy button transparent",
+      "default": false
+    },
+    {
+  "type": "color",
+  "id": "color_boton_agregar",
+  "label": "Color botón agregar al carrito",
+  "default": "#002554"
+},
+{
+  "type": "color",
+  "id": "color_texto_boton_agregar",
+  "label": "Color texto botón agregar",
+  "default": "#FFFFFF"
+},
+{
+  "type": "checkbox",
+  "id": "boton_agregar_transparente",
+  "label": "Make Add to cart button transparent",
+  "default": false
+},
+    {
+      "type": "checkbox",
+      "id": "transparent_cards",
+      "label": "Make transparent card",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background color",
+      "default": "#F5F5F5"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection product-2",
+      "category": "Secciones"
+    }
+  ]
+}
+{% endschema %}
+
+{% liquid
+  assign total_products = section.settings.columns | times: section.settings.rows
+%}
+
+<!-- CONTENEDOR PRINCIPAL -->
+<div class="contenedor-coleccion-productos" style="
+       {% if section.settings.background_image %}
+         background-image: url({{ section.settings.background_image | image_url }});
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+       {% else %}
+         background-color: {{ section.settings.background_color }};
+         width: 100vw;
+         padding: 3rem 3rem;
+       {% endif %}
+     ">
+   <!-- TÍTULO -->
+  <div class="contenedor-interior-coleccion-titulo">
+  <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};">
+    {{ section.settings.titulo }}
+  </h1>
+  <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">
+      {{ section.settings.texto }}
+  </div>
+
+    
+    <!-- BOTÓN -->
+    {% unless section.settings.ocultar_botones %}
+    <div class="contenedor-interior-boton-coleccion">
+       <a href="{{ section.settings.enlace_boton_1 }}" class="boton-portada"
+         style="
+           background-color: {% if section.settings.boton_1_transparente %} transparent {% else %} {{ section.settings.color_boton_1 }} {% endif %};
+           color: {{ section.settings.color_texto_boton_1 }};
+           border: 2px solid {{ section.settings.color_boton_1 }};
+         ">
+        {{ section.settings.texto_boton_1 }}
+      </a>
+      {% if section.settings.mostrar_dos_botones %}
+        <a href="{{ section.settings.enlace_boton_2 }}" class="boton-portada"
+           style="
+             background-color: {% if section.settings.boton_2_transparente %} transparent {% else %} {{ section.settings.color_boton_2 }} {% endif %};
+             color: {{ section.settings.color_texto_boton_2 }};
+             border: 2px solid {{ section.settings.color_boton_2 }};
+           ">
+          {{ section.settings.texto_boton_2 }}
+        </a>
+      {% endif %}
+    
+    </div>
+     {% endunless %}
+   </div>
+
+  <!-- PRODUCTOS -->
+  <div id="coleccion-{{ section.id }}" class="contenedor-interior-coleccion-desplazamiento-blog">
+     <div id="productos-grid-{{ section.id }}" class="contenedor-interior-coleccion-productos" style="display: grid; grid-template-columns: repeat({{ section.settings.columns }}, 1fr); grid-gap: 20px;">
+    {% for product in section.settings.collection.products limit: total_products %}
+      <div class="card-item-coleccion" style="background-color: {% if section.settings.transparent_cards %}transparent{% else %}{{ section.settings.card_background_color }}{% endif %};" >
+        <a href="{{ product.url }}" style="margin-bottom: 2rem;">
+           <img src="{{ product.featured_image | image_url: width: 290, height: 290 }}" alt="{{ product.title }}" class="producto-imagen">
+        </a>
+       
+       <div class="contenedor-nombre-categorias">
+              <div class="contenedor-interior-nombre-categorias">
+                <p class="producto-proveedor Titulo-Nickson-four-h6" style="margin: 0; color: {{ section.settings.producto-provedor}};">
+                   {{ product.vendor }}
+                </p>
+                <p class="producto-precio Titulo-Nickson-four-h5" style="color: {{ section.settings.color_precio_producto }}; margin-bottom: 0;">{{ product.price | money }}</p>
+
+              </div>
+              <a href="{{ product.url }}" style="cursor: pointer; text-decoration: none;">
+                <h3 class="{{ section.settings.clase_titulo_productos }} Titulo-Nickson-four-h5" style="color: {{ section.settings.producto-titulo}}; margin-bottom: 0 !important;">{{ product.title }}</h3> 
+              </a>
+              <div class="contenedor-interior-peso-categorías" style="display: flex; flex-flow: row nowrap; gap: 1rem;">
+                  <p class="producto-peso Titulo-Nickson-six-h6" style="margin: 0; color: {{ section.settings.producto-peso}};">
+                   {{ product.metafields.product_info.net_weight.value }}
+                  {{ product.metafields.product_info.net_weight.unit }}  
+                 </p>
+                 <p class="producto-categoria Titulo-Nickson-six-h6" style="color: {{ section.settings.producto-categoria}}; margin: 0;">{{ product.type }}</p>
+              </div>
+        </div>
+
+        <p class="producto-descripcion Texto-Poppinds-p-pequeño-2" style="color: {{ section.settings.color_descripcion_producto }};">{{ product.description | strip_html | truncate: 60 }}</p>
+
+
+
+
+        <div class="contenedor-botones-card" style="display: flex; flex-flow: row nowrap; gap: 1rem; margin-top: 1rem; width: 100%; justify-content: flex-start;">
+
+  <!-- Botón Where to buy (se muestra por defecto, excepto si el producto tiene la etiqueta store-only y hay stock) -->
+  {% unless product.tags contains 'store-only' and product.available %}
+    <a href="{{ section.settings.enlace_boton_wheretobuy }}" class="boton-portada"
+       style="
+         padding: calc(.4rem + 0.4vw);
+         background-color: {% if section.settings.boton_wheretobuy_transparente %}transparent{% else %}{{ section.settings.color_boton_wheretobuy }}{% endif %};
+         color: {{ section.settings.color_texto_boton_wheretobuy }};
+         border: 2px solid {{ section.settings.color_boton_wheretobuy }};
+         text-align: center;
+         text-decoration: none;
+         font-weight: 800;
+         line-height: calc(1rem + 0.8vw);
+         font-size: calc(0.6rem + 0.8vw) !important;
+       ">
+      {{ section.settings.texto_boton_wheretobuy }}
+    </a>
+  {% endunless %}
+
+  <!-- Botón Add to cart (solo para store-only y si hay stock disponible) -->
+  {% if product.tags contains 'store-only' and product.available %}
+    <form method="post" action="/cart/add">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+      <button type="submit"
+              style="
+                padding: calc(.4rem + 0.4vw);
+                background-color: {% if section.settings.boton_agregar_transparente %}transparent{% else %}{{ section.settings.color_boton_agregar }}{% endif %};
+                color: {{ section.settings.color_texto_boton_agregar }};
+                border: 2px solid {{ section.settings.color_boton_agregar }};
+                font-weight: 800;
+                cursor: pointer;
+                line-height: calc(1rem + 0.8vw);
+                font-size: calc(0.6rem + 0.8vw) !important;" 
+              class="boton-portada">
+        Add to cart
+      </button>
+    </form>
+  {% endif %}
+
+  <!-- Botón View Product (siempre visible) -->
+  {% unless section.settings.ocultar_boton_ver %}
+    <a href="{{ product.url }}" class="boton-portada"
+       style="
+         padding: calc(.4rem + 0.4vw);
+         background-color: {% if section.settings.boton_ver_transparente %}transparent{% else %}{{ section.settings.color_boton_ver }}{% endif %};
+         color: {{ section.settings.color_texto_boton_ver }};
+         border: 2px solid {{ section.settings.color_boton_ver }};
+         text-align: center;
+         text-decoration: none;
+         font-weight: 800;
+         line-height: calc(1rem + 0.8vw);
+         font-size: calc(0.6rem + 0.8vw) !important;
+       ">
+      View Product
+    </a>
+  {% endunless %}
+
+</div>
+
+
+
+        
+      </div>
+      
+    {% endfor %}
+    </div> 
+  </div> 
+</div>
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function () {
+    const grid = document.querySelector('#productos-grid-{{ section.id }}');
+    
+    if (grid) {
+      // Aquí puedes aplicar scroll horizontal, swiper u otra lógica específica
+      console.log('Colección cargada para sección {{ section.id }}');
+    }
+  });
+{% endjavascript %}
+
+{%- style -%}
+
+  
+{%- endstyle -%}

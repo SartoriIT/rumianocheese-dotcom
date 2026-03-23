@@ -1,0 +1,18 @@
+{% layout none %}
+{% paginate collection.products by products_per_page %}
+<div id="product-grid-{{ section.id }}" class="product-grid grid grid--{{ section.settings.columns }}-col">
+  {% for product in collection.products %}
+    <div class="product-card">
+      <a href="{{ product.url }}">
+        <img src="{{ product.featured_image | img_url: '300x' }}" 
+             alt="{{ product.title }}" 
+             loading="lazy"
+             width="300"
+             height="{{ 300 | divided_by: product.featured_image.aspect_ratio | round }}">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.price | money }}</p>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+{% endpaginate %}

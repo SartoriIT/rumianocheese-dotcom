@@ -1,0 +1,246 @@
+{% schema %}
+{
+  "name": "Titular Cuerpo Unicolumna",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#EDDEC1"
+    },
+    {
+          "type": "checkbox",
+          "id": "habilitar_imagen_fondo",
+          "label": "Use background image",
+          "default": false
+    },
+    {
+          "type": "image_picker",
+          "id": "imagen_fondo_seccion",
+          "label": "Background image"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "Better for the Earth"
+    },
+    {
+      "type": "select",
+      "id": "clase_titulo",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h1",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h1",
+          "label": "Nickson Six"
+        }   
+      ],
+      "default": "Titulo-Nickson-four-h1"
+    },
+    {
+      "type": "color",
+      "id": "color_titulo",
+      "label": "Title color",
+      "default": "#002554"
+    },
+     {
+          "type": "checkbox",
+          "id": "ocultar_subtito",
+          "label": "Hide subtitle",
+          "default": false
+    },
+    {
+      "type": "text",
+      "id": "subtitulo",
+      "label": "Subtítulo",
+      "default": "Better for You"
+    },
+    {
+      "type": "select",
+      "id": "clase_subtitulo",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h2",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h2",
+          "label": "Nickson Six"
+        }   
+      ],
+      "default": "Titulo-Nickson-six-h2"
+    },
+    {
+      "type": "color",
+      "id": "color_subtitulo",
+      "label": "Subtitle color",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "richtext",
+      "id": "texto",
+      "label": "Text",
+      "default": "<p>Our 100% grass-fed, pasture-raised practices create happier cows and healthier cheese. See how we’re reimagining organic farming.</p>"
+    },
+    {
+      "type": "color",
+      "id": "color_texto",
+      "label": "Color text",
+      "default": "#666666"
+    },
+     {
+          "type": "checkbox",
+          "id": "ocultar_botones",
+          "label": "Hide buttons",
+          "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mostrar_dos_botones",
+      "label": "Show second button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "texto_boton_1",
+      "label": "Text botton 1",
+      "default": "Explore our impact  →"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_1",
+      "label": "Link button 1"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_1",
+      "label": "Color botton 1",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_1",
+      "label": "Texto color botton 1",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "boton_1_transparente",
+      "label": "Make transparent button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "texto_boton_2",
+      "label": "Texto botton 2",
+      "default": "Contact"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_2",
+      "label": "Link botton 2"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_2",
+      "label": "Color botton 2",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_2",
+      "label": "Texto color botton 2",
+      "default": "#002554"
+    },
+    {
+      "type": "checkbox",
+      "id": "boton_2_transparente",
+      "label": "Make transparent button",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Container body single column title",
+      "category": "Secciones",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
+
+<div class="Contenedor-titular-cuerpo-unicolumna section-{{ section.id }}" style="background-color:{{ section.settings.background_color }};
+       {% if section.settings.habilitar_imagen_fondo and section.settings.imagen_fondo_seccion != blank %}
+         background-image: url('{{ section.settings.imagen_fondo_seccion | image_url }}');
+         background-size: cover;
+         background-position: center;
+       {% endif %}; padding-top: {{ section.settings.padding_top }}px;  padding-bottom: {{ section.settings.padding_bottom }}px;">
+  
+  <div class="Contenedor-interior-texto-titular-unicolumna">
+     <h1 class="{{ section.settings.clase_titulo }} titulo-class-mobile" style="color: {{ section.settings.color_titulo }};">
+    {{ section.settings.titulo }}
+  </h1>
+     {% unless section.settings.ocultar_subtito %}
+  <h2 class="{{ section.settings.clase_subtitulo }}"  style="color: {{ section.settings.color_subtitulo }};">
+    {{ section.settings.subtitulo  }}
+  </h2>
+    {% endunless %}
+  <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">
+      {{ section.settings.texto }}
+  </div>
+ 
+  {% unless section.settings.ocultar_botones %}
+  <div class="contenedor-titular-cuerpo-botones-unicolumna">
+    <a href="{{ section.settings.enlace_boton_1 }}" class="boton-portada"
+         style="
+           background-color: {% if section.settings.boton_1_transparente %} transparent {% else %} {{ section.settings.color_boton_1 }} {% endif %};
+           color: {{ section.settings.color_texto_boton_1 }};
+           border: 2px solid {{ section.settings.color_boton_1 }};
+         ">
+        {{ section.settings.texto_boton_1 }}
+      </a>
+      {% if section.settings.mostrar_dos_botones %}
+        <a href="{{ section.settings.enlace_boton_2 }}" class="boton-portada"
+           style="
+             background-color: {% if section.settings.boton_2_transparente %} transparent {% else %} {{ section.settings.color_boton_2 }} {% endif %};
+             color: {{ section.settings.color_texto_boton_2 }};
+             border: 2px solid {{ section.settings.color_boton_2 }};
+           ">
+          {{ section.settings.texto_boton_2 }}
+        </a>
+      {% endif %}
+  </div>
+  {% endunless %}
+  </div>
+</div>
+
+{%- style -%}
+
+{%- endstyle -%}

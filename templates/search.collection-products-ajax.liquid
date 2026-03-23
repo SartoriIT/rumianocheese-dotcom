@@ -1,0 +1,40 @@
+
+{% layout none %}
+{% paginate search.results by productos_por_pagina %}
+<div class="grid" style="display: grid; grid-template-columns: repeat({{ section.settings.columns | default: 3 }}, 1fr); grid-gap: 20px;">
+  {% for product in search.results %}
+    <div class="card-item-coleccion" style="background-color: {% if section.settings.transparent_cards %}transparent{% else %}{{ section.settings.card_background_color }}{% endif %};">
+      <a href="{{ product.url }}" style="margin-bottom: 2rem;">
+        <img src="{{ product.featured_image | image_url: width: 290 }}" alt="{{ product.title }}" class="producto-imagen" loading="lazy">
+      </a>
+      
+      <div class="contenedor-nombre-categorias">
+        <div class="contenedor-interior-nombre-categorias">
+          <p class="producto-proveedor" style="margin: 0; color: {{ section.settings.producto-provedor}};">{{ product.vendor }}</p>
+          <a href="{{ product.url }}" style="cursor: pointer; text-decoration: none;">
+            <h3 style="color: {{ section.settings.producto-titulo}}; margin-bottom: 0 !important;">{{ product.title }}</h3> 
+          </a>  
+          <p class="producto-categoria" style="color: {{ section.settings.producto-categoria}}; margin: 0;">{{ product.type }}</p>
+        </div>
+        <p class="producto-precio" style="color: {{ section.settings.color_precio_producto }};">{{ product.price | money }}</p>
+      </div>
+      <p class="producto-descripcion" style="color: {{ section.settings.color_descripcion_producto }};">{{ product.description | strip_html | truncate: 60 }}</p>
+      
+      <div class="contenedor-botones-card" style="display: flex; flex-flow: row nowrap; gap: 1rem; margin-top: 1rem; width: 100%; justify-content: flex-start;">
+        <form method="post" action="/cart/add">
+          <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+          <button type="submit" class="boton-portada">
+            Add to cart
+          </button>
+        </form>
+        
+        {% unless section.settings.ocultar_boton_ver %}
+        <a href="{{ product.url }}" class="boton-portada">
+          View Product
+        </a>
+        {% endunless %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endpaginate %}

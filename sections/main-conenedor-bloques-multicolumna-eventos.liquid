@@ -1,0 +1,334 @@
+{% schema %}
+{
+  "name": "Contenedor Multicolumna",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#EDDEC1"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_background_image",
+      "label": "Use solid background image",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "label": "Padding top"
+    },
+    {
+      "type": "range",
+      "id": "padding_sides",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "label": "Lateral spaces"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Columns in desktop version"
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 35,
+      "label": "Column spacing"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "bloque_multicolumna",
+      "name": "Bloque Multicolumna",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "top_image",
+          "label": "Image"
+        },
+         {
+      "type": "select",
+      "id": "clase_imagen",
+      "label": "Image size",
+      "options": [
+        {
+          "value": "Pequeño-imagen-multicolumna",
+          "label": "Small"
+        },
+        {
+          "value": "Mediano-imagen-multicolumna",
+          "label": "Medium"
+        },
+        {
+          "value": "Grande-imagen-multicolumna",
+          "label": "Big"
+        }   
+      ],
+      "default": "Mediano-imagen-multicolumna"
+    },
+        {
+          "type": "color",
+          "id": "block_background_color",
+          "label": "Color de fondo del bloque",
+          "default": "#f5f5f5"
+        },
+        {
+          "type": "checkbox",
+          "id": "transparent_background",
+          "label": "Hacer fondo transparente",
+          "default": true
+        },
+         {
+          "type": "text",
+          "id": "title_date_event",
+          "label": "Título",
+          "default": "Title"
+        },
+         {
+      "type": "select",
+      "id": "clase_date_event",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h3",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h3",
+          "label": "Nickson Six"
+        }   
+      ],
+      "default": "Titulo-Nickson-four-h3"
+    },
+        {
+          "type": "color",
+          "id": "title_color_date_event",
+          "label": "Color del título",
+          "default": "#002554"
+        },
+
+
+        
+        {
+          "type": "text",
+          "id": "title_bloque",
+          "label": "Subtitle",
+          "default": "Title"
+        },
+         {
+      "type": "select",
+      "id": "clase_title_bloque",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h3",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h3",
+          "label": "Nickson Six"
+        }   
+      ],
+      "default": "Titulo-Nickson-four-h3"
+    },
+        {
+          "type": "color",
+          "id": "title_color_bloque",
+          "label": "Color del título",
+          "default": "#002554"
+        },
+
+                 {
+          "type": "text",
+          "id": "subtitulo_bloque",
+          "label": "Título_bloque",
+          "default": "Title"
+        },
+         {
+      "type": "select",
+      "id": "clase_subtitulo_bloque",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h3",
+          "label": "Nickson Four"
+        },
+        {
+          "value": "Titulo-Nickson-six-h3",
+          "label": "Nickson Six"
+        }   
+      ],
+      "default": "Titulo-Nickson-four-h3"
+    },
+        {
+          "type": "color",
+          "id": "subtitulo_color_bloque",
+          "label": "Color del título",
+          "default": "#002554"
+        },
+   
+
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Texto",
+          "default": "<p>Our 100% grass-fed practices ensure the highest nutritional value and exceptional taste.</p>"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Color del texto",
+          "default": "#333333"
+        },
+        {
+  "type": "checkbox",
+  "id": "mostrar_boton",
+  "label": "Show button",
+  "default": true
+},
+{
+  "type": "text",
+  "id": "texto_boton",
+  "label": "Botton text",
+  "default": "Text"
+},
+{
+  "type": "url",
+  "id": "enlace_boton",
+  "label": "Button link"
+},
+{
+  "type": "color",
+  "id": "color_boton",
+  "label": "Button color",
+  "default": "#002554"
+}
+       
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Multicolumn Global Container Events",
+      "category": "Secciones",
+      "blocks": [
+        {
+          "type": "bloque_multicolumna"
+        },
+        {
+          "type": "bloque_multicolumna"
+        },
+        {
+          "type": "bloque_multicolumna"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
+
+<div class="section-{{ section.id }} contenedor-multicolumna-logos" id="section-contenedor-multicolumna-{{ section.id }}" style="background-color: {{ section.settings.background_color }};  padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px;">
+  <div class="contenedor-multicolumna" style=" display: grid; gap: {{ section.settings.column_gap }}px;"
+   >
+    {%- for block in section.blocks -%}
+      <div 
+        class="bloque-multicolumna" 
+        style="background-color: {% if block.settings.transparent_background %}transparent{% else %}{{ block.settings.block_background_color }}{% endif %};" 
+        {{ block.shopify_attributes }}>
+        {%- if block.settings.top_image != blank -%}
+        <div class="bloque-multicolumna-top-image">
+        <img class="{{ block.settings.clase_imagen }}" src="{{ block.settings.top_image | default: 'https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Icon-atributo-02.png?v=1739423460' | image_url: width: 1900 }}" 
+     alt="Image block" style="width: 100%;">
+        </div>
+
+        {%- endif -%}
+        {%- if block.settings.title_date_event != blank -%}
+          <h3 class="{{ block.settings.clase_date_event }}" style="color: {{ block.settings.title_color_date_event }};">
+            {{ block.settings.title_date_event }}
+          </h3>
+        {%- endif -%}
+        {%- if block.settings.title_bloque != blank -%}
+          <h3 class="{{ block.settings.clase_title_bloque }}" style="color: {{ block.settings.title_color_bloque }};">
+            {{ block.settings.title_bloque }}
+          </h3>
+            {%- endif -%}
+        {%- if block.settings.subtitulo_bloque != blank -%}
+          <h4 class="{{ block.settings.clase_subtitulo_bloque }}" style="color: {{ block.settings.subtitulo_color_bloque }};">
+            {{ block.settings.subtitulo_bloque }}
+          </h4>
+        {%- endif -%}
+      
+     
+        {%- if block.settings.text != blank -%}
+           
+          <div class="Texto-Poppinds-p-pequeño-2" style="color: {{ block.settings.text_color }};">
+            {{ block.settings.text }}
+          </div>
+        {%- endif -%}
+      {%- if block.settings.mostrar_boton -%}
+  <div class="boton-multicolumna" style="margin-top: 1rem;">
+    <a href="{{ block.settings.enlace_boton }}" 
+       class="boton-generico"
+       style="background-color: {{ block.settings.color_boton }}; color: white; padding: 0.5rem 1rem; text-decoration: none; display: inline-block;">
+      {{ block.settings.texto_boton }}
+    </a>
+  </div>
+{%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{%- style -%}
+  
+.contenedor-multicolumna {
+    display: grid;
+    gap: {{ section.settings.column_gap }}px;
+    grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+}
+
+/* 900px - 613px → 3 columnas */
+@media (max-width: 900px) and (min-width: 613px) {
+  .contenedor-multicolumna {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ≤ 612px → 1 columna */
+@media (max-width: 612px) {
+  .contenedor-multicolumna {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #section-contenedor-multicolumna-template--15729704534075__main_contenedor_multicolumnas_bloques_UcjKXb {
+    padding: 4rem 4rem !important;
+  }
+}
+
+{%- endstyle -%}

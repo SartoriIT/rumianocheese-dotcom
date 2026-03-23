@@ -1,0 +1,48 @@
+
+
+{% schema %}
+{
+  "name": "Política de Privacidad",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo del contenedor",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color de la tipografía del texto",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Tamaño del texto (px)",
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "richtext",
+      "id": "privacy_text_area",
+      "label": "Texto de la Política de Privacidad",
+      "default": "<p>Aquí puedes agregar tu texto de política de privacidad.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Política de Privacidad",
+      "category": "Contenido"
+    }
+  ]
+}
+{% endschema %}
+
+<div id="content-privacy-policy" style="background-color: {{ settings.background_color }}; padding: 20px;">
+  <div id="content-inter-privacy" style="color: {{ settings.text_color }}; font-size: {{ settings.font_size }}px;">
+    {{ settings.privacy_text_area | richtext }}
+  </div>
+</div>

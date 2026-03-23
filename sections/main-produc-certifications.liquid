@@ -1,0 +1,284 @@
+{% schema %}
+{
+  "name": "Product Certifications",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section title",
+      "default": "Certifications",
+      "info": "Leave empty to hide title"
+    },
+    {
+      "type": "select",
+      "id": "title_font",
+      "label": "Title font family",
+      "options": [
+        { "value": "Titulo-Nickson-four-h1", "label": "Nickson Four" },
+        { "value": "Titulo-Nickson-six-h1", "label": "Nickson Six" }
+      ],
+      "default": "Titulo-Nickson-four-h1"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "label": "Padding top (px)"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "label": "Padding bottom (px)"
+    },
+    {
+      "type": "range",
+      "id": "padding_sides",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "label": "Padding sides (px)"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "logo_size",
+      "min": 60,
+      "max": 200,
+      "step": 10,
+      "default": 120,
+      "label": "Logo size (px)"
+    },
+    {
+      "type": "range",
+      "id": "logo_spacing",
+      "min": 20,
+      "max": 80,
+      "step": 10,
+      "default": 40,
+      "label": "Space between logos (px)"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4,
+      "label": "Columns - Desktop"
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 2,
+      "label": "Columns - Mobile"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "certification",
+      "name": "Certification",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Certification logo"
+        },
+        {
+          "type": "text",
+          "id": "certification_id",
+          "label": "Certification ID",
+          "info": "Must match the ID in product metafield (e.g., usda-organic, non-gmo). Use lowercase and hyphens."
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt text",
+          "info": "Description for accessibility (e.g., USDA Organic Certified)"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Product Certifications",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
+
+{%- liquid
+  assign product_certifications = product.metafields.product.certifications.value
+  assign has_certifications = false
+  
+  if product_certifications and product_certifications.size > 0
+    for cert_id in product_certifications
+      assign normalized_cert = cert_id | strip | handleize
+      for block in section.blocks
+        assign block_id = block.settings.certification_id | strip | handleize
+        if normalized_cert == block_id and block.settings.logo != blank
+          assign has_certifications = true
+          break
+        endif
+      endfor
+      if has_certifications
+        break
+      endif
+    endfor
+  endif
+-%}
+
+{%- if has_certifications -%}
+  <div 
+    class="certifications-section section-{{ section.id }}" 
+    style="background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px {{ section.settings.padding_bottom }}px;"
+  >
+    <div class="certifications-container">
+      {%- if section.settings.title != blank -%}
+        <div class="certifications-title-wrapper">
+          <h2 
+            class="{{ section.settings.title_font }}" 
+            style="color: {{ section.settings.title_color }};"
+          >
+            {{ section.settings.title }}
+          </h2>
+        </div>
+      {%- endif -%}
+
+      <div class="certifications-grid">
+        {%- for cert_id in product_certifications -%}
+          {%- assign normalized_cert = cert_id | strip | handleize -%}
+          
+          {%- for block in section.blocks -%}
+            {%- assign block_id = block.settings.certification_id | strip | handleize -%}
+            
+            {%- if normalized_cert == block_id and block.settings.logo != blank -%}
+              <div class="certification-item" {{ block.shopify_attributes }}>
+                {{
+                  block.settings.logo
+                  | image_url: width: 400
+                  | image_tag: 
+                    class: 'certification-logo',
+                    alt: block.settings.alt_text | default: block.settings.certification_id,
+                    loading: 'lazy'
+                }}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+<style>
+  .certifications-section {
+    width: 100%;
+  }
+
+  .certifications-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .certifications-title-wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .certifications-title-wrapper h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+    gap: {{ section.settings.logo_spacing }}px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .certification-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: {{ section.settings.logo_size }}px;
+  }
+
+  .certification-logo {
+    max-width: {{ section.settings.logo_size }}px;
+    max-height: {{ section.settings.logo_size }}px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Tablet */
+  @media screen and (max-width: 989px) {
+    .certifications-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 749px) {
+    .certifications-grid {
+      grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+      gap: calc({{ section.settings.logo_spacing }}px * 0.75);
+    }
+
+    .certification-item {
+      height: calc({{ section.settings.logo_size }}px * 0.8);
+    }
+
+    .certification-logo {
+      max-width: calc({{ section.settings.logo_size }}px * 0.8);
+      max-height: calc({{ section.settings.logo_size }}px * 0.8);
+    }
+
+    .certifications-title-wrapper h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

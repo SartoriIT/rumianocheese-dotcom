@@ -1,0 +1,274 @@
+{% schema %}
+{
+  "name": "Portada Lateral",
+  "tag": "section",
+  "class": "portada-unicolumna-lateral",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "alinear_derecha",
+      "label": "Align to the right",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_fondo",
+      "label": "Background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "usar_color_fondo",
+      "label": "Use solid background color",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "color_fondo",
+      "label": "Background color",
+      "default": "#F5F5F5"
+    },
+    {
+      "type": "color",
+      "id": "color_contenedor",
+      "label": "Container color",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "checkbox",
+      "id": "fondo_transparente",
+      "label": "Transparent container",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "ancho_contenedor",
+      "label": "Container width",
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "default": 650,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "This is a title"
+    },
+    {
+      "type": "select",
+      "id": "clase_titulo",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h1-portada",
+          "label": "Nickson Four-Big"
+        },
+         {
+          "value": "Titulo-Nickson-six-h1-portada",
+          "label": "Nickson Six-Big"
+        },
+        {
+          "value": "Titulo-Nickson-six-h1",
+          "label": "Nickson Six-H1"
+        },
+        {
+          "value": "Titulo-Nickson-four-h1",
+          "label": "Nickson Four-H1"
+        }
+      ],
+      "default": "Titulo-Nickson-four-h1"
+    },
+    {
+      "type": "color",
+      "id": "color_titulo",
+      "label": "Title color",
+      "default": "#002554"
+    },
+     {
+          "type": "checkbox",
+          "id": "ocultar_subtito",
+          "label": "Hide subtitle",
+          "default": false
+    },
+    {
+      "type": "text",
+      "id": "subtitulo",
+      "label": "Subtítulo",
+      "default": "This is a subtitle"
+    },
+    {
+      "type": "select",
+      "id": "clase_subtitulo",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "Titulo-Nickson-four-h2",
+          "label": "Nickson Four-H2"
+        },
+        {
+          "value": "Titulo-Nickson-six-h2",
+          "label": "Nickson Six-H2"
+        }   
+      ],
+      "default": "Titulo-Nickson-six-h2"
+    },
+    {
+      "type": "color",
+      "id": "color_subtitulo",
+      "label": "Subtitle color",
+      "default": "#C9A76D"
+    },
+    {
+      "type": "richtext",
+      "id": "texto",
+      "label": "Text",
+      "default": "<p>This is an example of text</p>"
+    },
+    {
+      "type": "color",
+      "id": "color_texto",
+      "label": "Color text",
+      "default": "#666666"
+    },
+    {
+          "type": "checkbox",
+          "id": "ocultar_botones",
+          "label": "Hide buttons",
+          "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mostrar_dos_botones",
+      "label": "Show second button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "texto_boton_1",
+      "label": "Texto del Botón 1",
+      "default": "More information"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_1",
+      "label": "Link button 1"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_1",
+      "label": "Color botton 1",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_1",
+      "label": "Text color botton 1",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "boton_1_transparente",
+      "label": "Make transparent button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "texto_boton_2",
+      "label": "Text botton 2",
+      "default": "Contact"
+    },
+    {
+      "type": "url",
+      "id": "enlace_boton_2",
+      "label": "Link botton 2"
+    },
+    {
+      "type": "color",
+      "id": "color_boton_2",
+      "label": "Color botton 2",
+      "default": "#002554"
+    },
+    {
+      "type": "color",
+      "id": "color_texto_boton_2",
+      "label": "Text botton 2",
+      "default": "#002554"
+    },
+    {
+      "type": "checkbox",
+      "id": "boton_2_transparente",
+      "label": "Make transparent button",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Single-column cover",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="contenedor-portada-unicolumna-lateral" 
+  style="
+    background-image: {% if section.settings.usar_color_fondo == false and section.settings.imagen_fondo != blank %} 
+      url('{{ section.settings.imagen_fondo | image_url }}') 
+    {% endif %};
+    background-color: {% if section.settings.usar_color_fondo %} {{ section.settings.color_fondo }} {% else %} transparent {% endif %};
+    justify-content: {% if section.settings.alinear_derecha %} flex-end {% else %} flex-start {% endif %};
+    height: var(--Altura-bloque);
+">
+  <div class="contenedor-interior-unicolumna-lateral" style="
+    width: {{ section.settings.ancho_contenedor }}px;
+    background-color: {% if section.settings.fondo_transparente %} transparent {% else %} {{ section.settings.color_contenedor }} {% endif %};
+    padding: 2rem;
+  ">
+    <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};">
+      {{ section.settings.titulo }}
+    </h1>
+
+     {% unless section.settings.ocultar_subtito %}
+    <h2 class="{{ section.settings.clase_subtitulo }}" style="color: {{ section.settings.color_subtitulo }};">
+      {{ section.settings.subtitulo }}
+    </h2>
+      {% endunless %}
+    
+    <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">
+      {{ section.settings.texto }}
+    </div>
+   
+    {% unless section.settings.ocultar_botones %}
+    <div class="contenedor-interior-botones-unicolumna-lateral">
+        <a href="{{ section.settings.enlace_boton_1 }}" class="boton-portada"
+         style="
+           background-color: {% if section.settings.boton_1_transparente %} transparent {% else %} {{ section.settings.color_boton_1 }} {% endif %};
+           color: {{ section.settings.color_texto_boton_1 }};
+           border: 2px solid {{ section.settings.color_boton_1 }};
+         ">
+        {{ section.settings.texto_boton_1 }}
+      </a>
+      {% if section.settings.mostrar_dos_botones %}
+        <a href="{{ section.settings.enlace_boton_2 }}" class="boton-portada"
+           style="
+             background-color: {% if section.settings.boton_2_transparente %} transparent {% else %} {{ section.settings.color_boton_2 }} {% endif %};
+             color: {{ section.settings.color_texto_boton_2 }};
+             border: 2px solid {{ section.settings.color_boton_2 }};
+           ">
+          {{ section.settings.texto_boton_2 }}
+        </a>
+      {% endif %}
+    </div>
+    {% endunless %}
+
+
+    
+  </div>
+</div>
+
+
+
+{% style %}
+
+{% endstyle %}

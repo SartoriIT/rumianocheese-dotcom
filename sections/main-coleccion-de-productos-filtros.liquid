@@ -1,0 +1,993 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+
+{% schema %}
+  {
+    "name": "Colección de Productos",
+    "tag": "section",
+    "class": "contenedor-coleccion-productos",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#FFF9F1"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Container background image"
+      },
+      {
+        "type": "text",
+        "id": "titulo",
+        "label": "Title",
+        "default": "Discover Our Organic Favorites"
+      },
+      {
+        "type": "select",
+        "id": "clase_titulo",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "Titulo-Nickson-four-h1",
+            "label": "Nickson Four"
+          }, {
+            "value": "Titulo-Nickson-six-h1",
+            "label": "Nickson Six"
+          }
+        ],
+        "default": "Titulo-Nickson-four-h1"
+      }, {
+        "type": "color",
+        "id": "color_titulo",
+        "label": "Title color",
+        "default": "#002554"
+      }, {
+        "type": "richtext",
+        "id": "texto",
+        "label": "Text",
+        "default": "<p>From creamy Havarti to tangy Cheddar, Rumiano Organic offers flavors crafted with care for every occasion.</p>"
+      }, {
+        "type": "color",
+        "id": "color_texto",
+        "label": "Color text",
+        "default": "#666666"
+      }, {
+        "type": "checkbox",
+        "id": "ocultar_botones",
+        "label": "Hide buttons",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "mostrar_dos_botones",
+        "label": "Show second button",
+        "default": false
+      }, {
+        "type": "text",
+        "id": "texto_boton_1",
+        "label": "Text botton 1",
+        "default": "See All Products  →"
+      }, {
+        "type": "url",
+        "id": "enlace_boton_1",
+        "label": "Link button 1"
+      }, {
+        "type": "color",
+        "id": "color_boton_1",
+        "label": "Color botton 1",
+        "default": "#002554"
+      }, {
+        "type": "color",
+        "id": "color_texto_boton_1",
+        "label": "Texto color botton 1",
+        "default": "#FFFFFF"
+      }, {
+        "type": "checkbox",
+        "id": "boton_1_transparente",
+        "label": "Make transparent button",
+        "default": false
+      }, {
+        "type": "text",
+        "id": "texto_boton_2",
+        "label": "Text button 2",
+        "default": "Contact"
+      }, {
+        "type": "url",
+        "id": "enlace_boton_2",
+        "label": "Link botton 2"
+      }, {
+        "type": "color",
+        "id": "color_boton_2",
+        "label": "Color botton 2",
+        "default": "#002554"
+      }, {
+        "type": "color",
+        "id": "color_texto_boton_2",
+        "label": "Text color botton 2",
+        "default": "#002554"
+      }, {
+        "type": "checkbox",
+        "id": "boton_2_transparente",
+        "label": "Make transparent button",
+        "default": true
+      }, {
+        "type": "collection",
+        "id": "collection",
+        "label": "Select collection"
+      }, {
+        "type": "range",
+        "id": "columns",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "default": 3,
+        "label": "Number of columns"
+      }, {
+        "type": "range",
+        "id": "rows",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 1,
+        "label": "Number of rows"
+      }, {
+        "type": "color",
+        "id": "producto-provedor",
+        "label": "Supplier color",
+        "default": "#002554"
+      }, {
+        "type": "color",
+        "id": "producto-titulo",
+        "label": "Title color",
+        "default": "#002554"
+      }, {
+        "type": "select",
+        "id": "clase_titulo_productos",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "Titulo-Nickson-four-h6",
+            "label": "Nickson Four"
+          }, {
+            "value": "Titulo-Nickson-six-h6",
+            "label": "Nickson Six"
+          }
+        ],
+        "default": "Titulo-Nickson-six-h6"
+      }, {
+        "type": "color",
+        "id": "producto-categoria",
+        "label": "Category color",
+        "default": "#C9A76D"
+      }, {
+        "type": "color",
+        "id": "color_precio_producto",
+        "label": "Price color",
+        "default": "#002554"
+      }, {
+        "type": "color",
+        "id": "producto-peso",
+        "label": "Weight-color",
+        "default": "#002554"
+      }, {
+        "type": "color",
+        "id": "color_descripcion_producto",
+        "label": "Color description",
+        "default": "#666666"
+      }, {
+        "type": "color",
+        "id": "color_boton_ver",
+        "label": "Button color See product",
+        "default": "#002554"
+      }, {
+        "type": "color",
+        "id": "color_texto_boton_ver",
+        "label": "Button color see products",
+        "default": "#ffffff"
+      }, {
+        "type": "checkbox",
+        "id": "boton_ver_transparente",
+        "label": "See transparent product button",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "ocultar_boton_ver",
+        "label": "Hide Add to cart and Where to buy buttons",
+        "default": false
+      }, {
+        "type": "text",
+        "id": "texto_boton_wheretobuy",
+        "label": "Text 'Where to buy' button",
+        "default": "Where to buy"
+      }, {
+        "type": "url",
+        "id": "enlace_boton_wheretobuy",
+        "label": "Link 'Where to buy' button"
+      }, {
+        "type": "color",
+        "id": "color_boton_wheretobuy",
+        "label": "Color 'Where to buy' button",
+        "default": "#002554"
+      }, {
+        "type": "color",
+        "id": "color_texto_boton_wheretobuy",
+        "label": "Text color 'Where to buy' button",
+        "default": "#FFFFFF"
+      }, {
+        "type": "checkbox",
+        "id": "boton_wheretobuy_transparente",
+        "label": "Make Where to buy button transparent",
+        "default": false
+      }, {
+        "type": "color",
+        "id": "color_boton_agregar",
+        "label": "Color botón agregar al carrito",
+        "default": "#002554"
+      }, {
+        "type": "color",
+        "id": "color_texto_boton_agregar",
+        "label": "Color texto botón agregar",
+        "default": "#FFFFFF"
+      }, {
+        "type": "checkbox",
+        "id": "boton_agregar_transparente",
+        "label": "Make Add to cart button transparent",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "transparent_cards",
+        "label": "Make transparent card",
+        "default": true
+      }, {
+        "type": "color",
+        "id": "card_background_color",
+        "label": "Card background color",
+        "default": "#F5F5F5"
+      }, {
+        "type": "checkbox",
+        "id": "mostrar_filtro_tipo",
+        "label": "Show type filter",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "texto_todos",
+        "label": "Text for the ‘All’ filter",
+        "default": "Todos"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_todos_imagen",
+        "label": "All' filter image"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_todos_imagen_activa",
+        "label": "Active image of the ‘All’ filter"
+      }, {
+        "type": "text",
+        "id": "filtro_manual_1",
+        "label": "Filter Name 1",
+        "default": "Filtro 1"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_1_imagen",
+        "label": "Filter 1 image"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_1_imagen_activa",
+        "label": "Active image of Filter 1"
+      }, {
+        "type": "text",
+        "id": "filtro_manual_2",
+        "label": "Filter Name 2",
+        "default": "Filtro 2"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_2_imagen",
+        "label": "Filter 2 image"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_2_imagen_activa",
+        "label": "Active image of Filter 2"
+      }, {
+        "type": "text",
+        "id": "filtro_manual_3",
+        "label": "Filter Name 3",
+        "default": "Filtro 3"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_3_imagen",
+        "label": "Filter 3 image"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_3_imagen_activa",
+        "label": "Active image of Filter 3"
+      }, {
+        "type": "text",
+        "id": "filtro_manual_4",
+        "label": "Filter Name 4",
+        "default": "Filtro 4"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_4_imagen",
+        "label": "Filter 4 image"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_4_imagen_activa",
+        "label": "Active image of Filter 4"
+      }, {
+        "type": "text",
+        "id": "filtro_manual_5",
+        "label": "Filter Name 5",
+        "default": "Filtro 5"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_5_imagen",
+        "label": "Image of Filter 5"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_5_imagen_activa",
+        "label": "Active image of Filter 5"
+      }, {
+        "type": "text",
+        "id": "filtro_manual_6",
+        "label": "Filter Name 6",
+        "default": "Filtro 6"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_6_imagen",
+        "label": "Filter 6 image"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_6_imagen_activa",
+        "label": "Active image of Filter 6"
+      }, {
+        "type": "text",
+        "id": "filtro_manual_7",
+        "label": "Filter Name 7",
+        "default": "Filtro 7"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_7_imagen",
+        "label": "Filter 7 image"
+      }, {
+        "type": "image_picker",
+        "id": "filtro_manual_7_imagen_activa",
+        "label": "Active image of Filter 7"
+      }
+
+
+    ],
+    "presets": [
+      {
+        "name": "Collection product-filter",
+        "category": "Secciones"
+      }
+    ]
+  }
+{% endschema %}
+
+{% liquid
+  assign total_products = section.settings.columns | times: section.settings.rows
+  assign collection_products = section.settings.collection.products
+  assign section_id = section.id | split: '__' | first | remove: 'shopify-section-'
+
+  # Crear array de filtros manuales
+  assign manual_filters = ""
+
+  if section.settings.filtro_manual_1 != blank
+    assign manual_filters = manual_filters | append: section.settings.filtro_manual_1 | append: '|||'
+    if section.settings.filtro_manual_1_imagen != blank
+      assign manual_filters = manual_filters | append: section.settings.filtro_manual_1_imagen
+    endif
+    assign manual_filters = manual_filters | append: ':::'
+  endif
+
+  if section.settings.filtro_manual_2 != blank
+    assign manual_filters = manual_filters | append: section.settings.filtro_manual_2 | append: '|||'
+    if section.settings.filtro_manual_2_imagen != blank
+      assign manual_filters = manual_filters | append: section.settings.filtro_manual_2_imagen
+    endif
+    assign manual_filters = manual_filters | append: ':::'
+  endif
+
+  if section.settings.filtro_manual_3 != blank
+    assign manual_filters = manual_filters | append: section.settings.filtro_manual_3 | append: '|||'
+    if section.settings.filtro_manual_3_imagen != blank
+      assign manual_filters = manual_filters | append: section.settings.filtro_manual_3_imagen
+    endif
+    assign manual_filters = manual_filters | append: ':::'
+  endif
+
+  if section.settings.filtro_manual_4 != blank
+    assign manual_filters = manual_filters | append: section.settings.filtro_manual_4 | append: '|||'
+    if section.settings.filtro_manual_4_imagen != blank
+      assign manual_filters = manual_filters | append: section.settings.filtro_manual_4_imagen
+    endif
+    assign manual_filters = manual_filters | append: ':::'
+  endif
+
+  if section.settings.filtro_manual_5 != blank
+    assign manual_filters = manual_filters | append: section.settings.filtro_manual_5 | append: '|||'
+    if section.settings.filtro_manual_5_imagen != blank
+      assign manual_filters = manual_filters | append: section.settings.filtro_manual_5_imagen
+    endif
+    assign manual_filters = manual_filters | append: ':::'
+  endif
+
+  if section.settings.filtro_manual_6 != blank
+    assign manual_filters = manual_filters | append: section.settings.filtro_manual_6 | append: '|||'
+    if section.settings.filtro_manual_6_imagen != blank
+      assign manual_filters = manual_filters | append: section.settings.filtro_manual_6_imagen
+    endif
+    assign manual_filters = manual_filters | append: ':::'
+  endif
+
+  if section.settings.filtro_manual_7 != blank
+    assign manual_filters = manual_filters | append: section.settings.filtro_manual_7 | append: '|||'
+    if section.settings.filtro_manual_7_imagen != blank
+      assign manual_filters = manual_filters | append: section.settings.filtro_manual_7_imagen
+    endif
+    assign manual_filters = manual_filters | append: ':::'
+  endif
+
+  # Dividir filtros en un array para mostrarlos en el frontend
+  assign filters_to_show = manual_filters | split: ':::'
+%}
+
+<!-- CONTENEDOR PRINCIPAL -->
+<div class="contenedor-coleccion-productos" style="
+       {% if section.settings.background_image %}
+         background-image: url({{ section.settings.background_image | image_url }});
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+       {% else %}
+         background-color: {{ section.settings.background_color }};
+         width: 100vw;
+         padding: 3rem 3rem;
+       {% endif %}
+     ">
+  <!-- TÍTULO -->
+  <div class="contenedor-interior-coleccion-titulo">
+    <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};">
+      {{ section.settings.titulo }}
+    </h1>
+    <div class="Texto-Poppinds-p" style="color: {{ section.settings.color_texto }};">
+      {{ section.settings.texto }}
+    </div>
+
+    <!-- BOTÓN -->
+    {% unless section.settings.ocultar_botones %}
+      <div class="contenedor-interior-boton-coleccion">
+        <a
+          href="{{ section.settings.enlace_boton_1 }}"
+          class="boton-portada"
+          style="
+           background-color: {% if section.settings.boton_1_transparente %} transparent {% else %} {{ section.settings.color_boton_1 }} {% endif %};
+           color: {{ section.settings.color_texto_boton_1 }};
+           border: 2px solid {{ section.settings.color_boton_1 }};
+         ">
+          {{ section.settings.texto_boton_1 }}
+        </a>
+        {% if section.settings.mostrar_dos_botones %}
+          <a
+            href="{{ section.settings.enlace_boton_2 }}"
+            class="boton-portada"
+            style="
+             background-color: {% if section.settings.boton_2_transparente %} transparent {% else %} {{ section.settings.color_boton_2 }} {% endif %};
+             color: {{ section.settings.color_texto_boton_2 }};
+             border: 2px solid {{ section.settings.color_boton_2 }};
+           ">
+            {{ section.settings.texto_boton_2 }}
+          </a>
+        {% endif %}
+      </div>
+    {% endunless %}
+  </div>
+
+  {% comment %}
+    Filtro corregido: muestra todos los productos al activar "Todos"
+    Usa .filtro-item-0 > div para el fondo por CSS
+    Asegúrate de incluir filtro_todos_imagen en el schema
+  {% endcomment %}
+
+  <!-- FILTRO POR TIPO CON IMÁGENES PERSONALIZABLES -->
+  {% if section.settings.mostrar_filtro_tipo and filters_to_show.size > 0 %}
+    <div class="filtro-tipo-producto filtro-tipo-{{ section_id }}" style="margin: 2rem 0; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center !important;">
+
+      <!-- Botón "Todos" con imagen por CSS -->
+      <div class="filtro-item filtro-item-0" style="display: flex; flex-direction: column; align-items: center; cursor: pointer;">
+        <div
+          class="filtro-tipo-boton active"
+          data-section="{{ section_id }}"
+          data-tipo="todos"
+          style="
+            border-radius: 50%;
+            background-color: transparent;
+            padding: 0;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          ">
+          <div style="width: 100%; height: 100%;"></div>
+        </div>
+        <span style="font-size: 0.875rem; color: {{ section.settings.color_boton_1 }}; text-align: center;">
+          {{ section.settings.texto_todos }}
+        </span>
+      </div>
+
+      <!-- Botones de filtro con fondo vía CSS -->
+      {% for filter_item in filters_to_show %}
+        {% if filter_item != blank %}
+          {% assign filter_parts = filter_item | split: '|||' %}
+          {% assign filter_name = filter_parts[0] %}
+          <div class="filtro-item filtro-item-{{ forloop.index }}" style="display: flex; flex-direction: column; align-items: center; cursor: pointer;">
+            <div
+              class="filtro-tipo-boton"
+              data-section="{{ section_id }}"
+              data-tipo="{{ filter_name | handleize }}"
+              style="
+                border-radius: 50%;
+                background-color: transparent;
+                padding: 0;
+                margin-bottom: 0.5rem;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              ">
+              <div style="width: 100%; height: 100%;"></div>
+            </div>
+            <span style="font-size: 0.875rem; color: {{ section.settings.color_boton_1 }}; text-align: center;">{{ filter_name }}</span>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- PRODUCTOS -->
+  <div id="coleccion-{{ section.id }}" class="contenedor-interior-coleccion-desplazamiento-productos">
+    <div
+      id="productos-grid-{{ section.id }}"
+      class="contenedor-interior-coleccion-productos"
+      style="display: grid; grid-template-columns: repeat({{ section.settings.columns }}, 1fr); grid-gap: 20px;">
+      {% for product in collection_products %}
+        {% assign show_product = false %}
+        {% if section.settings.origen_filtros == 'automatico' %}
+          {% assign product_type_handle = product.type | handleize %}
+          {% if product_type_handle == 'dips' or product_type_handle == 'cheese' or product_type_handle == 'slices' or product_type_handle == 'shreds' or product_type_handle == 'butter' %}
+            {% assign show_product = true %}
+          {% endif %}
+        {% else %}
+          {% for filter_item in filters_to_show %}
+            {% if filter_item != blank %}
+              {% assign filter_parts = filter_item | split: '|||' %}
+              {% assign filter_name = filter_parts[0] %}
+              {% if product.type == filter_name %}
+                {% assign show_product = true %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        {% if show_product or section.settings.origen_filtros == 'automatico' or request.query.tipo == blank or request.query.tipo == 'todos' %}
+          <div
+            class="card-item-coleccion"
+            style="background-color: {% if section.settings.transparent_cards %}transparent{% else %}{{ section.settings.card_background_color }}{% endif %};"
+            data-section="{{ section_id }}"
+            data-tipo="{{ product.type | handleize }}">
+            <a href="{{ product.url }}" style="margin-bottom: 2rem;">
+              <img
+                src="{{ product.featured_image | img_url: '290x290', crop: 'center' }}"
+                alt="{{ product.title }}"
+                class="producto-imagen"
+                loading="lazy">
+            </a>
+            <div class="contenedor-nombre-categorias">
+              <div class="contenedor-interior-nombre-categorias">
+                <p class="producto-proveedor Titulo-Nickson-four-h6" style="margin: 0; color: {{ section.settings.producto-provedor}};">
+                  {{ product.vendor }}
+                </p>
+                <p class="producto-precio Titulo-Nickson-four-h5" style="color: {{ section.settings.color_precio_producto }}; margin-bottom: 0;">{{ product.price | money }}</p>
+
+              </div>
+              <a href="{{ product.url }}" style="cursor: pointer; text-decoration: none;">
+                <h3 class="{{ section.settings.clase_titulo_productos }}" style="color: {{ section.settings.producto-titulo}}; margin-bottom: 0 !important;">{{ product.title }}</h3>
+              </a>
+              <div class="contenedor-interior-peso-categorías" style="display: flex; flex-flow: row nowrap; gap: 1rem;">
+                <p class="producto-peso Titulo-Nickson-four-h6" style="margin: 0; color: {{ section.settings.producto-peso}};">
+                  {{ product.metafields.product_info.net_weight.value }}
+                  {{ product.metafields.product_info.net_weight.unit }}
+                </p>
+                <p class="producto-categoria Titulo-Nickson-four-h6" style="color: {{ section.settings.producto-categoria}}; margin: 0;">{{ product.type }}</p>
+              </div>
+            </div>
+            <p class="producto-descripcion Texto-Poppinds-p-pequeño-2" style="color: {{ section.settings.color_descripcion_producto }};">{{ product.description | strip_html | truncate: 60 }}</p>
+
+            <!-- Botones de acción -->
+            <div class="contenedor-botones-card" style="display: flex; flex-flow: row nowrap; gap: 1rem; margin-top: 1rem; width: 100%; justify-content: flex-start;">
+              <!-- "Where to Buy" button (only for info-only and if in stock) -->
+              {% if product.tags contains 'info-only' and product.available %}
+                <a
+                  href="{{ section.settings.enlace_boton_wheretobuy }}"
+                  class="boton-portada"
+                  style="
+                    padding: calc(.4rem + 0.4vw);
+                    background-color: {% if section.settings.boton_wheretobuy_transparente %}transparent{% else %}{{ section.settings.color_boton_wheretobuy }}{% endif %};
+                    color: {{ section.settings.color_texto_boton_wheretobuy }};
+                    border: 2px solid {{ section.settings.color_boton_wheretobuy }};
+                    text-align: center;
+                    text-decoration: none;
+                    font-weight: 800;
+                    line-height: calc(1rem + 0.8vw);
+                    font-size: calc(0.6rem + 0.8vw) !important;
+                  ">
+                  {{ section.settings.texto_boton_wheretobuy }}
+                </a>
+              {% elsif product.available %}
+                <!-- "Add to Cart" button (if in stock) -->
+                <form method="post" action="/cart/add">
+                  <input
+                    type="hidden"
+                    name="id"
+                    value="{{ product.variants.first.id }}">
+                  <button
+                    type="submit"
+                    style="
+                      padding: calc(.4rem + 0.4vw);
+                      background-color: {% if section.settings.boton_agregar_transparente %}transparent{% else %}{{ section.settings.color_boton_agregar }}{% endif %};
+                      color: {{ section.settings.color_texto_boton_agregar }};
+                      border: 2px solid {{ section.settings.color_boton_agregar }};
+                      font-weight: 800;
+                      cursor: pointer;
+                      line-height: calc(1rem + 0.8vw);
+                      font-size: calc(0.6rem + 0.8vw) !important;"
+                    class="boton-portada">
+                    Add to Cart
+                  </button>
+                </form>
+              {% endif %}
+
+              <!-- Botón View Product (siempre visible) -->
+              {% unless section.settings.ocultar_boton_ver %}
+                <a
+                  href="{{ product.url }}"
+                  class="boton-portada"
+                  style="
+                    padding: calc(.4rem + 0.4vw);
+                    background-color: {% if section.settings.boton_ver_transparente %}transparent{% else %}{{ section.settings.color_boton_ver }}{% endif %};
+                    color: {{ section.settings.color_texto_boton_ver }};
+                    border: 2px solid {{ section.settings.color_boton_ver }};
+                    text-align: center;
+                    text-decoration: none;
+                    font-weight: 800;
+                    line-height: calc(1rem + 0.8vw);
+                    font-size: calc(0.6rem + 0.8vw) !important;
+                  ">
+                  View Product
+                </a>
+              {% endunless %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('Script cargado correctamente');
+
+    // Selecciona todos los filtros
+    const filtroItems = document.querySelectorAll('.filtro-item');
+    if (filtroItems.length === 0) {
+      console.error('No se encontraron elementos .filtro-item');
+      return;
+    }
+
+    // Asigna el evento click a cada filtro
+    filtroItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const button = this.querySelector('.filtro-tipo-boton');
+        if (! button) {
+          console.error('No se encontró el botón dentro del filtro:', this);
+          return;
+        }
+
+        const sectionId = button.dataset.section;
+        const tipo = button.dataset.tipo;
+
+        console.log(`Filtro activado: sección=${sectionId}, tipo=${tipo}`);
+
+        // Llama a la función para filtrar productos
+        filterProducts(sectionId, tipo);
+      });
+    });
+
+    // Función para filtrar productos
+    function filterProducts(sectionId, tipo) {
+      console.log(`Filtrando productos: sección=${sectionId}, tipo=${tipo}`);
+
+      // Desactiva todos los botones
+      const buttons = document.querySelectorAll(`.filtro-tipo-${sectionId} .filtro-tipo-boton`);
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+        btn.style.backgroundColor = 'transparent';
+        btn.style.border = `2px solid {{ section.settings.color_boton_1 }}`;
+
+        // Limpia el estilo del hijo (div)
+        const childDiv = btn.querySelector('div');
+        if (childDiv) {
+          childDiv.style.backgroundImage = 'none';
+        }
+      });
+
+      // Activa el botón correspondiente
+      const activeButton = document.querySelector(`.filtro-tipo-${sectionId} .filtro-tipo-boton[data-tipo="${tipo}"]`);
+      if (activeButton) {
+        activeButton.classList.add('active');
+        activeButton.style.backgroundColor = tipo === 'todos'
+          ? '{{ section.settings.color_boton_1 }}'
+          : 'transparent';
+        activeButton.style.border = `2px solid {{ section.settings.color_boton_1 }}`;
+
+        // Modifica el estilo del hijo (div) del botón activo
+        const childDiv = activeButton.querySelector('div');
+        if (childDiv) {
+          if (tipo === 'todos') {
+            childDiv.style.backgroundImage = 'url({{ section.settings.filtro_todos_imagen_activa | image_url }} )';
+          } else {
+            const index = activeButton.closest('.filtro-item').classList[1].split('-')[2]; // Extrae el índice del filtro
+            childDiv.style.backgroundImage = `url({{ section.settings['filtro_manual_' + index + '_imagen_activa'] | image_url }})`;
+          } childDiv.style.backgroundPosition = 'center';
+          childDiv.style.backgroundSize = 'contain';
+          childDiv.style.backgroundRepeat = 'no-repeat';
+        }
+      } else {
+        console.error('No se encontró el botón activo para el tipo:', tipo);
+      }
+
+      // Filtra los productos
+      const productCards = document.querySelectorAll(`.card-item-coleccion[data-section="${sectionId}"]`);
+      productCards.forEach(card => {
+        const cardType = card.dataset.tipo;
+        if (tipo === 'todos') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = cardType === tipo
+            ? 'block'
+            : 'none';
+        }
+      });
+    }
+
+    // Forzar mostrar todos los productos al inicio
+    setTimeout(() => {
+      const defaultSectionId = '{{ section_id }}';
+      filterProducts(defaultSectionId, 'todos');
+    }, 100);
+  });
+{% endjavascript %}
+
+
+{% style %}
+  .filtro-item-0 > div {
+    background-image: url('{{ section.settings.filtro_todos_imagen | image_url }}');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .filtro-item-1 > div {
+    background-image: url('{{ section.settings.filtro_manual_1_imagen | image_url }}');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .filtro-item-2 > div {
+    background-image: url('{{ section.settings.filtro_manual_2_imagen | image_url }}');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .filtro-item-3 > div {
+    background-image: url('{{ section.settings.filtro_manual_3_imagen | image_url }}');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .filtro-item-4 > div {
+    background-image: url('{{ section.settings.filtro_manual_4_imagen | image_url }}');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .filtro-item-5 > div {
+    background-image: url('{{ section.settings.filtro_manual_5_imagen | image_url }}');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .filtro-item-6 > div {
+    background-image: url('{{ section.settings.filtro_manual_6_imagen | image_url }}');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .filtro-item-7 > div {
+    background-image: url('{{ section.settings.filtro_manual_7_imagen | image_url }}');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .filtro-tipo-producto span {
+    font-size: 1.3rem !important;
+    font-weight: 700;
+  }
+
+  .filtro-tipo-producto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin: 2rem 0;
+    width: 100%;
+    overflow: visible !important;
+  }
+
+  /* Botón "Todos" - Imagen Activa */
+  .filtro-item-0 > .filtro-tipo-boton.active {
+    background-image: url('{{ section.settings.filtro_todos_imagen_activa | image_url }}') !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Filtro 1 - Imagen Activa */
+  .filtro-item-1 > .filtro-tipo-boton.active {
+    background-image: url('{{ section.settings.filtro_manual_1_imagen_activa | image_url }}') !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Filtro 2 - Imagen Activa */
+  .filtro-item-2 > .filtro-tipo-boton.active {
+    background-image: url('{{ section.settings.filtro_manual_2_imagen_activa | image_url }}') !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Filtro 3 - Imagen Activa */
+  .filtro-item-3 > .filtro-tipo-boton.active {
+    background-image: url('{{ section.settings.filtro_manual_3_imagen_activa | image_url }}') !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Filtro 4 - Imagen Activa */
+  .filtro-item-4 > .filtro-tipo-boton.active {
+    background-image: url('{{ section.settings.filtro_manual_4_imagen_activa | image_url }}') !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Filtro 5 - Imagen Activa */
+  .filtro-item-5 > .filtro-tipo-boton.active {
+    background-image: url('{{ section.settings.filtro_manual_5_imagen_activa | image_url }}') !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Filtro 6 - Imagen Activa */
+  .filtro-item-6 > .filtro-tipo-boton.active {
+    background-image: url('{{ section.settings.filtro_manual_6_imagen_activa | image_url }}') !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Filtro 7 - Imagen Activa */
+  .filtro-item-7 > .filtro-tipo-boton.active {
+    background-image: url('{{ section.settings.filtro_manual_7_imagen_activa | image_url }}') !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+
+  /* Estilo para asegurar que las imágenes se muestren correctamente */
+  .filtro-tipo-boton div {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Efecto hover mejorado */
+  .filtro-item:hover .filtro-tipo-boton:not(.active) {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Transición suave para el cambio de imágenes */
+  .filtro-tipo-boton div {
+    transition: all 0.3s ease;
+  }
+
+  /* Eliminar estilos de scroll horizontal */
+  .filtro-tipo-producto {
+    padding-bottom: 0 !important;
+    white-space: normal !important;
+  }
+
+  .filtro-tipo-boton {
+    width: 8rem;
+    height: 8rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .filtro-tipo-boton.active img {
+    filter: brightness(0) invert(1);
+  }
+
+  .filtro-item {
+    transition: transform 0.2s ease;
+  }
+
+  .filtro-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .filtro-tipo-boton img {
+    transition: filter 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .filtro-tipo-producto {
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      white-space: nowrap;
+      justify-content: flex-start !important;
+    }
+
+    .filtro-item {
+      flex: 0 0 auto;
+      min-width: 80px;
+    }
+
+    #productos-grid-{{ section.id }} {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #productos-grid-{{ section.id }} {
+      grid-template-columns: 1fr !important;
+    }
+
+    .filtro-item {
+      min-width: 70px;
+    }
+  }
+{% endstyle %}

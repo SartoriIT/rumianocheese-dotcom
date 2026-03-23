@@ -1,0 +1,54 @@
+{% schema %}
+{
+  "name": "Splitting-tape",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_background_image",
+      "label": "Use background image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Imagen de fondo"
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "label": "Tape height (px)",
+      "min": 20,
+      "max": 30,
+      "step": 1,
+      "default": 25
+    }
+  ],
+  "presets": [
+    {
+      "name": "Splitting-tape",
+      "category": "Secciones personalizadas"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="contenedor-cinta" style="
+  width: 100vw;
+  min-height: 20px;
+  max-height: 30px;
+  height: {{ section.settings.height }}px;
+  {% if section.settings.use_background_image and section.settings.background_image != blank %}
+    background-image: url({{ section.settings.background_image | image_url }});
+    background-size: cover;
+    background-position: center;
+  {% else %}
+    background-color: {{ section.settings.background_color }};
+  {% endif %}
+">
+</div>

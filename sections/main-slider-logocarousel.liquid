@@ -1,0 +1,379 @@
+{% schema %}
+{
+  "name": "Infinite Logo Slider",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#002554"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_background_image",
+      "label": "Use background image instead of color",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Find us at"
+    },
+    {
+      "type": "select",
+      "id": "title_font",
+      "label": "Title font family",
+      "options": [
+        { "value": "Titulo-Nickson-four-h1", "label": "Nickson Four" },
+        { "value": "Titulo-Nickson-six-h1", "label": "Nickson Six" }
+      ],
+      "default": "Titulo-Nickson-four-h1"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#fafbfc"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "label": "Padding top (px)"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "label": "Padding bottom (px)"
+    },
+    {
+      "type": "range",
+      "id": "padding_sides",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "label": "Padding sides (px)"
+    },
+    {
+      "type": "range",
+      "id": "logo_spacing",
+      "min": 2,
+      "max": 20,
+      "step": 1,
+      "default": 10,
+      "label": "Space between logos (rem)"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 8,
+      "max": 25,
+      "step": 1,
+      "default": 15,
+      "label": "Logo width (rem)"
+    },
+    {
+      "type": "range",
+      "id": "animation_speed",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "default": 30,
+      "label": "Animation speed - Desktop (seconds)"
+    },
+    {
+      "type": "range",
+      "id": "animation_speed_mobile",
+      "min": 30,
+      "max": 180,
+      "step": 10,
+      "default": 120,
+      "label": "Animation speed - Mobile (seconds)"
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause animation on hover",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo image"
+        },
+        {
+          "type": "url",
+          "id": "logo_link",
+          "label": "Logo link (optional)"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Infinite Logo Slider",
+      "category": "Custom",
+      "blocks": [
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_style = ''
+  if section.settings.enable_background_image and section.settings.background_image != blank
+    assign bg_style = 'background-image: url(' | append: section.settings.background_image | image_url | append: '); background-size: cover; background-position: center;'
+  else
+    assign bg_style = 'background-color: ' | append: section.settings.background_color | append: ';'
+  endif
+-%}
+
+<div 
+  class="infinite-logo-slider section-{{ section.id }}" 
+  style="{{ bg_style }} padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px {{ section.settings.padding_bottom }}px;"
+>
+  {%- if section.settings.title != blank -%}
+    <div class="logo-slider-title-wrapper">
+      <h2 class="{{ section.settings.title_font }}" style="color: {{ section.settings.title_color }};">
+        {{ section.settings.title }}
+      </h2>
+    </div>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="logo-slider-track-wrapper">
+      <div class="logo-slider-track">
+        {%- comment -%} First iteration of logos {%- endcomment -%}
+        {%- for block in section.blocks -%}
+          <div class="logo-slider-item" {{ block.shopify_attributes }}>
+            {%- if block.settings.logo_link != blank -%}
+              <a href="{{ block.settings.logo_link }}" class="logo-link">
+            {%- endif -%}
+            
+            {%- if block.settings.logo_image != blank -%}
+              {{
+                block.settings.logo_image
+                | image_url: width: 400
+                | image_tag: class: 'logo-image', loading: 'lazy', alt: block.settings.logo_image.alt | default: 'Logo'
+              }}
+            {%- else -%}
+              <div class="logo-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <rect x="10" y="10" width="80" height="80" fill="currentColor" opacity="0.1"/>
+                  <text x="50" y="60" font-size="20" text-anchor="middle" fill="currentColor" opacity="0.3">Logo {{ forloop.index }}</text>
+                </svg>
+              </div>
+            {%- endif -%}
+            
+            {%- if block.settings.logo_link != blank -%}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+
+        {%- comment -%} Second iteration for seamless loop {%- endcomment -%}
+        {%- for block in section.blocks -%}
+          <div class="logo-slider-item">
+            {%- if block.settings.logo_link != blank -%}
+              <a href="{{ block.settings.logo_link }}" class="logo-link">
+            {%- endif -%}
+            
+            {%- if block.settings.logo_image != blank -%}
+              {{
+                block.settings.logo_image
+                | image_url: width: 400
+                | image_tag: class: 'logo-image', loading: 'lazy', alt: block.settings.logo_image.alt | default: 'Logo'
+              }}
+            {%- else -%}
+              <div class="logo-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <rect x="10" y="10" width="80" height="80" fill="currentColor" opacity="0.1"/>
+                  <text x="50" y="60" font-size="20" text-anchor="middle" fill="currentColor" opacity="0.3">Logo {{ forloop.index }}</text>
+                </svg>
+              </div>
+            {%- endif -%}
+            
+            {%- if block.settings.logo_link != blank -%}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- else -%}
+    <div class="logo-slider-empty-state">
+      <p style="color: {{ section.settings.title_color }}; opacity: 0.6; text-align: center; padding: 2rem;">
+        Add logo blocks to display them here
+      </p>
+    </div>
+  {%- endif -%}
+</div>
+
+{%- style -%}
+  .infinite-logo-slider {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .logo-slider-title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .logo-slider-title-wrapper h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+  }
+
+  .logo-slider-track-wrapper {
+    overflow: hidden;
+    position: relative;
+    min-height: {{ section.settings.logo_width }}rem;
+  }
+
+  .logo-slider-track {
+    display: flex;
+    gap: {{ section.settings.logo_spacing }}rem;
+    animation: scroll-left {{ section.settings.animation_speed }}s linear infinite;
+    width: max-content;
+  }
+
+  {% if section.settings.pause_on_hover %}
+  .logo-slider-track:hover {
+    animation-play-state: paused;
+  }
+  {% endif %}
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .logo-slider-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .logo-image {
+    width: {{ section.settings.logo_width }}rem;
+    height: {{ section.settings.logo_width }}rem;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: block;
+  }
+
+  .logo-placeholder {
+    width: {{ section.settings.logo_width }}rem;
+    height: {{ section.settings.logo_width }}rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ section.settings.title_color }};
+  }
+
+  .logo-placeholder svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-link:hover .logo-image {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+
+  .logo-slider-empty-state {
+    min-height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .logo-slider-track {
+      animation-duration: {{ section.settings.animation_speed_mobile }}s;
+      gap: calc({{ section.settings.logo_spacing }}rem / 2);
+    }
+
+    .logo-image,
+    .logo-placeholder {
+      width: calc({{ section.settings.logo_width }}rem * 0.66);
+      height: calc({{ section.settings.logo_width }}rem * 0.66);
+    }
+
+    .logo-slider-title-wrapper h2 {
+      font-size: 2rem;
+    }
+
+    .logo-slider-track-wrapper {
+      min-height: calc({{ section.settings.logo_width }}rem * 0.66);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .logo-slider-track {
+      gap: calc({{ section.settings.logo_spacing }}rem / 3);
+    }
+
+    .logo-image,
+    .logo-placeholder {
+      width: calc({{ section.settings.logo_width }}rem * 0.5);
+      height: calc({{ section.settings.logo_width }}rem * 0.5);
+    }
+
+    .logo-slider-title-wrapper h2 {
+      font-size: 1.5rem;
+    }
+
+    .logo-slider-track-wrapper {
+      min-height: calc({{ section.settings.logo_width }}rem * 0.5);
+    }
+  }
+{%- endstyle -%}

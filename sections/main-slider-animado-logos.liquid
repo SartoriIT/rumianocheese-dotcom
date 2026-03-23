@@ -1,0 +1,239 @@
+
+
+{% schema %}
+{
+  "name": "Contenedor Multicolumna",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#002554"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_background_image",
+      "label": "Use solid background image",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "Find us at"
+    },
+    {
+      "type": "select",
+      "id": "clase_titulo",
+      "label": "Font family",
+      "options": [
+        { "value": "Titulo-Nickson-four-h1", "label": "Nickson Four" },
+        { "value": "Titulo-Nickson-six-h1", "label": "Nickson Six" }
+      ],
+      "default": "Titulo-Nickson-four-h1"
+    },
+    {
+      "type": "color",
+      "id": "color_titulo",
+      "label": "Title color",
+      "default": "#fafbfc"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "label": "Padding top"
+    },
+    {
+      "type": "range",
+      "id": "padding_sides",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "label": "Lateral spaces"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "default": 4,
+      "label": "Columns in desktop version"
+    },
+    {
+      "type": "text",
+      "id": "tag_mostrar",
+      "label": "Label to show section",
+      "info": "If the product has this label, the section will be visible."
+    },
+    {
+      "type": "text",
+      "id": "tag_ocultar",
+      "label": "Label to hide section",
+      "info": "If the product has this label, the section will be hidden."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "bloque_multicolumna",
+      "name": "Bloque Multicolumna",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_id",
+          "label": "ID del bloque (atributo HTML id / tag de coincidencia)",
+          "info": "El bloque se muestra si el producto tiene un tag que coincida con este ID tras normalizar (handleize), a menos que el producto tenga el tag 'slider-default'. Si se deja vacío se usa un ID automático."
+        },
+        {
+          "type": "checkbox",
+          "id": "block_visible",
+          "label": "Mostrar bloque (solo si el producto tiene el tag 'slider-default')",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "top_image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Slider Logo",
+      "category": "Secciones",
+      "blocks": [
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" },
+        { "type": "bloque_multicolumna" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
+
+{%- unless product.tags contains section.settings.tag_ocultar -%}
+  {%- if section.settings.tag_mostrar == blank or product.tags contains section.settings.tag_mostrar -%}
+    <div class="section-{{ section.id }} contenedor-multicolumna-logos" id="section-contenedor-multicolumna-{{ section.id }}" style="background-color: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px {{ section.settings.padding_sides }}px;">
+
+      <div class="Contenedor-titulo-slider">
+        <h1 class="{{ section.settings.clase_titulo }}" style="color: {{ section.settings.color_titulo }};">
+          {{ section.settings.titulo }}
+        </h1>
+      </div>
+
+      {% liquid
+        assign use_switches = false
+        for t in product.tags
+          assign tid = t | handleize
+          if tid == 'slider-default'
+            assign use_switches = true
+            break
+          endif
+        endfor
+      %}
+
+      <div class="contenedor-multicolumna-slider">
+        {%- for i in (1..2) -%}
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign show_by_tag = false
+
+              assign bid_raw = block.settings.block_id | strip
+              assign bid_handle = bid_raw | handleize
+
+              if bid_raw != blank
+                for t in product.tags
+                  assign tid_handle = t | strip | handleize
+                  if tid_handle == bid_handle
+                    assign show_by_tag = true
+                    break
+                  endif
+                endfor
+              endif
+
+              assign visible = false
+              if show_by_tag
+                assign visible = true
+              elsif use_switches and block.settings.block_visible
+                assign visible = true
+              endif
+
+              if bid_raw != blank
+                assign final_id = bid_raw
+              else
+                assign final_id = 'bloque-multicolumna-' | append: block.id
+              endif
+            -%}
+
+            <!-- debug: bid_handle='{{ bid_handle }}' | show_by_tag='{{ show_by_tag }}' | use_switches='{{ use_switches }}' | product_tags='{% for t in product.tags %}{{ t | handleize }}{% unless forloop.last %},{% endunless %}{% endfor %}' -->
+
+            <div
+              id="{{ final_id }}"
+              style="display: {% if visible %}block{% else %}none{% endif %};"
+              {{ block.shopify_attributes }}
+            >
+              <div class="bloque-multicolumna-slider-image" style="
+                background-image: url('{{ block.settings.top_image | default: 'https://cdn.shopify.com/s/files/1/0355/3873/1067/files/Recurso_5.png?v=1739406687' | image_url }}');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 15rem;
+                height: auto;">
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+{%- endunless -%}
+
+{%- style -%}
+.contenedor-multicolumna-logos { overflow: hidden; }
+.Contenedor-titulo-slider {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-multicolumna-slider {
+  display: flex;
+  gap: 10rem;
+  animation: scroll-left 30s linear infinite;
+  width: max-content;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.bloque-multicolumna-slider-image { aspect-ratio: 1 / 1; }
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-multicolumna-slider { animation-duration: 120s; }
+}
+{%- endstyle -%}
